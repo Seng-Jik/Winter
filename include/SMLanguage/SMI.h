@@ -1,6 +1,6 @@
 #pragma once
 
-//#define DEBUG
+#define DEBUG
 
 #include <iostream>
 #include <fstream>
@@ -21,7 +21,7 @@
 #include "../Core/ResFile.h"
 
 #else
-
+typedef char BYTE;
 #endif
 namespace SMI
 {
@@ -71,7 +71,7 @@ namespace SMI
 		State now_state;
 		std::stack<State> stk_state;
 
-		std::unordered_set<wchar_t> keywords = { L'<', L'>', L'[', L']', L'!', L'/', L'\\' };
+		const std::unordered_set<wchar_t> keywords = { L'<', L'>', L'[', L']', L'!', L'/', L'\\' };
 
 		std::unordered_map<std::wstring, int> labels;
 		std::unordered_map<std::wstring, int> flags;
@@ -88,38 +88,22 @@ namespace SMI
 		std::vector<std::wstring> all_text;
 		size_t now_line;
 
-		Uint16 now_pos;
+		unsigned short now_pos;
 
 	public:
 		Interpreter();
 		~Interpreter();
 
-		bool RunOneStep();
-
-#ifndef DEBUG
-		void Save(Core::Bundle<SAVE_SIZE>&);	//保存解释器状态以存档
-		bool Load(Core::Bundle<SAVE_SIZE>&);	//读取解释器状态
-#endif
-		//New interface
 		bool LoadStory(const std::string& filename, bool is_encoding);
 		bool PullEvent(SMEvent& out_event);
 
-		//Old interface
-										//判断类函数
-		bool NextIsText();	//下一个位置是否为对话
-		bool CmdOver();	//指令是否读取完成
-
-						//读取类函数
-		std::wstring PopCmd();	//读取指令，包括断点和出栈指令
-		void PopArg(std::vector<std::wstring>&);	//读取文字参数，如果有双引号则自动去掉
-		void PopIntArg(std::vector<int>&);	//读取数字参数
-
-		std::wstring PopText();	//读取文字，到指令开始前，或者到文字结束符之前，如果文字已结束，则返回文字结束符
-		std::wstring PopName();	//读取当前对话者名称
-
-							//操作类函数
-		bool Goto(const std::wstring&);	//跳转到某个标签
-		bool OutStack();	//跳出栈区，自动略过子栈区
+#ifdef DEBUG
+		void Save(const std::string save_file);
+		bool Load(const std::string save_file);
+#else
+		void Save(Core::Bundle<SAVE_SIZE>&);	//保存解释器状态以存档
+		bool Load(Core::Bundle<SAVE_SIZE>&);	//读取解释器状态
+#endif
 
 		size_t Serialize(BYTE *buffer);
 		void Unserialize(BYTE *buffer);
@@ -129,23 +113,31 @@ namespace SMI
 	private:
 		bool loadText(std::istream& file);
 
-		bool analysis();
+		//syntax analysis
+		bool runOneStep();	//get next cmd or text to analysis
+		bool analysis();	//analysis a sentence and prepare handle it
 		SingleWord getNextChar();
 		void backToBeforeChar();
+		bool isKeyword(SingleWord word);
 
-		void handler(const std::wstring& str);
-
+		//semantic analysis
+		void operate(const std::wstring& str);
 		void cmdAnalysis(const std::wstring& command);
 		void cmdOperate();
 
+		bool gotoLable(const std::wstring&);	//跳转到某个标签
+		bool outStack();	//跳出栈区，自动略过子栈区
+
+		//state help func
 		void changeState(State state);
 		void switchState(State state);
 		State returnState();
-
-		bool isKeyword(SingleWord word);
+		
+		//init help func 
 		void addLabel();
 		void scanFile();
 
+		//general help func
 		void splitArgs(std::wstring& str,std::vector<std::wstring>& arg_array);
 		std::wstring trim(std::wstring str);
 

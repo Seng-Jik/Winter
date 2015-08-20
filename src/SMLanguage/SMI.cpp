@@ -1,7 +1,9 @@
 #include "../../include/SMLanguage/SMI.h"
 
 using namespace SMI;
+#ifndef DEBUG
 using namespace Core;
+#endif
 using namespace std;
 
 string ws2s(const wstring& ws);
@@ -13,34 +15,6 @@ SMI::Interpreter::Interpreter()
 
 SMI::Interpreter::~Interpreter()
 {
-}
-
-bool SMI::Interpreter::RunOneStep()
-{
-	bool result = false;
-	if (now_line < all_text.size()) {
-		name = L"";
-		cmd = L"";
-		text = L"";
-		while (now_line < all_text.size() && (all_text[now_line].length() == 0 || all_text[now_line].at(0) == '#' || all_text[now_line].at(0) == '\r')) {
-			++now_line;
-			if (now_line >= all_text.size()) {
-				return false;
-			}
-			now_pos = 0;
-		}
-		if (now_line < all_text.size()) {
-#ifdef DEBUG
-			wcout << all_text[now_line] << endl;
-#endif
-			do {
-				//result = analysisOneLine(all_text[now_line++]);
-				//To do...
-				result = this->analysis();
-			} while (now_state == CMD_SINGLE);
-		}
-	}
-	return result;
 }
 
 bool SMI::Interpreter::LoadStory(const string & filename, bool is_encoding)
@@ -59,11 +33,6 @@ bool SMI::Interpreter::LoadStory(const string & filename, bool is_encoding)
 	//istringstream file(string(res));
 	result = loadText(file);
 #else
-	/*ifstream file(filename);
-	result = loadText(file);
-	file.close();
-	*/
-
 	ifstream pf(filename, ios::binary);
 	pf.seekg(0, ios::end);
 	size_t fsize = pf.tellg();
@@ -87,12 +56,39 @@ bool SMI::Interpreter::LoadStory(const string & filename, bool is_encoding)
 
 bool SMI::Interpreter::PullEvent(SMEvent & out_event)
 {
-	bool result = RunOneStep();
+	bool result = runOneStep();
 	out_event = now_event;
 	return result;
 }
 
-#ifndef DEBUG
+#ifdef DEBUG
+void SMI::Interpreter::Save(const string save_file)
+{
+	ofstream file(save_file, ios::binary);
+
+	BYTE buffer[0xffff];
+	size_t size = Serialize(buffer);
+	file.write(buffer, size);
+	file.close();
+}
+
+bool SMI::Interpreter::Load(const string save_file)
+{
+	ifstream file(save_file, ios::binary);
+
+	BYTE buffer[0xffff];
+	BYTE *p = buffer;
+	memset(buffer, 0, 0xffff);
+
+	while (!file.eof()) {
+		*p = file.get();
+		++p;
+	}
+
+	Unserialize(buffer);
+	return true;
+}
+#else
 void SMI::Interpreter::Save(Bundle<SAVE_SIZE> &bundle)
 {
 	BYTE buffer[SAVE_SIZE];
@@ -112,93 +108,6 @@ bool SMI::Interpreter::Load(Bundle<SAVE_SIZE> &bundle)
 	return true;
 }
 #endif
-
-bool SMI::Interpreter::NextIsText()
-{
-	return is_text;
-}
-
-bool SMI::Interpreter::CmdOver()
-{
-	return is_end;
-}
-
-wstring SMI::Interpreter::PopCmd()
-{
-	return cmd;
-}
-
-void SMI::Interpreter::PopArg(vector<wstring> &arr)
-{
-	arr = str_args;
-}
-
-void SMI::Interpreter::PopIntArg(vector<int> &arr)
-{
-	arr = num_args;
-}
-
-wstring SMI::Interpreter::PopText()
-{
-	return text;
-}
-
-wstring SMI::Interpreter::PopName()
-{
-	return name;
-}
-
-bool SMI::Interpreter::Goto(const wstring& label)
-{
-	auto iter = labels.find(label);
-	bool result = iter != labels.end();
-	if (result) {
-		now_line = iter->second;
-		now_pos = 0;
-
-		while (stk_state.size()) {
-			stk_state.pop();
-		}
-
-		switchState(TEXT);
-	}
-	return result;
-}
-
-bool SMI::Interpreter::OutStack()
-{
-	bool result = now_state == CMD_MULTI;
-	int floor = 0;
-
-	if (result) {
-		size_t pos = now_line;
-		while (pos < all_text.size()) {
-			if (all_text[pos] == L"<!>" || all_text[pos].find(L"if") != string::npos) {
-				++floor;
-			}
-
-			if (all_text[pos] == L"</>" || all_text[pos] == L"/") {
-				if (floor) {
-					--floor;
-				}
-				else {
-					returnState();
-					returnState();
-					break;
-				}
-			}
-			++pos;
-		}
-		result = pos != now_line;
-		now_line = pos + 1;
-		if (now_line >= all_text.size()) {
-			now_line = all_text.size() - 1;
-		}
-		now_pos = 0;
-	}
-
-	return result;
-}
 
 size_t SMI::Interpreter::Serialize(BYTE *buffer)
 {
@@ -257,8 +166,8 @@ size_t SMI::Interpreter::Serialize(BYTE *buffer)
 		p += sizeof(int);
 	}
 
-	*p++ = is_text;
-	*p++ = is_end;
+	*(bool*)p++ = is_text;
+	*(bool*)p++ = is_end;
 
 	/**(int*)p = cmd.length();
 	p += sizeof(int);
@@ -304,9 +213,9 @@ size_t SMI::Interpreter::Serialize(BYTE *buffer)
 	*(size_t*)p = now_line;
 	p += sizeof(size_t);
 
-	*(int*)p = now_pos;
+	*(unsigned short*)p = now_pos;
 
-	p++;
+	p += sizeof(unsigned short);
 
 	return p - buffer;
 }
@@ -375,8 +284,8 @@ void SMI::Interpreter::Unserialize(BYTE *buffer)
 		flags[str_temp] = num_temp;
 	}
 
-	is_text = *p++;
-	is_end = *p++;
+	is_text = *(bool*)p++;
+	is_end = *(bool*)p++;
 
 	/*len = *(int*)p;
 	p += sizeof(int);
@@ -442,7 +351,7 @@ void SMI::Interpreter::Unserialize(BYTE *buffer)
 	now_line = *(size_t*)p;
 	p += sizeof(size_t);
 
-	now_pos = *(int*)p;
+	now_pos = *(unsigned short*)p;
 }
 
 void SMI::Interpreter::InfoOut(wostream & out)
@@ -494,16 +403,52 @@ bool SMI::Interpreter::loadText(istream& file)
 	return true;
 }
 
+bool SMI::Interpreter::runOneStep()
+{
+	bool result = false;
+
+	if (now_line >= all_text.size()) {
+		return false;
+	}
+
+	name = L"";
+	cmd = L"";
+	text = L"";
+
+	//jump commitment or empty line
+	while (all_text[now_line].length() == 0 || all_text[now_line].at(0) == '#' || all_text[now_line].at(0) == '\r') {
+		++now_line;
+		if (now_line >= all_text.size()) {
+			return false;
+		}
+		now_pos = 0;
+	}
+
+	if (now_line >= all_text.size()) {
+		return false;
+	}
+
+	//start analysis
+#ifdef DEBUG
+	wcout << all_text[now_line] << endl;
+#endif
+	do {
+		//To do...
+		result = analysis();
+	} while (now_state == CMD_SINGLE);
+
+	return result;
+}
+
+
 bool SMI::Interpreter::analysis()
 {
 	SingleWord now_word;
 
 	wstring str = L"";
-	bool continue_analysis = true;
+	bool continue_analysis = true;	//mark if finished a cmd or text
+
 	while (continue_analysis) {
-		if (now_line == 145) {
-			cout << "break" << endl;
-		}
 		now_word = getNextChar();
 		if (!now_word.word) {
 			return false;
@@ -551,7 +496,7 @@ bool SMI::Interpreter::analysis()
 		}
 	}
 
-	handler(str);
+	operate(str);
 	return true;
 }
 
@@ -601,7 +546,22 @@ void SMI::Interpreter::backToBeforeChar()
 	}
 }
 
-void SMI::Interpreter::handler(const wstring & str)
+bool SMI::Interpreter::isKeyword(SingleWord word)
+{
+	if (word.is_transformded) {
+		return false;
+	}
+
+	bool result = keywords.find(word.word) != keywords.end();
+
+	if (word.word == L'!' || word.word == L'/') {
+		result &= now_state == CMD_SINGLE || now_state == CMD_MULTI;
+	}
+
+	return result;
+}
+
+void SMI::Interpreter::operate(const wstring & str)
 {
 	now_event.type = SMI::SMEType::END;
 	now_event.cmd.clear();
@@ -689,7 +649,7 @@ void SMI::Interpreter::cmdAnalysis(const wstring & command)
 	else if (cmd == L"flag_del") {		// <flag_del: name>
 		str_args.push_back(arg_array[0]);
 	}
-	else if (cmd == L"goto") {		// <goto: name>
+	else if (cmd == L"gotoLable") {		// <gotoLable: name>
 		str_args.push_back(arg_array[0]);
 	}
 	else if (cmd == L"if") {
@@ -725,8 +685,8 @@ void SMI::Interpreter::cmdOperate()
 	else if (cmd == L"flag_del") {		// <flag_del: name>
 		flags.erase(str_args[0]);
 	}
-	else if (cmd == L"goto") {		// <goto: name>
-		Goto(str_args[0]);
+	else if (cmd == L"gotoLable") {		// <gotoLable: name>
+		gotoLable(str_args[0]);
 	}
 	else if (cmd == L"if") {
 		bool test_result = false;
@@ -752,10 +712,62 @@ void SMI::Interpreter::cmdOperate()
 		changeState(CMD_MULTI);
 
 		if (!test_result) {
-			OutStack();
+			outStack();
 		}
 	}
 }
+bool SMI::Interpreter::gotoLable(const wstring& label)
+{
+	auto iter = labels.find(label);
+	bool result = iter != labels.end();
+	if (result) {
+		now_line = iter->second;
+		now_pos = 0;
+
+		while (stk_state.size()) {
+			stk_state.pop();
+		}
+
+		switchState(TEXT);
+	}
+	return result;
+}
+
+bool SMI::Interpreter::outStack()
+{
+	bool result = now_state == CMD_MULTI;
+	int floor = 0;
+
+	if (result) {
+		size_t pos = now_line;
+		while (pos < all_text.size()) {
+			if (all_text[pos] == L"<!>" || all_text[pos].find(L"if") != string::npos) {
+				++floor;
+			}
+
+			if (all_text[pos] == L"</>" || all_text[pos] == L"/") {
+				if (floor) {
+					--floor;
+				}
+				else {
+					returnState();
+					returnState();
+					break;
+				}
+			}
+			++pos;
+		}
+		result = pos != now_line;
+		now_line = pos + 1;
+		if (now_line >= all_text.size()) {
+			now_line = all_text.size() - 1;
+		}
+		now_pos = 0;
+	}
+
+	return result;
+}
+
 
 void SMI::Interpreter::changeState(State state)
 {
@@ -778,23 +790,6 @@ SMI::Interpreter::State SMI::Interpreter::returnState()
 	}
 	return result;
 }
-
-
-bool SMI::Interpreter::isKeyword(SingleWord word)
-{
-	if (word.is_transformded) {
-		return false;
-	}
-
-	bool result = keywords.find(word.word) != keywords.end();
-
-	if (word.word == L'!' || word.word == L'/') {
-		result &= now_state == CMD_SINGLE || now_state == CMD_MULTI;
-	}
-
-	return result;
-}
-
 
 void SMI::Interpreter::addLabel()
 {
