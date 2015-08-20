@@ -88,6 +88,8 @@ void Bg::Load(std::string p_file,int p_x,int p_y,float p_zoom,int p_a){
     m_src_h = m_rect.h * p_zoom;
 
     SetDisplayMode();
+    OnNext();
+    //OnNext();
 }
 
 void Bg::Load(std::string p_file,int p_x,int p_y,int p_w,int p_h,int p_a){

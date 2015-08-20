@@ -17,6 +17,7 @@
 #include "ChrMgr.h"
 #include "SMEProcUnit.h"
 #include <map>
+#include <stack>
 
 namespace ACGCross{
 namespace Galgame{
@@ -124,6 +125,7 @@ private:
 public:
     Corner corner;
     std::list<TextBoxLog> textLog;
+    ~GalgameActivity();
 
     void LoadSave(int num); //if num == -1 reset SMI to restart game.
     void SaveGame(int num); //Save game states;

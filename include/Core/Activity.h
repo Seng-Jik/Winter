@@ -18,10 +18,8 @@ namespace Core{
     private:
         std::forward_list<Control*> m_ansList;
         int m_logic_w,m_logic_h;
-        Activity* m_father = nullptr;
         bool m_Inited = false;
     protected:
-        inline Activity* GetParent(){return m_father;}
         void RegControl(Control&);
         void SetLogicScreenSize(int w,int h)
         {m_logic_h = h;m_logic_w = w;}

@@ -88,6 +88,7 @@ void Title::OnNext()
     }
 
     if(m_dosomething) {
+        gameData.UpdateData();
         m_dosomething = false;
         if(m_btnOpr == &m_bExit) exit(0);
         else if(m_btnOpr == &m_bSta) {
@@ -123,7 +124,6 @@ void Title::OnInit(){
 
 void Title::OnShow()
 {
-
     m_fpsCounter.Reset();
     m_mbg.SetDstRect(0,0);
     m_mbg.Init(r.Str("TITLE_MBG_IMAGE"));

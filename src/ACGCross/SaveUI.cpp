@@ -11,63 +11,78 @@ SaveUI::SaveUI()
 
 void SaveUI::OnShow()
 {
-    m_bgsur.Load(SDL_CreateRGBSurface(0,256,1,32,0x00FF0000,0x0000FF00,0x000000FF,0xFF000000));
-    m_bgsur.Lock();
-    for(int i = 0;i < 256;++i)
-        m_bgsur.PSet(i,0, i*0x1000000u);
+    if(GetParent() == pGal){
+        SDL_Rect r = {0,0,pRnd.GetPhW(),pRnd.GetPhH()};
+        Uint32* pixels = (new Uint32 [pRnd.GetPhW()*pRnd.GetPhH()]);
+        SDL_RenderReadPixels(pRnd,
+                         &r,
+                         SDL_PIXELFORMAT_ARGB8888,
+                         (void*)pixels,
+                         pRnd.GetPhW()*4);
+        m_bg.Load(SDL_CreateRGBSurfaceFrom((void*)pixels,pRnd.GetPhW(),pRnd.GetPhH(),32,pRnd.GetPhW()*4,
+                                           0x00FF0000,0X0000FF00,0x000000FF,0XFF000000));
+        m_bgt_o.Load(m_bg);
+        m_bgt_o.SetPos(0,0);
+        m_bgt_o.SetZoom(pRnd.GetW(),pRnd.GetH());
+        FastBlurARGB8888(m_bg,5);
+        m_bgt.Load(m_bg);
+        m_bgt.SetPos(0,0);
+        m_bgt.SetZoom(pRnd.GetW(),pRnd.GetH());
 
-    m_bgsur.Unlock();
-    m_bg.Load(m_bgsur);
-    m_bg.SetZoom(400,pRnd.GetH());
-    m_bg.SetAlpha(0);
-
-    m_stat = OPENNING;
-
-    m_timer.Reset();
+        m_stat = SHOWING;
+        m_timer.Reset();
+        delete pixels;
+    }
 }
 
 void SaveUI::OnHide()
 {
-
-}
-
-void SaveUI::OnNext()
-{
-    GetParent() -> OnNext();
-    if(m_timer.GetTimer() > 500 && m_stat == OPENNING){
-        float per = float(m_timer.GetTimer() - 500)/500;
-        if(per >= 1.0) {
-            m_stat = SELECTSAVE;
-            m_bg.SetAlpha(255);
-            m_bg.SetPos(0x40,-400,0);
-        }
-        else {
-            m_bg.SetAlpha(255*ArcFunc(per));
-            m_bg.SetPos(0x40,-200 - 200 * ArcFunc(per),0);
-        }
-    }else if(m_stat == CLOSING){
-        float per = float(m_timer.GetTimer())/500;
-        if(per >= 1.0) {
-            m_bg.SetAlpha(0);
-            Return();
-        }
-        else {
-            m_bg.SetAlpha(255 - 255*ArcFunc(per));
-            m_bg.SetPos(0x40,-400 + 200 * ArcFunc(per),0);
-        }
-    }
+    m_bgt.Clear();
+    m_bgt_o.Clear();
+    m_bg.Clear();
 }
 
 void SaveUI::OnDraw()
 {
-    GetParent() -> OnDraw();
-    m_bg.OnDraw();
+    if(GetParent() != pGal) GetParent() -> OnDraw();
+
+    if(GetParent() == pGal){
+        pRnd.Clear();
+        m_bgt_o.OnDraw();
+        m_bgt.OnDraw();
+    }
+}
+
+void SaveUI::OnNext()
+{
+    if(GetParent() != pGal) GetParent() -> OnNext();
+    if(GetParent() == pGal) SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,255);
+    if(m_stat == SHOWING){
+        float per = ArcFunc(float(m_timer.GetTimer()) / 500);
+        if(per == -1){
+            m_stat = NOR;
+            m_bgt.SetAlpha(128);
+            m_bgt_o.SetAlpha(0);
+        }else{
+            m_bgt_o.SetAlpha(255 - 255*per);
+            m_bgt.SetAlpha(128*per);
+        }
+    }else if(m_stat == HIDING){
+        float per = 1 - ArcFunc(float(m_timer.GetTimer()) / 500);
+        if(per == 2){
+            m_stat = NOR;
+            Return();
+        }else{
+            m_bgt_o.SetAlpha(255*(1-per));
+            m_bgt.SetAlpha(128*per);
+        }
+    }
 }
 
 void SaveUI::OnEvent(const SDL_Event& e){
     if(e.type == SDL_KEYUP) {
         if(GetParent() ==pTitle) ((Galgame::Title*)GetParent()) -> ShowButton();
-        m_stat = CLOSING;
+        m_stat = HIDING;
         m_timer.Reset();
     }
 }

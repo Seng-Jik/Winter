@@ -24,8 +24,9 @@ namespace Core{
     //在代码块外执行该函数
 
     void Goto(Activity*);   //跳转活动
-    void Call(Activity*);  //调用活动,不要递归
-    void Return();  //活动调用返回,不要递归
+    void Call(Activity*);  //调用活动
+    void Return();  //活动调用返回
+    Activity* GetParent();  //获取父活动
 
     class RndPtr{   //渲染器和窗口智能指针
     friend void CoreInit(const std::string& title,const bool FullScreen,const int w,const int h);

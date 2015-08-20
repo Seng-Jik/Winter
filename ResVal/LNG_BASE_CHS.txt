@@ -43,5 +43,10 @@ INT ED_STAFF_STOP = 3489
 INT ED_TIME = 6000
 STR ED_BGM = "GalRes/bgm/k.ogg"
 
-
+#设置界面
+STR CFG_SCREENMODE = "屏幕模式"
+STR CFG_BGMSTR = "背景音乐音量"
+STR CFG_CVSTR = "语音音量"
+STR CFG_SESTR = "音效音量"
+STR CFG_WARN = "这些设置将会在重新启动游戏后应用。"
 

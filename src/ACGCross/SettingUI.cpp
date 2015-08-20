@@ -24,7 +24,7 @@ SettingUI::SettingUI()
 
     m_font.Open(ACGCross::r.Str("AFX_FONT"),32);
 
-    m_bgmSetting.SetPos(60,150+r.Int("CFG_YOFFSET"));
+    m_bgmSetting.SetPos(660,150+r.Int("CFG_YOFFSET"));
     m_bgmSetting.SetLength(300);
 
 
@@ -33,11 +33,11 @@ SettingUI::SettingUI()
     m_bgmSetting.SetHKTex_Mot("GalGameSystem/sld2.png");
     m_bgmSetting.SetHKTex_Down("GalGameSystem/sld3.png");
 
-    m_bgmLab.Load(m_font,L"背景音乐音量");
-    m_bgmLab.SetPos(60,100+r.Int("CFG_YOFFSET"));
+    m_bgmLab.Load(m_font,StringToWString(r.Str("CFG_BGMSTR")));
+    m_bgmLab.SetPos(660,100+r.Int("CFG_YOFFSET"));
     //m_bgmLab.SetZoom(0.4);
 
-    m_cvSetting.SetPos(60,250+r.Int("CFG_YOFFSET"));
+    m_cvSetting.SetPos(660,250+r.Int("CFG_YOFFSET"));
     m_cvSetting.SetLength(300);
 
     m_cvSetting.SetBKTex("GalGameSystem/sldbk.png");
@@ -45,11 +45,11 @@ SettingUI::SettingUI()
     m_cvSetting.SetHKTex_Mot("GalGameSystem/sld2.png");
     m_cvSetting.SetHKTex_Down("GalGameSystem/sld3.png");
 
-    m_cvLab.Load(m_font,L"语音音量");
-    m_cvLab.SetPos(60,200+r.Int("CFG_YOFFSET"));
+    m_cvLab.Load(m_font,StringToWString(r.Str("CFG_CVSTR")));
+    m_cvLab.SetPos(660,200+r.Int("CFG_YOFFSET"));
    // m_cvLab.SetZoom(0.4);
 
-    m_seSetting.SetPos(60,350+r.Int("CFG_YOFFSET"));
+    m_seSetting.SetPos(660,350+r.Int("CFG_YOFFSET"));
     m_seSetting.SetLength(300);
 
     m_seSetting.SetBKTex("GalGameSystem/sldbk.png");
@@ -57,8 +57,8 @@ SettingUI::SettingUI()
     m_seSetting.SetHKTex_Mot("GalGameSystem/sld2.png");
     m_seSetting.SetHKTex_Down("GalGameSystem/sld3.png");
 
-    m_seLab.Load(m_font,L"音效音量");
-    m_seLab.SetPos(60,300+r.Int("CFG_YOFFSET"));
+    m_seLab.Load(m_font,StringToWString(r.Str("CFG_SESTR")));
+    m_seLab.SetPos(660,300+r.Int("CFG_YOFFSET"));
     //m_seLab.SetZoom(0.4);
 
     RegControl(m_seSetting);
@@ -69,28 +69,28 @@ SettingUI::SettingUI()
     RegControl(m_title);
 
     screen screenmode[] ={
-        {L"4:3-窗口-800x600",false},
-        {L"4:3-窗口-1024x768",false},
-        {L"4:3-窗口-1280x960",false},
-        {L"4:3-全屏-1024x768",true},
-        {L"4:3-全屏-1280x960",true},
-        {L"4:3-全屏-自适应",true},
-        {L"16:9-窗口-800x450",false},
-        {L"16:9-窗口-1024x576",false},
-        {L"16:9-窗口-1280x720",false},
-        {L"16:9-全屏-1024x576",true},
-        {L"16:9-全屏-1280x720",true},
-        {L"16:9-全屏-自适应",true}
+        {L"4:3-Win-800x600",false},
+        {L"4:3-Win-1024x768",false},
+        {L"4:3-Win-1280x960",false},
+        {L"4:3-Full-1024x768",true},
+        {L"4:3-Full-1280x960",true},
+        {L"4:3-Full-Auto",true},
+        {L"16:9-Win-800x450",false},
+        {L"16:9-Win-1024x576",false},
+        {L"16:9-Win-1280x720",false},
+        {L"16:9-Full-1024x576",true},
+        {L"16:9-Full-1280x720",true},
+        {L"16:9-Full-Auto",true}
     };
 
-    m_grp_title.Load(m_font,L"屏幕模式");
-    m_grp_title.SetPos(750,100+r.Int("CFG_YOFFSET"));
+    m_grp_title.Load(m_font,StringToWString(r.Str("CFG_SCREENMODE")));
+    m_grp_title.SetPos(150,100+r.Int("CFG_YOFFSET"));
     //m_grp_title.SetZoom(0.4);
     for(int i = 0;i < 12;++i){
         wstring wo=screenmode[i].w;
 
         m_grp_list[i].Load(m_font,wo);
-        m_grp_list[i].SetPos(650,150+30*i+r.Int("CFG_YOFFSET"));
+        m_grp_list[i].SetPos(150,150+30*i+r.Int("CFG_YOFFSET"));
         m_grp_list[i].SetZoom(0.9);
 
     }
@@ -103,8 +103,8 @@ SettingUI::SettingUI()
     m_return.SetDownPic("GalGameSystem/config_ret3.png");
     m_title.SetDownPic("GalGameSystem/config_tle3.png");
 
-    m_return.SetPos(55,458+r.Int("CFG_YOFFSET"));
-    m_title.SetPos(240,458+r.Int("CFG_YOFFSET"));
+    m_return.SetPos(655,458+r.Int("CFG_YOFFSET"));
+    m_title.SetPos(940,458+r.Int("CFG_YOFFSET"));
 }
 
 void SettingUI::updateGrpState(){
@@ -140,7 +140,7 @@ void SettingUI::OnShow()
     m_bgt.SetZoom(pRnd.GetW(),pRnd.GetH());
 
     m_grpWarn_t.SetRenderTextColor(0xfa,0xd8,0xd1,255);
-    m_grpWarn_t.Load(m_font,L"这些设置将会在重新启动游戏后应用。");
+    m_grpWarn_t.Load(m_font,StringToWString(ACGCross::r.Str("CFG_WARN")));
     m_grpWarn_t.SetZoom(0.7);
     m_grpWarn_t.SetPos(638,528+ACGCross::r.Int("CFG_YOFFSET"));
 
@@ -189,8 +189,8 @@ void SettingUI::OnNext()
             m_stat = NOR;
             m_return.SetAlpha(192);
             m_title.SetAlpha(192);
-            m_return.SetPos(55,458+r.Int("CFG_YOFFSET"));
-            m_title.SetPos(240,458+r.Int("CFG_YOFFSET"));
+            m_return.SetPos(655,458+r.Int("CFG_YOFFSET"));
+            m_title.SetPos(840,458+r.Int("CFG_YOFFSET"));
 
             m_cvSetting.SetValue(float(gameData.GetCVVol())/128);
             m_bgmSetting.SetValue(float(gameData.GetBGMVol())/128);
@@ -205,15 +205,15 @@ void SettingUI::OnNext()
             m_seLab.SetAlpha(255);
             m_grp_title.SetAlpha(255);
             for(int i = 0;i<12;++i){
-                m_grp_list[i].SetPos(int(650),150+30*i+r.Int("CFG_YOFFSET"));
+                m_grp_list[i].SetPos(int(50),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255);
                 else m_grp_list[i].SetAlpha(128);
             }
         }else{
             m_return.SetAlpha(192*per);
             m_title.SetAlpha(192*per);
-            m_return.SetPos(55,458+r.Int("CFG_YOFFSET")+50*(1-per));
-            m_title.SetPos(240,458+r.Int("CFG_YOFFSET")+50*(1-per));
+            m_return.SetPos(655,458+r.Int("CFG_YOFFSET")+50*(1-per));
+            m_title.SetPos(840,458+r.Int("CFG_YOFFSET")+50*(1-per));
 
             m_bgmLab.SetAlpha(255*per);
             m_cvLab.SetAlpha(255*per);
@@ -228,7 +228,7 @@ void SettingUI::OnNext()
             m_bgt_o.SetAlpha(255 - 255*per);
             m_bgt.SetAlpha(128*per);
             for(int i = 0;i<12;++i){
-                m_grp_list[i].SetPos(int(650+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
+                m_grp_list[i].SetPos(int(50+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255*per);
                 else m_grp_list[i].SetAlpha(128*per);
             }
@@ -237,12 +237,13 @@ void SettingUI::OnNext()
         float per = 1 - ArcFunc(float(m_timer.GetTimer()) / 500);
         if(per == 2){
             Return();
+            gameData.UpdateData();
             SDL_SetRenderDrawColor(pRnd,0,0,0,0);
         }else{
             m_return.SetAlpha(192*per);
             m_title.SetAlpha(192*per);
-            m_return.SetPos(55,458+r.Int("CFG_YOFFSET")+50*(1-per));
-            m_title.SetPos(240,458+r.Int("CFG_YOFFSET")+50*(1-per));
+            m_return.SetPos(655,458+r.Int("CFG_YOFFSET")+50*(1-per));
+            m_title.SetPos(840,458+r.Int("CFG_YOFFSET")+50*(1-per));
 
             m_bgmLab.SetAlpha(255*per);
             m_cvLab.SetAlpha(255*per);
@@ -258,8 +259,8 @@ void SettingUI::OnNext()
             m_bgt.SetAlpha(128*per);
 
             m_grpWarn_t.SetAlpha(255*per);
-            for(int i = 0;i<12;++i){
-                m_grp_list[i].SetPos(int(650+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
+            for(Uint8 i = 0;i<12;++i){
+                m_grp_list[i].SetPos(int(50+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255*per);
                 else m_grp_list[i].SetAlpha(128*per);
             }
@@ -268,6 +269,7 @@ void SettingUI::OnNext()
         float per = 1 - ArcFunc(float(m_timer.GetTimer()) / 500);
         if(per == 2){
             SDL_SetRenderDrawColor(pRnd,0xFF,0xFF,0xFF,255);
+            gameData.UpdateData();
             Goto(pTitle);
         }else{
             SDL_SetRenderDrawColor(pRnd,0x3A + 0xC5*(1-per),0xE6 + 0x19*(1-per),0xFF,255);
@@ -338,10 +340,14 @@ void SettingUI::OnEvent(const SDL_Event& e){
         if(!grpSel) updateGrpState();
     }
     else if(e.type == SDL_MOUSEBUTTONUP){
-        for(int i = 0;i < 12;++i){
+        SDL_Rect r = {51,ACGCross::r.Int("CFG_GRPHIG"),259,355};
+        if(InRect(r,e.motion.x,e.motion.y)) for(int i = 0;i < 12;++i){
             if(m_grp_list[i].InRect(e.motion.x,e.motion.y)){
                 gameData.SetGrpMode(i);
+                gameData.AddUpdateTask(-3);
                 m_grpWarn = true;
+                PNT("GRP:"<<i);
+                break;
             }
         }
         updateGrpState();

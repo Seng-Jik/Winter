@@ -1,9 +1,6 @@
 #include "ACGCross\NumTexture.h"
 using namespace ACGCross;
 
-#include <fstream>
-std::fstream logloglo("CLOCK_log.log",std::ios::out);
-#define PNT(s) logloglo<<s<<std::endl;
 
 
 void NumTexture::SetNum(char n)

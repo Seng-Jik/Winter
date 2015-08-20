@@ -17,14 +17,12 @@ class SaveUI : public Core::Activity
         void OnEvent(Core::Control*,const Uint32);
     protected:
     private:
-        Core::Texture m_bg;
-        Core::Surface m_bgsur;
+        Core::Surface m_bg;
+        Core::Texture m_bgt_o;
+        Core::Texture m_bgt;
+
         Core::Timer m_timer;
-        enum state{
-            OPENNING,
-            SELECTSAVE,
-            CLOSING
-        }m_stat;
+        enum {SHOWING,HIDING,NOR,TITLING} m_stat = NOR;
 };
 }
 

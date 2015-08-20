@@ -4,17 +4,19 @@
 #include "Core/Globals.h"
 #include "Core/Control.h"
 #include "Core/Debug.h"
+#include <stack>
 
 using namespace Core;
 using namespace std;
 
-Activity* nowFocus;
-Activity* nextFocus;
 
 
 namespace Core{
 
 RndPtr pRnd;
+Activity* nowFocus;
+Activity* nextFocus;
+stack<Activity*> actStack;
 
 void Goto(Activity* a)
 {
@@ -23,14 +25,17 @@ void Goto(Activity* a)
 }
 
 void Call(Activity* a){
-    a -> m_father = nowFocus;
-    a -> OnShow();
+    actStack.push(nowFocus);
     nowFocus = a;
+    a -> OnShow();
 }
+Activity* GetParent()
+{return actStack.top();}
 
 void Return(){
     nowFocus -> OnHide();
-    nowFocus = nowFocus -> m_father;
+    nowFocus = actStack.top();
+    actStack.pop();
 }
 
 //void ActivityDrawProc() //活动刷新一次处理
@@ -95,6 +100,11 @@ void CoreMain(Activity* start)
         /**** 如果有Goto消息则执行Goto ****/
         if(nextFocus != nullptr){
                 if(nowFocus != nullptr) nowFocus -> OnHide();
+                while(!actStack.empty()){
+                    Activity*p = actStack.top();
+                    p -> OnHide();
+                    actStack.pop();
+                }
                 nowFocus = nextFocus;
                 nextFocus = nullptr;
                 SDL_RenderSetLogicalSize(pRnd,nowFocus -> m_logic_w,nowFocus -> m_logic_h);
@@ -109,6 +119,11 @@ void CoreMain(Activity* start)
         while(SDL_PollEvent(&e)){
             if (e.type == SDL_QUIT) {   //如果是退出
                 nowFocus -> OnHide();
+                while(!actStack.empty()){
+                    Activity*p = actStack.top();
+                    p -> OnHide();
+                    actStack.pop();
+                }
                 return;
             }
             else {

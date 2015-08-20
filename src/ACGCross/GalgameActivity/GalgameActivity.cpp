@@ -12,8 +12,6 @@ using namespace ACGCross::Galgame;
 
 using namespace SMI;
 
-
-
 void GalgameActivity::SetWindowStyle_Normal()
 {
     //int x,y;
@@ -274,7 +272,6 @@ GalgameActivity::GalgameActivity(TextBox* b,Clock* c):m_bgm_loader(&BGMLoader),m
 
 void GalgameActivity::OnShow(){
     PNT("GALGAMEACTIVITY:ONSHOW");
-    //if(!m_autoSaver.Running()) m_autoSaver.Run();
 }
 
 void GalgameActivity::OnInit()
@@ -331,8 +328,8 @@ void GalgameActivity::OnHide()
     if(m_cv.Playing()) m_cv.Stop(250);
     if(m_se.Playing()) m_se.Stop(250);
 
-    m_text -> ForceClear();
     gameData.UpdateData();
+    pTextBox -> ForceClear();
     //m_autoSaver.WaitFinish();
     /*m_bg.Quit();
     m_chr.Quit(0);
@@ -340,9 +337,10 @@ void GalgameActivity::OnHide()
     m_snow.Stop();
     m_snow.Quit();
     m_textWindow.Quit();*/
-    //pGal = new GalgameActivity;
+
+    PNT("DELETE THIS");
+    //delete pGal;
     pGal = new GalgameActivity(pTextBox,pClock);
-    delete this;
 }
 
 void GalgameActivity::OnNext()
@@ -482,10 +480,7 @@ void GalgameActivity::OnEvent(Core::Control* c, const Uint32 msg)
     if(msg == 4){
         if(c == &m_textWindow_X) HideWindow();
         else if(c == &m_textWindow_set) Call(pSettingUI);
-        else if(c == &m_textWindow_save) {
-            if(m_SMEProc_stat != WAITCLICK) SMEClick();
-            Call(pSaveUI);
-        }
+        else if(c == &m_textWindow_save) Call(pSaveUI);
         else if(c == &m_textWindow_skip){
             m_SMEProc_skipping = true;
             m_text -> SetEffectSpeed(0);
@@ -697,6 +692,10 @@ void GalgameActivity::SaveGame(int num)
 }
 
 
+GalgameActivity::~GalgameActivity()
+{
+
+}
 
 
 void ACGCross::Galgame::BGMLoader(THREAD_ID id){
