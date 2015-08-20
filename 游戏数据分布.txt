@@ -1,0 +1,44 @@
+[LocalAppData]\ACGCross\01Winter.dat
+
+游戏数据大小：8+8+32+65536*16 = 1,048,624 字节
+
+以下为游戏数据分配：
+
+数据类型说明：
+bool 逻辑型 1字节，仅有0、1两个值
+Uint8 无符号8位整数，1字节
+bitsX X个bool叠加成的X/8个字节
+Xnull X字节的空数据，用于保留
+save 65536字节的游戏存档区
+
+-设置区（8字节）-
+bool BGM开关
+bool SE开关
+bool CV开关
+Uint8 画面模式（值为0、1、2、3、4五个）
+4null
+
+-游戏状态区域（8字节）-
+bits16 16个存档区是否有存档
+6null
+
+-CG存储区（32字节）-
+bits(8*32) CG开启标志
+
+-游戏存档区（65536*16字节）-
+save 自动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档
+save 手动存档

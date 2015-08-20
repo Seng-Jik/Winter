@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Galgame_Engine" />
+		<Option makefile="MAKEFILE" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Galgame_Engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/Debug/obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+					<Add directory="Core" />
+					<Add directory="src" />
+					<Add directory="include/ACGCross/Title" />
+					<Add directory="include/ACGCross" />
+					<Add directory="include/Core" />
+					<Add directory="include/ACGCross/GalgameActivity" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Galgame_Engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/Release/obj/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add directory="Core" />
+					<Add directory="src" />
+					<Add directory="include/ACGCross/Title" />
+					<Add directory="include/ACGCross" />
+					<Add directory="include/Core" />
+					<Add directory="include/ACGCross/GalgameActivity" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pg" />
+			<Add option="-g" />
+			<Add directory="$(#sdl2.include)/SDL2" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add option="-pg -lgmon" />
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add library="SDL2_mixer" />
+			<Add library="SDL2_ttf" />
+			<Add directory="$(#sdl2.lib)" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
+		</ExtraCommands>
+		<Unit filename="icon.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="include/ACGCross/ACGCross_Logo.h" />
+		<Unit filename="include/ACGCross/Button.h" />
+		<Unit filename="include/ACGCross/Ending.h" />
+		<Unit filename="include/ACGCross/FadeLable.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/Bg.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/Chr.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/ChrMgr.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/Clock.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/Corner.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/GalgameActivity.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/GameMenu.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/MaskCmdTarget.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/NameCard.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/SMEProcUnit.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/Snow.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/TextBox.h" />
+		<Unit filename="include/ACGCross/GalgameActivity/TextWindow.h" />
+		<Unit filename="include/ACGCross/Game.h" />
+		<Unit filename="include/ACGCross/GameDataMgr.h" />
+		<Unit filename="include/ACGCross/Mask.h" />
+		<Unit filename="include/ACGCross/MathFunc.h" />
+		<Unit filename="include/ACGCross/NumTexture.h" />
+		<Unit filename="include/ACGCross/SaveUI.h" />
+		<Unit filename="include/ACGCross/SettingUI.h" />
+		<Unit filename="include/ACGCross/Slider.h" />
+		<Unit filename="include/ACGCross/Title/GameLogo.h" />
+		<Unit filename="include/ACGCross/Title/MovingBG.h" />
+		<Unit filename="include/ACGCross/Title/Title.h" />
+		<Unit filename="include/ACGCross/Title/TitleButton.h" />
+		<Unit filename="include/ACGCross/str2wstr.h" />
+		<Unit filename="include/Core.h" />
+		<Unit filename="include/Core/Activity.h" />
+		<Unit filename="include/Core/Bundle.h" />
+		<Unit filename="include/Core/Control.h" />
+		<Unit filename="include/Core/Debug.h" />
+		<Unit filename="include/Core/Error.h" />
+		<Unit filename="include/Core/Font.h" />
+		<Unit filename="include/Core/Globals.h" />
+		<Unit filename="include/Core/Misc.h" />
+		<Unit filename="include/Core/OS.h" />
+		<Unit filename="include/Core/ResFile.h" />
+		<Unit filename="include/Core/ResVal.h" />
+		<Unit filename="include/Core/SDLbase.h" />
+		<Unit filename="include/Core/Sound.h" />
+		<Unit filename="include/Core/Surface.h" />
+		<Unit filename="include/Core/Texture.h" />
+		<Unit filename="include/Core/Thread.h" />
+		<Unit filename="include/Core/Timer.h" />
+		<Unit filename="include/SMLanguage/SMI.h" />
+		<Unit filename="src/ACGCross/ACGCross_Logo.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/ACGCross/Button.cpp" />
+		<Unit filename="src/ACGCross/Ending.cpp" />
+		<Unit filename="src/ACGCross/FadeLable.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/Bg.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/Chr.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/ChrMgr.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/Clock.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/Corner.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/GalgameActivity.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/GameMenu.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/MaskCmdTarget.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/NameCard.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/Snow.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/TextBox.cpp" />
+		<Unit filename="src/ACGCross/GalgameActivity/TextWindow.cpp" />
+		<Unit filename="src/ACGCross/Game.cpp" />
+		<Unit filename="src/ACGCross/GameDataMgr.cpp" />
+		<Unit filename="src/ACGCross/Mask.cpp" />
+		<Unit filename="src/ACGCross/MathFunc.cpp" />
+		<Unit filename="src/ACGCross/NumTexture.cpp" />
+		<Unit filename="src/ACGCross/SaveUI.cpp" />
+		<Unit filename="src/ACGCross/SettingUI.cpp" />
+		<Unit filename="src/ACGCross/Slider.cpp" />
+		<Unit filename="src/ACGCross/Title/GameLogo.cpp" />
+		<Unit filename="src/ACGCross/Title/MovingBG.cpp" />
+		<Unit filename="src/ACGCross/Title/Title.cpp" />
+		<Unit filename="src/ACGCross/Title/TitleButton.cpp" />
+		<Unit filename="src/ACGCross/str2wstr.cpp" />
+		<Unit filename="src/Core/CoreMain.cpp" />
+		<Unit filename="src/Core/Error.cpp" />
+		<Unit filename="src/Core/Font.cpp" />
+		<Unit filename="src/Core/Misc.cpp" />
+		<Unit filename="src/Core/ResFile.cpp" />
+		<Unit filename="src/Core/ResVal.cpp" />
+		<Unit filename="src/Core/Sound.cpp" />
+		<Unit filename="src/Core/Surface.cpp" />
+		<Unit filename="src/Core/Texture.cpp" />
+		<Unit filename="src/Core/Thread.cpp" />
+		<Unit filename="src/Core/Window.cpp" />
+		<Unit filename="src/SMLanguage/SMI.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

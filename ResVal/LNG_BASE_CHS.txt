@@ -1,0 +1,47 @@
+#冬 基本语言文件
+#中华人民共和国 大陆 简体中文
+
+STR AFX_FONT = "GalGameSystem/FangZhengHei.TTF"
+
+#标题页面
+STR TITLE_ACGCROSS_LOGO = "ACGCross/ACGCross_Logo_Mini.png"
+STR TITLE_GAMELOGO = ""
+
+STR TITLE_BUTTON_CONTINUE = "Title/bCon.png"
+STR TITLE_BUTTON_CONTINUE_M = "Title/tbCon.png"
+STR TITLE_BUTTON_CONTINUE_D = "Title/tbCon.png"
+
+STR TITLE_BUTTON_START = "Title/bSta.png"
+STR TITLE_BUTTON_START_M = "Title/tbSta.png"
+STR TITLE_BUTTON_START_D = "Title/tbSta.png"
+
+STR TITLE_BUTTON_LOAD = "Title/bLoad.png"
+STR TITLE_BUTTON_LOAD_M = "Title/tbLoad.png"
+STR TITLE_BUTTON_LOAD_D = "Title/tbLoad.png"
+
+STR TITLE_BUTTON_CG = "Title/bCG.png"
+STR TITLE_BUTTON_CG_M = "Title/tbCG.png"
+STR TITLE_BUTTON_CG_D = "Title/tbCG.png"
+
+STR TITLE_BUTTON_EXIT = "Title/bExt.png"
+STR TITLE_BUTTON_EXIT_M = "Title/tbExt.png"
+STR TITLE_BUTTON_EXIT_D = "Title/tbExt.png"
+
+#游戏主逻辑配置
+STR SMI_STORYFILE = "GalRes/winter_chs.smo"
+
+INT GAL_TEXTBOX_EFFECTSPEED = 100
+
+#游戏界面
+INT GAL_SAYSPEED = 100
+INT GAL_WORDSIZE = 36
+
+#ED
+#Warning:ED_STAFF's Height MUST smaller than 4000px!
+STR ED_STAFF = "GalGameSystem/Staff.png"
+INT ED_STAFF_STOP = 3489
+INT ED_TIME = 6000
+STR ED_BGM = "GalRes/bgm/k.ogg"
+
+
+
