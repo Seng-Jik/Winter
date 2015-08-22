@@ -181,7 +181,13 @@ bool ChrMgr::ChrMgrFinishAnimation(){
 	return true;
 }
 
-
+void ChrMgr::Reset(){
+    for(m_it = m_chr.begin();m_it != m_chr.end();){
+        delete m_it->second;
+        m_chr.erase(m_it++);
+    }
+    m_count = 0;
+}
 
    }
 }

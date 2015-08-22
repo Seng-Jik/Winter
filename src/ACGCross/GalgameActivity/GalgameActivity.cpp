@@ -558,6 +558,8 @@ void GalgameActivity::LoadSave(int num){
         m_SMEProc_smi.Goto(L"start");
         m_SMEProc_stat = FINISHED;
         m_autoUpdateDataTimer.Reset();
+        m_bg.Reset();
+        m_chrs.Reset();
         //m_snow.ForceStop();
     }else{
         GameDataMgr::SAVE& saveBundle = gameData[num];

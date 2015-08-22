@@ -39,6 +39,7 @@ namespace ACGCross{
         void LoadData(GameDataMgr::SAVE& bundle);
 
         bool ChrMgrFinishAnimation();
+        void Reset();
 
     };
 

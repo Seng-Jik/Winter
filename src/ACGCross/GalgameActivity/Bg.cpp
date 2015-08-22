@@ -7,6 +7,16 @@ using namespace Core;
 namespace ACGCross{
 namespace Galgame{
 
+void Bg::Reset(){
+    m_dp_mode = CENTER;
+    m_WillAlpha = m_WillMove = m_WillZoom = false;
+    IsLoaded = false;
+    AfterLoad = false;
+    m_alpha = 255;
+    m_tex.Clear();
+    m_sur.Clear();
+}
+
 Bg::Bg(){
     m_dp_mode = CENTER;
     IsLoaded = false;
@@ -88,8 +98,6 @@ void Bg::Load(std::string p_file,int p_x,int p_y,float p_zoom,int p_a){
     m_src_h = m_rect.h * p_zoom;
 
     SetDisplayMode();
-    OnNext();
-    //OnNext();
 }
 
 void Bg::Load(std::string p_file,int p_x,int p_y,int p_w,int p_h,int p_a){

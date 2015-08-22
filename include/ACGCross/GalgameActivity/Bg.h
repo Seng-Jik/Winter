@@ -1,4 +1,4 @@
-/* ** the  Bg system,using map - stl **
+﻿/* ** the  Bg system,using map - stl **
 ************ Write by Maikaze ************
 ****https://github.com/amarillys******* */
 #pragma once
@@ -66,6 +66,7 @@ namespace Galgame{
         void LoadData(GameDataMgr::SAVE& bundle);
 
         bool FinishAnimation();
+        void Reset();
 
     };
 }
