@@ -340,7 +340,7 @@ void GalgameActivity::OnHide()
 
     PNT("DELETE THIS");
     //delete pGal;
-    pGal = new GalgameActivity(pTextBox,pClock);
+    //pGal = new GalgameActivity(pTextBox,pClock);
 }
 
 void GalgameActivity::OnNext()
@@ -549,7 +549,15 @@ bool GalgameActivity::SMEFinished(SMI::SMEvent* pSme)
 void GalgameActivity::LoadSave(int num){
     m_bgm_name.clear();
     if(num < 0){
+        m_SMEProc_skipping = false;
+        m_SMEProc_autoing = false;
+        m_SMEProc_ProcCalled = false;
+        m_SMEProc_FastProcCalled = false;
+        m_name_isEmpty = true;
+        m_snow.ForceStop();
         m_SMEProc_smi.Goto(L"start");
+        m_SMEProc_stat = FINISHED;
+        m_autoUpdateDataTimer.Reset();
         //m_snow.ForceStop();
     }else{
         GameDataMgr::SAVE& saveBundle = gameData[num];
@@ -626,6 +634,7 @@ void GalgameActivity::LoadSave(int num){
         m_text -> ForceClear();
         SMEClick();
         textLog.clear();
+        m_autoUpdateDataTimer.Reset();
     }
 }
 
