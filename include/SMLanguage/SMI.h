@@ -1,6 +1,6 @@
 #pragma once
 
-#define DEBUG
+//#define SMI_DEBUG
 
 #include <iostream>
 #include <fstream>
@@ -16,7 +16,7 @@
 #define SAVE_SIZE 65536
 
 
-#ifndef DEBUG
+#ifndef SMI_DEBUG
 #include "../Core/Bundle.h"
 #include "../Core/ResFile.h"
 
@@ -97,7 +97,7 @@ namespace SMI
 		bool LoadStory(const std::string& filename, bool is_encoding);
 		bool PullEvent(SMEvent& out_event);
 
-#ifdef DEBUG
+#ifdef SMI_DEBUG
 		void Save(const std::string save_file);
 		bool Load(const std::string save_file);
 #else
@@ -109,6 +109,9 @@ namespace SMI
 		void Unserialize(BYTE *buffer);
 
 		void InfoOut(std::wostream &out);
+
+		//I need Goto Interface
+		void Goto(const std::wstring& label);
 
 	private:
 		bool loadText(std::istream& file);
@@ -132,8 +135,8 @@ namespace SMI
 		void changeState(State state);
 		void switchState(State state);
 		State returnState();
-		
-		//init help func 
+
+		//init help func
 		void addLabel();
 		void scanFile();
 

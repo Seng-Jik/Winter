@@ -1,7 +1,7 @@
 #include "../../include/SMLanguage/SMI.h"
 
 using namespace SMI;
-#ifndef DEBUG
+#ifndef SMI_DEBUG
 using namespace Core;
 #endif
 using namespace std;
@@ -20,7 +20,7 @@ SMI::Interpreter::~Interpreter()
 bool SMI::Interpreter::LoadStory(const string & filename, bool is_encoding)
 {
 	bool result = false;
-#ifndef DEBUG
+#ifndef SMI_DEBUG
 	ResFile res;
 	res.Load(string(filename.c_str()));
 
@@ -61,7 +61,7 @@ bool SMI::Interpreter::PullEvent(SMEvent & out_event)
 	return result;
 }
 
-#ifdef DEBUG
+#ifdef SMI_DEBUG
 void SMI::Interpreter::Save(const string save_file)
 {
 	ofstream file(save_file, ios::binary);
@@ -429,7 +429,7 @@ bool SMI::Interpreter::runOneStep()
 	}
 
 	//start analysis
-#ifdef DEBUG
+#ifdef SMI_DEBUG
 	wcout << all_text[now_line] << endl;
 #endif
 	do {
@@ -907,4 +907,9 @@ wstring s2ws(const string& s)
 	delete[]_Dest;
 	setlocale(LC_ALL, "C");
 	return result;
+}
+
+void Interpreter::Goto(const std::wstring& label)
+{
+    gotoLable(label);
 }
