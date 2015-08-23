@@ -40,8 +40,12 @@ void ACGCross::InitGame(){
     LCID lcid = GetSystemDefaultLCID(); //GetSystemLanguage
     r.Load("ResVal/LNG_BASE_CHS.TXT");   //China WanSui!!
     switch(lcid){
+    case  0x1004:
+        r.Load("ResVal/LNG_CHT_MO.txt");break;
+    case 3076:
+        r.Load("ResVal/LNG_CHT_HK.txt");break;
     case 0x404:
-        r.Load("ResVal/LNG_CHT.txt");break;
+        r.Load("ResVal/LNG_CHT_TW.txt");break;
     case 0x409:
         r.Load("ResVal/LNG_ENG.txt");break;
     case 0x411 :
