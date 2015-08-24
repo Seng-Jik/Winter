@@ -8,12 +8,14 @@ using namespace ACGCross;
 
 void TitleButton::Hide()
 {
+    if(m_stat == -1) return;
     m_stat = -1;
     m_fpsCounter.Reset();
 }
 
 void TitleButton::Show()
 {
+    if(m_stat == -2) return;
     m_stat = -2;
     m_fpsCounter.Reset();
 }

@@ -21,6 +21,7 @@ namespace Core{
         bool m_Inited = false;
     protected:
         void RegControl(Control&);
+        void UnRegAllControl(){m_ansList.clear();};
         void SetLogicScreenSize(int w,int h)
         {m_logic_h = h;m_logic_w = w;}
         //设置屏幕逻辑大小
@@ -39,7 +40,7 @@ namespace Core{
         virtual void OnEvent(const SDL_Event&){};
         //当没有控件接受消息时，回调此函数
 
-        virtual void OnEvent(Control*,const Uint32){};
+        virtual void OnEvent(Control*,const Sint32){};
         //当有控件接收消息时，由Control调用此函数，并传入控件给的消息
 
         virtual void OnNext() {};   //请求下一帧，执行逻辑和动画

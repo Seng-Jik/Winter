@@ -137,7 +137,7 @@ public:
     void OnNext();
     void OnDraw();
     void OnEvent(const SDL_Event&);
-    void OnEvent(Core::Control*,const Uint32);
+    void OnEvent(Core::Control*,const Sint32);
     virtual void SetVol(Uint8 bgm,Uint8 se,Uint8 cv);
 
     virtual void SMEProc(SMI::SMEvent*);

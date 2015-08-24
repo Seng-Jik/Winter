@@ -19,7 +19,7 @@ class SettingUI : public Core::Activity
         void OnDraw();
         void OnNext();
 
-        void OnEvent(Core::Control*,const Uint32);
+        void OnEvent(Core::Control*,const Sint32);
         void OnEvent(const SDL_Event&);
 
     protected:

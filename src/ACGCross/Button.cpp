@@ -28,7 +28,7 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
             if(InRect(m_r,e.motion.x,e.motion.y)){
                 m_stat = 2;
                 ActivityEvent(2);
-                return true;
+                return false;
             }else{
                 m_stat = 1;
                 return false;

@@ -47,14 +47,14 @@ void Title::OnDraw()
     FOR_EACH(p,m_visableBtn.begin(),m_visableBtn.end())
         (*p) -> OnDraw();
 
-    if(m_stat == 3){
+    if(m_stat == 3 || m_stat == 4){
         float per = float(m_fpsCounter.GetTimer())/40;
 
         SDL_SetRenderDrawColor(pRnd,0,0,0,per*255);
-        pRnd.Clear();
+        if(m_stat == 3) pRnd.Clear();
         if(per>=1.0) {
             SDL_SetRenderDrawColor(pRnd,0,0,0,255);
-            pRnd.Clear();
+            if(m_stat == 3) pRnd.Clear();
             m_dosomething = true;
         }
     }
@@ -97,6 +97,8 @@ void Title::OnNext()
         }else if(m_btnOpr == &m_bContinue) {
             ((GalgameActivity*)pGal) -> LoadSave(0);
             Goto(pGal);
+        }else if(m_btnOpr == &m_bLoad){
+            Call(pSaveUI);
         }
         m_btnOpr = nullptr;
     }
@@ -165,7 +167,7 @@ void Title::OnShow()
     m_bSta.SetMotionPic(r.Str("TITLE_BUTTON_START_M"));
     m_bSta.SetDownPic(r.Str("TITLE_BUTTON_START_D"));
     //m_bSta.SetPos(813,70);
-    m_bSta.TitleButton::Show();
+    m_bSta.Button::Hide();
     m_visableBtn.push_back(&m_bSta);
 
     if(gameData.GetSaveExist()){
@@ -198,9 +200,9 @@ void Title::OnShow()
         (*p) -> SetPos(x,r.Int("TITLE_BUTTON_Y"));
         x -= 85;
     }
-    m_visableBtn[0] -> Show();
 
     m_fpsCounter.Reset();
+    m_visableBtn[0] -> Show();
     m_stat = 2;
 
 }
@@ -219,11 +221,13 @@ void Title::OnEvent(const SDL_Event& e)
 {
 }
 
-void Title::OnEvent(Control* c, const Uint32 msg)
+void Title::OnEvent(Control* c, const Sint32 msg)
 {
     if(c == &m_bLoad && msg == 3){
         HideButton();
-        Call(pSaveUI);
+        //Call(pSaveUI);
+        m_btnOpr = (TitleButton*)c;
+        //m_dosomething = true;
         return;
     }
     m_btnOpr = (TitleButton*)c;

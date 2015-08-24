@@ -3,7 +3,7 @@
 
 #include "SDLbase.h"
 
-#define ActivityEvent(UINT32_EVENT) a.OnEvent((Control*)this,UINT32_EVENT);
+#define ActivityEvent(SINT32_EVENT) a.OnEvent((Control*)this,SINT32_EVENT);
 
 /* 控件基类介绍 */
 /*

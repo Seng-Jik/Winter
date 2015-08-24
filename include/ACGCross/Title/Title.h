@@ -51,7 +51,7 @@ namespace Galgame{
         void OnNext();
         void OnDraw();
         void OnEvent(const SDL_Event&);
-        void OnEvent(Core::Control*, const Uint32);
+        void OnEvent(Core::Control*, const Sint32);
     };
 }
 }

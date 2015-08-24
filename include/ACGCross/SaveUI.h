@@ -14,7 +14,7 @@ class SaveUI : public Core::Activity
         void OnNext();
         void OnDraw();
         void OnEvent(const SDL_Event& e);
-        void OnEvent(Core::Control*,const Uint32);
+        void OnEvent(Core::Control*,const Sint32);
     protected:
     private:
         Core::Surface m_bg;
@@ -33,7 +33,8 @@ class SaveUI : public Core::Activity
             bool OnEvent(const SDL_Event&,Activity& a);
             void OnDraw();
             void SetPos(int x,int y);
-            void SetAlpha(Uint8);
+            void SetShowing(float per);
+            //void SetHiding(float per);
             void LoadSurface(SDL_Surface* pSur);
             virtual ~SaveButton(){};
         } *m_saves [4][4];

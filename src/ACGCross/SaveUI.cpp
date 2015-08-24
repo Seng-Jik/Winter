@@ -30,8 +30,6 @@ void SaveUI::OnShow()
         m_bgt.SetPos(0,0);
         m_bgt.SetZoom(pRnd.GetW(),pRnd.GetH());
 
-        m_stat = SHOWING;
-        m_timer.Reset();
         delete pixels;
     }
 
@@ -41,26 +39,43 @@ void SaveUI::OnShow()
 
     //DBG
     auto pSur = SDL_LoadBMP("0.bmp");
+    Surface noData;
+    noData.Load("GalGameSystem/saveUI_NODATA.png");
 
     for(int i = 0;i < 4;++i){
         int x = r.Int("SAV_BESTLEFT_X");
         for(int j = 0;j < 4;++j){
             if(num >= 16) num = -1;
-            PNT("SAVE UI SETTING BUTTON:"<<num);
+            PNT("SAVE UI SETTING BUTTON:"<<num<<":"<<x<<","<<y);
             m_saves[i][j] = new SaveButton(num);
-            m_saves[i][j] ->LoadSurface(pSur);
+            if(num != -1){
+                if(gameData.GetDataExist(num)){
+                    //TODO:加载存档预览图
+                    m_saves[i][j] ->LoadSurface(pSur);
+                }
+                else
+                    m_saves[i][j] ->LoadSurface(noData);
+            }else{
+                Core::Surface sur;
+                sur.Load("GalGameSystem/saveUI_back.png");
+                m_saves[i][j] -> LoadSurface(sur);
+            }
             m_saves[i][j] ->SetPos(x,y);
             x -= 180;
-            m_saves[i][j] ->SetAlpha(0);
+            m_saves[i][j] ->SetShowing(0);
             num++;
+            RegControl(*m_saves[i][j]);
         }
         y += 110;
     }
 
+    m_stat = SHOWING;
+    m_timer.Reset();
 }
 
 void SaveUI::OnHide()
 {
+    UnRegAllControl();
     m_bgt.Clear();
     m_bgt_o.Clear();
     m_bg.Clear();
@@ -81,12 +96,14 @@ void SaveUI::OnDraw()
     }
 
     for(int i = 0;i <4;++i)
-    for(int j = 0;j < 4;++j)
+    for(int j = 0;j < 4;++j){
         m_saves[i][j] -> OnDraw();
+    }
 }
 
 void SaveUI::OnNext()
 {
+
     if(GetParent() != pGal) GetParent() -> OnNext();
     if(GetParent() == pGal) SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,255);
     if(m_stat == SHOWING){
@@ -97,13 +114,13 @@ void SaveUI::OnNext()
             m_bgt_o.SetAlpha(0);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
-                m_saves[i][j] -> SetAlpha(255);
+                m_saves[i][j] -> SetShowing(1);
         }else{
             m_bgt_o.SetAlpha(255 - 255*per);
             m_bgt.SetAlpha(128*per);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
-                m_saves[i][j] -> SetAlpha(255*per);
+                m_saves[i][j] -> SetShowing(per);
         }
     }else if(m_stat == HIDING){
         float per = 1 - ArcFunc(float(m_timer.GetTimer()) / 200);
@@ -115,21 +132,21 @@ void SaveUI::OnNext()
             m_bgt.SetAlpha(128*per);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
-                m_saves[i][j] -> SetAlpha(255*per);
+                m_saves[i][j] -> SetShowing(per);
         }
     }
 }
 
 void SaveUI::OnEvent(const SDL_Event& e){
-    if(e.type == SDL_KEYUP) {
+}
+
+void SaveUI::OnEvent(Core::Control* c, const Sint32 sav)
+{
+    if(sav == -1){
         if(GetParent() ==pTitle) ((Galgame::Title*)GetParent()) -> ShowButton();
         m_stat = HIDING;
         m_timer.Reset();
     }
-}
-
-void SaveUI::OnEvent(Core::Control*, const Uint32)
-{
 }
 
 void SaveUI::SaveButton::OnDraw()
@@ -141,10 +158,27 @@ void SaveUI::SaveButton::LoadSurface(SDL_Surface* pSur)
 {
     m_button.Load(pSur);
     m_button.SetBlend(SDL_BLENDMODE_BLEND);
+    m_button.SetColor(0x3A,0xE6,0xFF);
+    m_button.SetAlpha(192);
 }
 
 bool SaveUI::SaveButton::OnEvent(const SDL_Event& e, Activity& a)
 {
+    if(e.type == SDL_MOUSEMOTION){
+        if(m_button.InRect(e.motion.x,e.motion.y)){
+            m_button.SetColor(255,255,255);
+        }else
+            m_button.SetColor(0x3A,0xE6,0xFF);
+    }else if(e.type == SDL_MOUSEBUTTONDOWN){
+        if(m_button.InRect(e.button.x,e.button.y)){
+            m_button.SetAlpha(128);
+        }
+    }else if(e.type == SDL_MOUSEBUTTONUP){
+        m_button.SetAlpha(192);
+        if(m_button.InRect(e.button.x,e.button.y)){
+            ActivityEvent(m_saveID);
+        }
+    }
     return false;
 }
 
@@ -153,7 +187,10 @@ void SaveUI::SaveButton::SetPos(int x, int y)
     m_button.SetPos(x,y);
 }
 
-void SaveUI::SaveButton::SetAlpha(Uint8 a)
+void SaveUI::SaveButton::SetShowing(float per)
 {
-    m_button.SetAlpha(a);
+    m_button.SetAlpha(192*per);
+    m_button.SetSrc(0,0,160,90*per);
+    m_button.SetZoom(160,int(90*per));
 }
+

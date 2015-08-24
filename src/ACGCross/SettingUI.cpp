@@ -301,7 +301,7 @@ void SettingUI::OnNext()
     }
 }
 
-void SettingUI::OnEvent(Control* c, const Uint32 msg)
+void SettingUI::OnEvent(Control* c, const Sint32 msg)
 {
     if(m_stat != NOR) return;
     else if(c == &m_return && msg == 3){

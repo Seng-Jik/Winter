@@ -475,7 +475,7 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
 
 }
 
-void GalgameActivity::OnEvent(Core::Control* c, const Uint32 msg)
+void GalgameActivity::OnEvent(Core::Control* c, const Sint32 msg)
 {
     if(msg == 4){
         if(c == &m_textWindow_X) HideWindow();
