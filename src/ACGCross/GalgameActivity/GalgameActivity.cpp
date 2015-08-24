@@ -693,6 +693,8 @@ void GalgameActivity::LowerSaveGame()
 
     //Add Update Task To GameDataMgr
     gameData.AddUpdateTask(0);
+
+    PNT("LOWSAVEGAME SAVESIZE:"<<saveBundle.WPtr());
 }
 
 void GalgameActivity::SaveGame(int num)

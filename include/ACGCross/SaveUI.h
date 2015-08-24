@@ -23,6 +23,20 @@ class SaveUI : public Core::Activity
 
         Core::Timer m_timer;
         enum {SHOWING,HIDING,NOR,TITLING} m_stat = NOR;
+
+        class SaveButton:public Core::Control{
+        private:
+            Sint8 m_saveID;
+            Core::Texture m_button;
+        public:
+            SaveButton(Sint8 saveID):m_saveID(saveID){};
+            bool OnEvent(const SDL_Event&,Activity& a);
+            void OnDraw();
+            void SetPos(int x,int y);
+            void SetAlpha(Uint8);
+            void LoadSurface(SDL_Surface* pSur);
+            virtual ~SaveButton(){};
+        } *m_saves [4][4];
 };
 }
 

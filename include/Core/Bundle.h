@@ -16,6 +16,10 @@ namespace Core{
     public:
         Bundle();
         void ResetPtr();    //重设读写指针
+        inline Uint32 WPtr(){return m_wptr;};
+        inline void WPtr_Offset(Uint32 o){m_wptr+=o;}
+        inline Uint32 RPtr(){return m_rptr;};
+        inline void RPtr_Offset(Uint32 o){m_rptr+=o;}
         template <typename type> void Write(const type&);
         //在当前写位置写入一个数据，并把写指针挪向下一个数据
         //仅限基本类型！类似Uint32、BYTE及其已知大小的数组型
