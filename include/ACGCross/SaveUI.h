@@ -9,6 +9,7 @@ class SaveUI : public Core::Activity
 {
     public:
         SaveUI();
+        void MoveDuang(int mouse_x,int mouse_y);
         void OnShow();
         void OnHide();
         void OnNext();
@@ -27,12 +28,14 @@ class SaveUI : public Core::Activity
         class SaveButton:public Core::Control{
         private:
             Sint8 m_saveID;
+            SDL_Point m_orgPos;
             Core::Texture m_button;
         public:
             SaveButton(Sint8 saveID):m_saveID(saveID){};
             bool OnEvent(const SDL_Event&,Activity& a);
             void OnDraw();
             void SetPos(int x,int y);
+            void SetPosOffset(int x,int y);
             void SetShowing(float per);
             //void SetHiding(float per);
             void LoadSurface(SDL_Surface* pSur);

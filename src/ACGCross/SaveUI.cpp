@@ -69,8 +69,18 @@ void SaveUI::OnShow()
         y += 110;
     }
 
+    int mouse_x,mouse_y;
+    SDL_GetMouseState(&mouse_x,&mouse_y);
+    MoveDuang(mouse_x,mouse_y);
+
     m_stat = SHOWING;
     m_timer.Reset();
+}
+
+void SaveUI::MoveDuang(int mouse_x,int mouse_y){
+    for(int i = 0;i <4;++i)
+    for(int j = 0;j < 4;++j)
+        m_saves[i][j] -> SetPosOffset(-(mouse_x-512)*0.03,-(mouse_y-384)*0.03);
 }
 
 void SaveUI::OnHide()
@@ -138,6 +148,8 @@ void SaveUI::OnNext()
 }
 
 void SaveUI::OnEvent(const SDL_Event& e){
+    if(e.type == SDL_MOUSEMOTION)
+        MoveDuang(e.motion.x,e.motion.y);
 }
 
 void SaveUI::OnEvent(Core::Control* c, const Sint32 sav)
@@ -185,6 +197,8 @@ bool SaveUI::SaveButton::OnEvent(const SDL_Event& e, Activity& a)
 void SaveUI::SaveButton::SetPos(int x, int y)
 {
     m_button.SetPos(x,y);
+    m_orgPos.x = x;
+    m_orgPos.y = y;
 }
 
 void SaveUI::SaveButton::SetShowing(float per)
@@ -194,3 +208,7 @@ void SaveUI::SaveButton::SetShowing(float per)
     m_button.SetZoom(160,int(90*per));
 }
 
+void SaveUI::SaveButton::SetPosOffset(int x, int y)
+{
+    m_button.SetPos(x+m_orgPos.x,y+m_orgPos.y);
+}
