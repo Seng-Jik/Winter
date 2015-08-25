@@ -4,7 +4,6 @@
 #define FPS 60
 
 #define FOR_EACH(val,begin,end) for(auto val = begin;val != end;++val)
-
 #include "SDLbase.h"
 #include <string>
 #include "../Core/Debug.h"
@@ -26,7 +25,8 @@ namespace Core{
     void Goto(Activity*);   //跳转活动
     void Call(Activity*);  //调用活动
     void Return();  //活动调用返回
-    Activity* GetParent();  //获取父活动
+    void JumpDraw();    //不渲染当前帧
+    //Activity* GetParent();  //获取父活动
 
     class RndPtr{   //渲染器和窗口智能指针
     friend void CoreInit(const std::string& title,const bool FullScreen,const int w,const int h);

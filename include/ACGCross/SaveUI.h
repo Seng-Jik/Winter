@@ -2,6 +2,7 @@
 #define _HEAD_SAVEUI_HEAD_
 
 #include "Core.h"
+#include "Button.h"
 
 namespace ACGCross{
 
@@ -16,11 +17,18 @@ class SaveUI : public Core::Activity
         void OnDraw();
         void OnEvent(const SDL_Event& e);
         void OnEvent(Core::Control*,const Sint32);
+        void NeedReturn();
+        void SetCallByTitle(bool b){m_callByTitle = b;}
+        bool GetCallByTitle(){return m_callByTitle;}
+        void DLoad(int);
     protected:
     private:
+        int m_dLoad;Uint8 m_dLoad_fg;
         Core::Surface m_bg;
         Core::Texture m_bgt_o;
         Core::Texture m_bgt;
+
+        bool m_callByTitle = false;
 
         Core::Timer m_timer;
         enum {SHOWING,HIDING,NOR,TITLING} m_stat = NOR;
@@ -35,12 +43,37 @@ class SaveUI : public Core::Activity
             bool OnEvent(const SDL_Event&,Activity& a);
             void OnDraw();
             void SetPos(int x,int y);
+            SDL_Point GetPos();
             void SetPosOffset(int x,int y);
             void SetShowing(float per);
             //void SetHiding(float per);
             void LoadSurface(SDL_Surface* pSur);
             virtual ~SaveButton(){};
         } *m_saves [4][4];
+
+        class Really:public Core::Activity{
+        private:
+            SDL_Rect m_bg;
+            Button m_save;
+            Button m_load;
+            Button m_del;
+            SaveButton* m_saveBtn;
+            bool m_needRet = false;
+            int m_saveNum;
+
+            enum{SO_MENU,SO_BTN,HI_BTN,HI_MENU,NOR} m_state = NOR;
+            Core::Timer m_timer;
+            bool m_callByTitle;
+        public:
+            Really();
+            void SetInit(int x,int y,int dataNum,SaveButton*);
+            void OnShow();
+            void OnHide();
+            void OnDraw();
+            void OnNext();
+            void OnEvent(const SDL_Event&);
+            void OnEvent(Core::Control*,const Sint32);
+        }m_actReally;
 };
 }
 

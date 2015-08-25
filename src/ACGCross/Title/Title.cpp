@@ -1,6 +1,7 @@
 #include "ACGCross/Title/Title.h"
 #include "ACGCross/Game.h"
 #include "ACGCross/GalgameActivity/GalgameActivity.h"
+#include "ACGCross/SaveUI.h"
 #include <cstdlib>
 #include <fstream>
 using namespace std;
@@ -23,7 +24,7 @@ void Title::HideButton(){
 void Title::FadeToBlackAndOpr(){
     m_stat = 3;
     m_fpsCounter.Reset();
-    FOR_EACH(p,m_visableBtn.begin(),m_visableBtn.end())
+    if(!m_bSta.GetHidden()) FOR_EACH(p,m_visableBtn.begin(),m_visableBtn.end())
         (*p) -> Hide();
 }
 
@@ -56,6 +57,7 @@ void Title::OnDraw()
             SDL_SetRenderDrawColor(pRnd,0,0,0,255);
             if(m_stat == 3) pRnd.Clear();
             m_dosomething = true;
+            m_stat = 0;
         }
     }
 }
@@ -90,14 +92,18 @@ void Title::OnNext()
     if(m_dosomething) {
         gameData.UpdateData();
         m_dosomething = false;
+
         if(m_btnOpr == &m_bExit) exit(0);
         else if(m_btnOpr == &m_bSta) {
             ((GalgameActivity*)pGal) -> LoadSave(-1);
             Goto(pGal);
+            JumpDraw();
         }else if(m_btnOpr == &m_bContinue) {
             ((GalgameActivity*)pGal) -> LoadSave(0);
             Goto(pGal);
+            JumpDraw();
         }else if(m_btnOpr == &m_bLoad){
+            ((SaveUI*)pSaveUI) -> SetCallByTitle(true);
             Call(pSaveUI);
         }
         m_btnOpr = nullptr;
@@ -126,6 +132,8 @@ void Title::OnInit(){
 
 void Title::OnShow()
 {
+    m_dataNum = -1;
+
     m_fpsCounter.Reset();
     m_mbg.SetDstRect(0,0);
     m_mbg.Init(r.Str("TITLE_MBG_IMAGE"));

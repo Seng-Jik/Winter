@@ -1,6 +1,7 @@
 #include "ACGCross\GalgameActivity\GalgameActivity.h"
 #include "ACGCross/str2wstr.h"
 #include "ACGCross/Game.h"
+#include "ACGCross/SaveUI.h"
 
 #define IFFAST if(fast)
 #define REGSMCMD(s,u) m_SMEProc_map[s] = (SMEProcUnit*)&u
@@ -272,6 +273,8 @@ GalgameActivity::GalgameActivity(TextBox* b,Clock* c):m_bgm_loader(&BGMLoader),m
 
 void GalgameActivity::OnShow(){
     PNT("GALGAMEACTIVITY:ONSHOW");
+    m_actGlbStat = SHOWING;
+    m_actGlbTimer.Reset();
 }
 
 void GalgameActivity::OnInit()
@@ -287,10 +290,10 @@ void GalgameActivity::OnInit()
     corner.Init();
     corner.SetFadeSpeed(600);
     corner.SetTopAlpha(192);
-    corner.SetSrc(0,0,64,74);
-    corner.SetPos(926,r.Int("GAL_CORNER_Y"));
-    corner.SetZoom(70,80);
-    corner.SetRollCenter(35,40);
+    //corner.SetSrc(0,0,64,74);
+    //corner.SetPos(926,r.Int("GAL_CORNER_Y"));
+    //corner.SetZoom(70,80);
+    corner.SetRollCenter(128,147);
 
     PNT("GALGAMEACTIVITY:ONINIT twin");
     m_textWindow.Init();
@@ -390,6 +393,17 @@ void GalgameActivity::OnDraw()
 
     m_clock -> OnDraw();
     corner.OnDraw();
+
+    if(m_actGlbStat == SHOWING){
+        float per = float(m_actGlbTimer.GetTimer()) / 400;
+        if(per>=1){
+            m_actGlbStat = NOR;
+        }else{
+            SDL_SetRenderDrawColor(pRnd,0,0,0,255-255*per);
+            SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
+            pRnd.Clear();
+        }
+    }
 }
 
 void GalgameActivity::OnEvent(const SDL_Event& e)
@@ -480,7 +494,7 @@ void GalgameActivity::OnEvent(Core::Control* c, const Sint32 msg)
     if(msg == 4){
         if(c == &m_textWindow_X) HideWindow();
         else if(c == &m_textWindow_set) Call(pSettingUI);
-        else if(c == &m_textWindow_save) Call(pSaveUI);
+        else if(c == &m_textWindow_save) {((SaveUI*)pSaveUI) -> SetCallByTitle(false);Call(pSaveUI);}
         else if(c == &m_textWindow_skip){
             m_SMEProc_skipping = true;
             m_text -> SetEffectSpeed(0);
@@ -548,6 +562,7 @@ bool GalgameActivity::SMEFinished(SMI::SMEvent* pSme)
 
 void GalgameActivity::LoadSave(int num){
     m_bgm_name.clear();
+    corner.Hide();
     if(num < 0){
         m_SMEProc_skipping = false;
         m_SMEProc_autoing = false;

@@ -33,6 +33,7 @@ namespace Galgame{
         TitleButton m_bLoad;
         TitleButton m_bCG;
         TitleButton m_bExit;
+        int m_dataNum = -1;
         std::vector<TitleButton*> m_visableBtn;
 
         TitleButton* m_btnOpr;
@@ -42,6 +43,7 @@ namespace Galgame{
 
     public:
         Title();
+        inline void SetLoad(int n){m_dataNum = n;}
         void OnInit();
         void OnShow();
         void OnHide();

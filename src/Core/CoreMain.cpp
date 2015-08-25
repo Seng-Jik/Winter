@@ -17,7 +17,11 @@ RndPtr pRnd;
 Activity* nowFocus;
 Activity* nextFocus;
 stack<Activity*> actStack;
+bool jumpDraw = false;
 
+void JumpDraw(){
+    jumpDraw = true;
+}
 void Goto(Activity* a)
 {
     if(a != nowFocus)
@@ -29,8 +33,8 @@ void Call(Activity* a){
     nowFocus = a;
     a -> OnShow();
 }
-Activity* GetParent()
-{return actStack.top();}
+//Activity* GetParent()
+//{return actStack.top();}
 
 void Return(){
     nowFocus -> OnHide();
@@ -144,6 +148,11 @@ void CoreMain(Activity* start)
         /**** 绘制 ****/
         SDL_SetRenderDrawColor(pRnd,0x00,0x00,0x00,0xFF);
         nowFocus -> OnNext();   //可以取得上一帧数据
+        if(jumpDraw) {
+            pRnd.m_fps++;
+            jumpDraw = false;
+            continue;
+        }
         SDL_RenderClear(pRnd);
         nowFocus -> OnDraw();
         SDL_RenderPresent(pRnd);

@@ -42,6 +42,10 @@ private:
             else Show();
         };
     };
+
+    enum {SHOWING,NOR} m_actGlbStat = NOR;
+    Core::Timer m_actGlbTimer;
+
     enum ActState{
         RUNNING,
         WINDOWHIDDEN

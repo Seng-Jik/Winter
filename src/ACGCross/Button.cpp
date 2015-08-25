@@ -57,6 +57,11 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
 
 void Button::OnDraw()
 {
+    if(m_stat >=2){
+        int x,y;
+        SDL_GetMouseState(&x,&y);
+        if(!InRect(m_r,x,y)) m_stat = 1;
+    }
     if(m_stat != 0) switch(m_stat){
     case 2:
         m_motion.OnDraw();break;

@@ -22,6 +22,7 @@ class Button : public Core::Control
 
         void Show();
         void Hide();
+        bool GetHidden(){return m_stat == 0;}
     protected:
         int m_stat;
         SDL_Rect m_r;

@@ -2,17 +2,27 @@
 #include "Game.h"
 #include "ACGCross/Title/Title.h"
 #include "ACGCross/MathFunc.h"
+#include "ACGCross/GalgameActivity/GalgameActivity.h"
 using namespace Core;
 using namespace ACGCross;
+using namespace ACGCross::Galgame;
 using namespace std;
 SaveUI::SaveUI()
 {
     //ctor
 }
 
+void SaveUI::DLoad(int s)
+{
+    m_dLoad = s;
+    m_dLoad_fg = 0;
+}
+
+
 void SaveUI::OnShow()
 {
-    if(GetParent() == pGal){
+    m_dLoad = -1;
+    if(!m_callByTitle){
         SDL_Rect r = {0,0,pRnd.GetPhW(),pRnd.GetPhH()};
         Uint32* pixels = (new Uint32 [pRnd.GetPhW()*pRnd.GetPhH()]);
         SDL_RenderReadPixels(pRnd,
@@ -97,9 +107,9 @@ void SaveUI::OnHide()
 
 void SaveUI::OnDraw()
 {
-    if(GetParent() != pGal) GetParent() -> OnDraw();
+    if(m_callByTitle) pTitle -> OnDraw();
 
-    if(GetParent() == pGal){
+    if(!m_callByTitle){
         pRnd.Clear();
         m_bgt_o.OnDraw();
         m_bgt.OnDraw();
@@ -109,13 +119,20 @@ void SaveUI::OnDraw()
     for(int j = 0;j < 4;++j){
         m_saves[i][j] -> OnDraw();
     }
+
+    if(m_stat == HIDING && m_dLoad != -1){
+        SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
+        SDL_SetRenderDrawColor(pRnd,0,0,0,m_dLoad_fg);
+        PNT("DLOADFG:"<<(int)m_dLoad_fg);
+        pRnd.Clear();
+    }
 }
 
 void SaveUI::OnNext()
 {
 
-    if(GetParent() != pGal) GetParent() -> OnNext();
-    if(GetParent() == pGal) SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,255);
+    if(m_callByTitle) pTitle -> OnNext();
+    else SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,255);
     if(m_stat == SHOWING){
         float per = ArcFunc(float(m_timer.GetTimer()) / 200);
         if(per == -1){
@@ -135,9 +152,13 @@ void SaveUI::OnNext()
     }else if(m_stat == HIDING){
         float per = 1 - ArcFunc(float(m_timer.GetTimer()) / 200);
         if(per == 2){
-            m_stat = NOR;
-            Return();
+            if(m_dLoad!=-1){
+                m_dLoad_fg = 255;
+                ((GalgameActivity*)pGal) -> LoadSave(m_dLoad);
+                Goto(pGal);
+            }else Return();
         }else{
+            m_dLoad_fg = 255 * (1-per);
             m_bgt_o.SetAlpha(255*(1-per));
             m_bgt.SetAlpha(128*per);
             for(int i = 0;i <4;++i)
@@ -155,10 +176,30 @@ void SaveUI::OnEvent(const SDL_Event& e){
 void SaveUI::OnEvent(Core::Control* c, const Sint32 sav)
 {
     if(sav == -1){
-        if(GetParent() ==pTitle) ((Galgame::Title*)GetParent()) -> ShowButton();
+        NeedReturn();
+        return;
+    }else{
+        if(gameData.GetDataExist(sav)){
+            SDL_Point poi = ((SaveButton*)c) -> GetPos();
+            m_actReally.SetInit(poi.x,poi.y,sav,(SaveButton*)c);
+            Call(&m_actReally);
+        }else{
+            if(m_callByTitle) return;
+            else{
+                ((GalgameActivity*)pGal) -> SaveGame(sav);
+                gameData.SetDataExist(sav,true);
+                gameData.AddUpdateTask(-2);
+                gameData.AddUpdateTask(sav);
+                NeedReturn();
+            }
+        }
+    }
+}
+
+void SaveUI::NeedReturn(){
+        if(m_callByTitle && m_dLoad == -1) ((Galgame::Title*)pTitle) -> ShowButton();
         m_stat = HIDING;
         m_timer.Reset();
-    }
 }
 
 void SaveUI::SaveButton::OnDraw()
@@ -211,4 +252,214 @@ void SaveUI::SaveButton::SetShowing(float per)
 void SaveUI::SaveButton::SetPosOffset(int x, int y)
 {
     m_button.SetPos(x+m_orgPos.x,y+m_orgPos.y);
+}
+
+SDL_Point SaveUI::SaveButton::GetPos()
+{
+    SDL_Point poi;
+    m_button.GetPos(poi.x,poi.y);
+    return poi;
+}
+
+
+void SaveUI::Really::SetInit(int x, int y, int dataNum,SaveButton* b)
+{
+    m_callByTitle = ((SaveUI*)pSaveUI) -> GetCallByTitle();
+    m_saveBtn = b;
+    m_bg.x = x;
+    m_bg.y = y + 90;
+    m_bg.w = 160;
+    m_save.SetPos(x,y+90);
+    if(m_callByTitle){
+        m_load.SetPos(x,y+90);
+        m_del.SetPos(x,y+90+37);
+    }
+    else {
+        m_load.SetPos(x,y+90+37);
+        m_del.SetPos(x,y+90+37*2);
+    }
+    m_saveNum = dataNum;
+    PNT("SAVEUI::REALLY::SETINIT");
+}
+
+SaveUI::Really::Really()
+{
+    m_save.SetNormalPic(r.Str("SAV_BUTTON_SAVE"));
+    m_save.GetNormal() -> SetAlpha(192);
+    m_save.SetMotionPic(r.Str("SAV_BUTTON_SAVE"));
+    m_save.GetMotion() -> SetColor(0,255,255);
+    m_save.GetMotion() -> SetAlpha(192);
+    m_save.SetDownPic(r.Str("SAV_BUTTON_SAVE"));
+    m_save.GetDown() -> SetAlpha(128);
+
+    m_load.SetNormalPic(r.Str("SAV_BUTTON_LOAD"));
+    m_load.GetNormal() -> SetAlpha(192);
+    m_load.SetMotionPic(r.Str("SAV_BUTTON_LOAD"));
+    m_load.GetMotion() -> SetColor(0,255,255);
+    m_load.GetMotion() -> SetAlpha(192);
+    m_load.SetDownPic(r.Str("SAV_BUTTON_LOAD"));
+    m_load.GetDown() -> SetAlpha(128);
+
+    m_del.SetNormalPic(r.Str("SAV_BUTTON_DEL"));
+    m_del.GetNormal() -> SetAlpha(192);
+    m_del.SetMotionPic(r.Str("SAV_BUTTON_DEL"));
+    m_del.GetMotion() -> SetColor(0,255,255);
+    m_del.GetMotion() -> SetAlpha(192);
+    m_del.SetDownPic(r.Str("SAV_BUTTON_DEL"));
+    m_del.GetDown() -> SetAlpha(128);
+}
+
+void SaveUI::Really::OnHide()
+{
+
+}
+
+void SaveUI::Really::OnDraw()
+{
+    pSaveUI -> OnDraw();
+    SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,224);
+    SDL_RenderFillRect(pRnd,&m_bg);
+    m_del.OnDraw();
+    m_load.OnDraw();
+    if(!m_callByTitle) m_save.OnDraw();
+}
+
+void SaveUI::Really::OnNext()
+{
+    pSaveUI -> OnNext();
+
+    float per;
+    switch(m_state){
+    case SO_MENU:
+        per = float(m_timer.GetTimer()) / 200;
+        if(per >= 1){
+            m_state = SO_BTN;
+            m_timer.Reset();
+            if(!m_callByTitle) m_bg.h = 3*37;
+            else m_bg.h = 2*37;
+        }
+        else {
+            per = ArcFunc(per);
+            if(!m_callByTitle) m_bg.h = 3*37*per;
+            else m_bg.h = 2*37*per;
+        }
+        break;
+    case SO_BTN:
+        per = float(m_timer.GetTimer()) / 200;
+        if(per >= 1){
+            m_state = NOR;
+            if(!m_callByTitle) RegControl(m_save);
+            RegControl(m_load);
+            RegControl(m_del);
+            m_save.GetNormal() -> SetAlpha(192);
+            m_load.GetNormal() -> SetAlpha(192);
+            m_del.GetNormal() -> SetAlpha(192);
+        }
+        else {
+            per = ArcFunc(per);
+            m_save.GetNormal() -> SetAlpha(192*per);
+            m_load.GetNormal() -> SetAlpha(192*per);
+            m_del.GetNormal() -> SetAlpha(192*per);
+        }
+        break;
+
+        case HI_BTN:
+        per = float(m_timer.GetTimer()) / 200;
+        if(per >= 1){
+            m_state = HI_MENU;
+            m_save.GetNormal() -> SetAlpha(0);
+            m_load.GetNormal() -> SetAlpha(0);
+            m_del.GetNormal() -> SetAlpha(0);
+            m_save.GetMotion() -> SetAlpha(0);
+            m_load.GetMotion() -> SetAlpha(0);
+            m_del.GetMotion() -> SetAlpha(0);
+            m_timer.Reset();
+        }
+        else {
+            per = 1 - ArcFunc(per);
+            m_save.GetNormal() -> SetAlpha(192*per);
+            m_load.GetNormal() -> SetAlpha(192*per);
+            m_del.GetNormal() -> SetAlpha(192*per);
+            m_save.GetMotion() -> SetAlpha(192*per);
+            m_load.GetMotion() -> SetAlpha(192*per);
+            m_del.GetMotion() -> SetAlpha(192*per);
+        }
+        break;
+
+    case HI_MENU:
+        per = float(m_timer.GetTimer()) / 200;
+        if(per >= 1){
+            m_save.GetMotion() -> SetAlpha(192);
+            m_load.GetMotion() -> SetAlpha(192);
+            m_del.GetMotion() -> SetAlpha(192);
+            if(m_needRet) ((SaveUI*)pSaveUI) -> NeedReturn();
+            Return();
+        }
+        else {
+            per = ArcFunc(1 - per);
+            if(!m_callByTitle) m_bg.h = 3*37*per;
+            else m_bg.h = 2*37*per;
+        }
+        break;
+
+        default:
+            break;
+
+    }
+}
+
+
+void SaveUI::Really::OnShow()
+{
+
+    m_needRet = false;
+    m_state = SO_MENU;
+    m_timer.Reset();
+
+    m_save.GetNormal() -> SetAlpha(0);
+    m_load.GetNormal() -> SetAlpha(0);
+    m_del.GetNormal() -> SetAlpha(0);
+}
+
+void SaveUI::Really::OnEvent(const SDL_Event& e)
+{
+    if(e.type == SDL_MOUSEBUTTONUP && m_state == NOR){
+        UnRegAllControl();
+        m_state = HI_BTN;
+        m_timer.Reset();
+    }else if(e.type == SDL_MOUSEMOTION){
+        ((SaveUI*)pSaveUI) -> MoveDuang(e.motion.x,e.motion.y);
+        SDL_Point poi = m_saveBtn -> GetPos();
+        m_bg.x = poi.x;
+        m_bg.y = poi.y + 90;
+        m_save.SetPos(poi.x,poi.y+90);
+        if(m_callByTitle){
+            m_load.SetPos(poi.x,poi.y+90);
+            m_del.SetPos(poi.x,poi.y+90+37);
+        }
+        else {
+            m_load.SetPos(poi.x,poi.y+90+37);
+            m_del.SetPos(poi.x,poi.y+90+37*2);
+        }
+    }
+}
+
+void SaveUI::Really::OnEvent(Core::Control* c,const Sint32 msg){
+    if(msg == 4){
+        UnRegAllControl();
+        if(c == (Control*)&m_save){
+            ((GalgameActivity*)pGal) -> SaveGame(m_saveNum);
+            gameData.SetDataExist(m_saveNum,true);
+            gameData.AddUpdateTask(-2);
+            gameData.AddUpdateTask(m_saveNum);
+        }else if(c == (Control*)&m_load){
+            ((SaveUI*)pSaveUI) -> DLoad(m_saveNum);
+        }else{
+            gameData.SetDataExist(m_saveNum,false);
+            gameData.AddUpdateTask(-2);
+        }
+        m_state = HI_BTN;
+        m_timer.Reset();
+        m_needRet = true;
+    }
 }

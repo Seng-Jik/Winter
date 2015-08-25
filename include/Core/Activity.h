@@ -3,6 +3,7 @@
 #include <forward_list>
 #include "SDLbase.h"
 #include "Globals.h"
+#include <stack>
 
 namespace Core{
     class Activity;
