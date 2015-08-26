@@ -106,6 +106,7 @@ private:
     void ShowWindow();
 
     Core::Sound m_cv;
+    std::string m_cvstr;
     Core::Sound m_se;
     Core::Sound m_bgm;  //访问加锁，m_bgm_lock
     std::string m_bgm_name;
@@ -129,6 +130,7 @@ private:
 public:
     Corner corner;
     static std::list<TextBoxLog> textLog;
+    static std::list<std::string> cvLog;
     Uint8* saveScreen;
     Uint8* saveScreen_org;
     ~GalgameActivity();

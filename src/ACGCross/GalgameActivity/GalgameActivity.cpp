@@ -14,6 +14,7 @@ using namespace ACGCross::Galgame;
 using namespace SMI;
 
 std::list<TextBoxLog> GalgameActivity::textLog;
+std::list<string> GalgameActivity::cvLog;
 
 void GalgameActivity::SetWindowStyle_Normal()
 {
@@ -118,6 +119,9 @@ void GalgameActivity::SMEText_lb(){
     corner.Show();
     textLog.push_back(m_text_cmdtarget.GetTextLog());
     if(textLog.size()>=64) textLog.pop_front();
+    cvLog.push_back(m_cvstr);
+    if(cvLog.size()>=64) cvLog.pop_front();
+    m_cvstr.clear();
 }
 
 void GalgameActivity::RefreshSaveScreen()
@@ -573,6 +577,7 @@ void GalgameActivity::SMEProc(SMI::SMEvent* pSme)
         m_waiter.Reset();
         m_waiterBroken = false;
     }else if(pSme -> cmd == L"v"){
+        m_cvstr = WStringToString(pSme -> argv[0]);
         m_cv.Load("GalRes/Voice/"+WStringToString(pSme -> argv[0])+".ogg");
         m_cv.Volume(gameData.GetCVVol());
         m_cv.Play();
@@ -712,6 +717,7 @@ void GalgameActivity::LoadSave(int num){
         m_text -> ForceClear();
         SMEClick();
         textLog.clear();
+        cvLog.clear();
         m_autoUpdateDataTimer.Reset();
     }
 }
