@@ -84,7 +84,7 @@ bool GameDataMgr::GetCGExist()
         break;
     }
     Unlock();
-    return ret;
+    return false;
 }
 
 void GameDataMgr::AddUpdateTask(int num)

@@ -121,17 +121,19 @@ void Title::OnHide()
     m_fk.Clear();
 
     m_visableBtn.clear();*/
+    PNT("TITLE::ONHIDE");
     pTitle = new Title;
     delete this;
 
 }
 
 void Title::OnInit(){
-
+    PNT("TITLE::ONINIT");
 }
 
 void Title::OnShow()
 {
+    PNT("TITLE::ONSHOW");
     m_dataNum = -1;
 
     m_fpsCounter.Reset();
@@ -212,6 +214,8 @@ void Title::OnShow()
     m_fpsCounter.Reset();
     m_visableBtn[0] -> Show();
     m_stat = 2;
+    m_dosomething = false;
+
 
 }
 
