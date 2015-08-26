@@ -1,4 +1,4 @@
-
+#include "Core/Debug.h"
 #include "Core/Surface.h"
 
 using namespace Core;
@@ -47,9 +47,13 @@ void Surface::Unlock()
 }
 
 void Surface::Load(const std::string& f){
+    PNT("SURFACE CLEAR");
     Clear();
+    PNT("SURFACE FILE LOAD");
     m_file.Load(f);
+    PNT("SURFACE LOAD");
     m_sur = IMG_Load_RW(m_file,m_file.Size());
+    PNT("SURFACE LOADED");
     //SDL_ConvertSurfaceFormat(m_sur,SDL_PIXELFORMAT_ARGB8888,0);
     SDL_SetSurfaceRLE(m_sur,1);
     SDL_SetSurfaceBlendMode(m_sur,SDL_BLENDMODE_BLEND);

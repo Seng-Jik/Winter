@@ -134,6 +134,13 @@ void Title::OnInit(){
 void Title::OnShow()
 {
     PNT("TITLE::ONSHOW");
+
+    RegControl(m_bSta);
+    if(gameData.GetSaveExist()) RegControl(m_bLoad);
+    if(gameData.GetCGExist()) RegControl(m_bCG);
+    RegControl(m_bExit);
+    if(gameData.GetCSaveExist()) RegControl(m_bContinue);
+
     m_dataNum = -1;
 
     m_fpsCounter.Reset();
@@ -222,11 +229,6 @@ void Title::OnShow()
  Title::Title()
 {
     SetLogicScreenSize(1024,r.Int("TITLE_LOGICSCREEN_HEIGHT"));
-    RegControl(m_bSta);
-    RegControl(m_bLoad);
-    RegControl(m_bCG);
-    RegControl(m_bExit);
-    RegControl(m_bContinue);
 }
 
 void Title::OnEvent(const SDL_Event& e)

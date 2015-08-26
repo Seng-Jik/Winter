@@ -35,7 +35,7 @@ void SaveUI::OnShow()
         m_bgt_o.Load(m_bg);
         m_bgt_o.SetPos(0,0);
         m_bgt_o.SetZoom(pRnd.GetW(),pRnd.GetH());
-        FastBlurARGB8888(m_bg,5);
+        FastBlurARGB8888(m_bg,3);
         m_bgt.Load(m_bg);
         m_bgt.SetPos(0,0);
         m_bgt.SetZoom(pRnd.GetW(),pRnd.GetH());
@@ -48,7 +48,7 @@ void SaveUI::OnShow()
     int num = 1;
 
     //DBG
-    auto pSur = SDL_LoadBMP("0.bmp");
+    //auto pSur = SDL_LoadBMP("0.bmp");
     Surface noData;
     noData.Load("GalGameSystem/saveUI_NODATA.png");
 
@@ -60,8 +60,18 @@ void SaveUI::OnShow()
             m_saves[i][j] = new SaveButton(num);
             if(num != -1){
                 if(gameData.GetDataExist(num)){
-                    //TODO:加载存档预览图
+                    Uint32 rm,gm,bm,am;int bpp;
+                    SDL_PixelFormatEnumToMasks(SDL_PIXELFORMAT_RGB24,
+                                               &bpp,&rm,&gm,&bm,&am);
+                    auto pSur = SDL_CreateRGBSurface(0,160,90,24,rm,gm,bm,am);
+
+                    Uint8* pScreenDst = (Uint8*)((void*)gameData[num]);
+                    pScreenDst += 65536 - 160*90*3;
+                    SDL_LockSurface(pSur);
+                    memcpy(pSur->pixels,pScreenDst,160*90*3);
+                    SDL_UnlockSurface(pSur);
                     m_saves[i][j] ->LoadSurface(pSur);
+                    SDL_FreeSurface(pSur);
                 }
                 else
                     m_saves[i][j] ->LoadSurface(noData);
@@ -109,7 +119,7 @@ void SaveUI::OnDraw()
 {
     if(m_callByTitle) pTitle -> OnDraw();
 
-    if(!m_callByTitle){
+    else{
         pRnd.Clear();
         m_bgt_o.OnDraw();
         m_bgt.OnDraw();
@@ -137,14 +147,14 @@ void SaveUI::OnNext()
         float per = ArcFunc(float(m_timer.GetTimer()) / 200);
         if(per == -1){
             m_stat = NOR;
-            m_bgt.SetAlpha(128);
+            m_bgt.SetAlpha(192);
             m_bgt_o.SetAlpha(0);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
                 m_saves[i][j] -> SetShowing(1);
         }else{
             m_bgt_o.SetAlpha(255 - 255*per);
-            m_bgt.SetAlpha(128*per);
+            m_bgt.SetAlpha(192*per);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
                 m_saves[i][j] -> SetShowing(per);
@@ -160,7 +170,7 @@ void SaveUI::OnNext()
         }else{
             m_dLoad_fg = 255 * (1-per);
             m_bgt_o.SetAlpha(255*(1-per));
-            m_bgt.SetAlpha(128*per);
+            m_bgt.SetAlpha(192*per);
             for(int i = 0;i <4;++i)
             for(int j = 0;j < 4;++j)
                 m_saves[i][j] -> SetShowing(per);
@@ -212,7 +222,7 @@ void SaveUI::SaveButton::LoadSurface(SDL_Surface* pSur)
     m_button.Load(pSur);
     m_button.SetBlend(SDL_BLENDMODE_BLEND);
     m_button.SetColor(0x3A,0xE6,0xFF);
-    m_button.SetAlpha(192);
+    m_button.SetAlpha(96);
 }
 
 bool SaveUI::SaveButton::OnEvent(const SDL_Event& e, Activity& a)
@@ -317,7 +327,7 @@ void SaveUI::Really::OnHide()
 void SaveUI::Really::OnDraw()
 {
     pSaveUI -> OnDraw();
-    SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,224);
+    SDL_SetRenderDrawColor(pRnd,255,255,255,192);
     SDL_RenderFillRect(pRnd,&m_bg);
     m_del.OnDraw();
     m_load.OnDraw();

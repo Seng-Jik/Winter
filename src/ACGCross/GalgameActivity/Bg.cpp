@@ -98,6 +98,9 @@ void Bg::Load(std::string p_file,int p_x,int p_y,float p_zoom,int p_a){
     m_src_h = m_rect.h * p_zoom;
 
     SetDisplayMode();
+    m_tex.SetAlpha( m_alpha );
+    m_tex.SetPos(m_rect.x,m_rect.y);
+    m_tex.SetZoom(m_rect.w,m_rect.h);
 }
 
 void Bg::Load(std::string p_file,int p_x,int p_y,int p_w,int p_h,int p_a){
@@ -115,6 +118,9 @@ void Bg::Load(std::string p_file,int p_x,int p_y,int p_w,int p_h,int p_a){
     m_src_h = m_rect.h = p_h;
 
     SetDisplayMode();
+    m_tex.SetAlpha( m_alpha );
+    m_tex.SetPos(m_rect.x,m_rect.y);
+    m_tex.SetZoom(m_rect.w,m_rect.h);
 }
 
 void Bg::SetDisplayMode(){
@@ -186,6 +192,7 @@ void Bg::OnNext(){
     m_tex.SetZoom(m_rect.w,m_rect.h);
 
     if(AfterLoad){
+        m_sur.Clear();
         Load(m_file,m_rect.x,m_rect.y,m_rect.w,m_rect.h,m_alpha);
         AfterLoad = false;
     }

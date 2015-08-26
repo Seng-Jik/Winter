@@ -128,9 +128,12 @@ private:
 
 public:
     Corner corner;
-    std::list<TextBoxLog> textLog;
+    static std::list<TextBoxLog> textLog;
+    Uint8* saveScreen;
+    Uint8* saveScreen_org;
     ~GalgameActivity();
 
+    void RefreshSaveScreen();
     void LoadSave(int num); //if num == -1 reset SMI to restart game.
     void SaveGame(int num); //Save game states;
     SMI::SMEvent* GetSme(){return &m_SMEProc_sme;}

@@ -13,6 +13,8 @@ using namespace ACGCross::Galgame;
 
 using namespace SMI;
 
+std::list<TextBoxLog> GalgameActivity::textLog;
+
 void GalgameActivity::SetWindowStyle_Normal()
 {
     //int x,y;
@@ -115,6 +117,60 @@ void GalgameActivity::SMEUpdateStat()
 void GalgameActivity::SMEText_lb(){
     corner.Show();
     textLog.push_back(m_text_cmdtarget.GetTextLog());
+    if(textLog.size()>=64) textLog.pop_front();
+}
+
+void GalgameActivity::RefreshSaveScreen()
+{
+    SDL_SetRenderDrawColor(pRnd,255,255,255,255);
+    pRnd.Clear();
+
+    m_bg.OnDraw();
+    m_mask.OnDraw();
+    m_snow.OnDraw();
+    m_chrs.OnDraw();
+
+    Uint8* pixels = saveScreen_org;
+    Uint32 rm = 0xff0000,gm=0x00ff00,bm=0x0000FF,am=0;int bpp=24;
+    SDL_PixelFormatEnumToMasks(SDL_PIXELFORMAT_RGB24,
+                               &bpp,&rm,&gm,&bm,&am);
+    SDL_Rect r = {0,0,pRnd.GetPhW(),pRnd.GetPhW()*9/16};
+
+    SDL_RenderReadPixels(pRnd,
+                         &r,
+                         SDL_PIXELFORMAT_RGB24,
+                         (void*)pixels,
+                         pRnd.GetPhW()*3);
+
+    int org_w = pRnd.GetPhW(),org_h = pRnd.GetPhW()*9/16;
+    int org_pitch = org_w * 3;
+    int dst_pitch = 160*3;
+    Uint8* pSurOrg = pixels;
+    Uint8* pSurDst = saveScreen;
+    for(int y = 0;y < 90;++y)
+    for(int x = 0;x < 160;++x){
+        int org_x = float(x) / 160 * org_w;
+        int org_y = float(y) / 160 * org_w;
+        if(org_x >= org_w) org_x = org_w-1;
+        if(org_y >= org_h) org_x = org_h-1;
+
+        Uint8* orgpx = &pSurOrg[org_y*org_pitch+3*org_x];
+        Uint8* dstpx = &pSurDst[y*dst_pitch+3*x];
+
+        for(int i = 0;i < 3;++i)
+            dstpx[i] = orgpx[i];
+    }
+
+    m_textWindow.OnDraw();
+    m_text -> OnDraw();
+    m_textWindow_X.OnDraw();
+    m_textWindow_save.OnDraw();
+    m_textWindow_set.OnDraw();
+    m_textWindow_skip.OnDraw();
+    m_textWindow_auto.OnDraw();
+
+    m_name.OnDraw();
+    corner.OnDraw();
 }
 
 void GalgameActivity::SMEProc(bool fast)
@@ -196,6 +252,8 @@ void GalgameActivity::ShowWindow()
 
 GalgameActivity::GalgameActivity(TextBox* b,Clock* c):m_bgm_loader(&BGMLoader),m_mask(&m_bg)
 {
+    saveScreen = new Uint8[160*3*90];
+    saveScreen_org = new Uint8 [3*pRnd.GetPhW()*pRnd.GetPhW()*9/16];
     m_text = b;
     m_clock = c;
     PNT("GALGAMEACTIVITY CREATED!");
@@ -494,7 +552,10 @@ void GalgameActivity::OnEvent(Core::Control* c, const Sint32 msg)
     if(msg == 4){
         if(c == &m_textWindow_X) HideWindow();
         else if(c == &m_textWindow_set) Call(pSettingUI);
-        else if(c == &m_textWindow_save) {((SaveUI*)pSaveUI) -> SetCallByTitle(false);Call(pSaveUI);}
+        else if(c == &m_textWindow_save){
+            RefreshSaveScreen();
+            ((SaveUI*)pSaveUI) -> SetCallByTitle(false);Call(pSaveUI);
+        }
         else if(c == &m_textWindow_skip){
             m_SMEProc_skipping = true;
             m_text -> SetEffectSpeed(0);
@@ -715,6 +776,11 @@ void GalgameActivity::LowerSaveGame()
 void GalgameActivity::SaveGame(int num)
 {
     memcpy(gameData[num],gameData[0],65536);
+
+    Uint8* pScreenDst = (Uint8*)((void*)gameData[num]);
+    pScreenDst += 65536 - 160*90*3;
+    memcpy(pScreenDst,saveScreen,160*90*3);
+
     gameData.AddUpdateTask(num);
     gameData.UpdateData();
 }
@@ -722,7 +788,8 @@ void GalgameActivity::SaveGame(int num)
 
 GalgameActivity::~GalgameActivity()
 {
-
+    delete [] saveScreen;
+    delete [] saveScreen_org;
 }
 
 
