@@ -165,10 +165,7 @@ void CoreMain(Activity* start)
 
 void CoreInit(const string& title,const bool fullScreen,const int w,const int h)
 {
-    SDL_Init(SDL_INIT_AUDIO |
-                SDL_INIT_EVENTS|
-                SDL_INIT_VIDEO |
-                SDL_INIT_TIMER);
+    SDL_Init(SDL_INIT_EVERYTHING);
     IMG_Init(IMG_INIT_PNG);
     TTF_Init();
 

@@ -18,7 +18,7 @@ LIBDIR = -L$(SDL2_LIB)
 LIB = -lmingw32 -lSDL2main -lSDL2_image SDL2.dll -luser32 -lgdi32 -lwinmm -ldxguid -lSDL2_mixer -lSDL2_ttf
 LDFLAGS = -pg -lgmon
 
-INC_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity
+INC_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude
 CFLAGS_DEBUG = $(CFLAGS) -pg -g -D_DEBUG
 RESINC_DEBUG = $(RESINC)
 RCFLAGS_DEBUG = $(RCFLAGS)
@@ -29,7 +29,7 @@ OBJDIR_DEBUG = bin\\Debug\\obj
 DEP_DEBUG = 
 OUT_DEBUG = bin\\Debug\\Galgame_Engine.exe
 
-INC_RELEASE = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity
+INC_RELEASE = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude
 CFLAGS_RELEASE = $(CFLAGS) -pg -g
 RESINC_RELEASE = $(RESINC)
 RCFLAGS_RELEASE = $(RCFLAGS)
@@ -40,9 +40,9 @@ OBJDIR_RELEASE = bin\\Release\\obj
 DEP_RELEASE = 
 OUT_RELEASE = bin\\Release\\Galgame_Engine.exe
 
-OBJ_DEBUG = $(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Game.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_DEBUG)\\src\\ACGCross\\FadeLable.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Ending.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Button.o $(OBJDIR_DEBUG)\\src\\main.o $(OBJDIR_DEBUG)\\src\\SMLanguage\\SMI.o $(OBJDIR_DEBUG)\\src\\Core\\Window.o $(OBJDIR_DEBUG)\\src\\Core\\Thread.o $(OBJDIR_DEBUG)\\src\\Core\\Texture.o $(OBJDIR_DEBUG)\\src\\Core\\Surface.o $(OBJDIR_DEBUG)\\src\\Core\\Sound.o $(OBJDIR_DEBUG)\\src\\Core\\ResVal.o $(OBJDIR_DEBUG)\\src\\Core\\ResFile.o $(OBJDIR_DEBUG)\\src\\Core\\Misc.o $(OBJDIR_DEBUG)\\src\\Core\\Font.o $(OBJDIR_DEBUG)\\src\\Core\\Error.o $(OBJDIR_DEBUG)\\src\\Core\\CoreMain.o $(OBJDIR_DEBUG)\\src\\ACGCross\\str2wstr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Slider.o $(OBJDIR_DEBUG)\\src\\ACGCross\\SettingUI.o $(OBJDIR_DEBUG)\\src\\ACGCross\\SaveUI.o $(OBJDIR_DEBUG)\\src\\ACGCross\\NumTexture.o $(OBJDIR_DEBUG)\\src\\ACGCross\\MathFunc.o $(OBJDIR_DEBUG)\\icon.o
+OBJ_DEBUG = $(OBJDIR_DEBUG)\\src\\ACGCross\\KeyMapActivity.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Game.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_DEBUG)\\src\\ACGCross\\FadeLable.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Ending.o $(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Button.o $(OBJDIR_DEBUG)\\src\\main.o $(OBJDIR_DEBUG)\\src\\SMLanguage\\SMI.o $(OBJDIR_DEBUG)\\src\\Core\\Window.o $(OBJDIR_DEBUG)\\src\\Core\\Thread.o $(OBJDIR_DEBUG)\\src\\Core\\Texture.o $(OBJDIR_DEBUG)\\src\\Core\\Surface.o $(OBJDIR_DEBUG)\\src\\Core\\Sound.o $(OBJDIR_DEBUG)\\src\\Core\\ResVal.o $(OBJDIR_DEBUG)\\src\\Core\\ResFile.o $(OBJDIR_DEBUG)\\src\\Core\\Misc.o $(OBJDIR_DEBUG)\\src\\Core\\Font.o $(OBJDIR_DEBUG)\\src\\Core\\Error.o $(OBJDIR_DEBUG)\\src\\Core\\CoreMain.o $(OBJDIR_DEBUG)\\src\\ACGCross\\str2wstr.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Slider.o $(OBJDIR_DEBUG)\\src\\ACGCross\\SettingUI.o $(OBJDIR_DEBUG)\\src\\ACGCross\\SaveUI.o $(OBJDIR_DEBUG)\\src\\ACGCross\\NumTexture.o $(OBJDIR_DEBUG)\\src\\ACGCross\\MathFunc.o $(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o $(OBJDIR_DEBUG)\\icon.o
 
-OBJ_RELEASE = $(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Game.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_RELEASE)\\src\\ACGCross\\FadeLable.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Ending.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Button.o $(OBJDIR_RELEASE)\\src\\ACGCross\\ACGCross_Logo.o $(OBJDIR_RELEASE)\\src\\main.o $(OBJDIR_RELEASE)\\src\\SMLanguage\\SMI.o $(OBJDIR_RELEASE)\\src\\Core\\Window.o $(OBJDIR_RELEASE)\\src\\Core\\Thread.o $(OBJDIR_RELEASE)\\src\\Core\\Texture.o $(OBJDIR_RELEASE)\\src\\Core\\Surface.o $(OBJDIR_RELEASE)\\src\\Core\\Sound.o $(OBJDIR_RELEASE)\\src\\Core\\ResVal.o $(OBJDIR_RELEASE)\\src\\Core\\ResFile.o $(OBJDIR_RELEASE)\\src\\Core\\Misc.o $(OBJDIR_RELEASE)\\src\\Core\\Font.o $(OBJDIR_RELEASE)\\src\\Core\\Error.o $(OBJDIR_RELEASE)\\src\\Core\\CoreMain.o $(OBJDIR_RELEASE)\\src\\ACGCross\\str2wstr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Slider.o $(OBJDIR_RELEASE)\\src\\ACGCross\\SettingUI.o $(OBJDIR_RELEASE)\\src\\ACGCross\\SaveUI.o $(OBJDIR_RELEASE)\\src\\ACGCross\\NumTexture.o $(OBJDIR_RELEASE)\\src\\ACGCross\\MathFunc.o $(OBJDIR_RELEASE)\\icon.o
+OBJ_RELEASE = $(OBJDIR_RELEASE)\\src\\ACGCross\\KeyMapActivity.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Game.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_RELEASE)\\src\\ACGCross\\FadeLable.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Ending.o $(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Button.o $(OBJDIR_RELEASE)\\src\\ACGCross\\ACGCross_Logo.o $(OBJDIR_RELEASE)\\src\\main.o $(OBJDIR_RELEASE)\\src\\SMLanguage\\SMI.o $(OBJDIR_RELEASE)\\src\\Core\\Window.o $(OBJDIR_RELEASE)\\src\\Core\\Thread.o $(OBJDIR_RELEASE)\\src\\Core\\Texture.o $(OBJDIR_RELEASE)\\src\\Core\\Surface.o $(OBJDIR_RELEASE)\\src\\Core\\Sound.o $(OBJDIR_RELEASE)\\src\\Core\\ResVal.o $(OBJDIR_RELEASE)\\src\\Core\\ResFile.o $(OBJDIR_RELEASE)\\src\\Core\\Misc.o $(OBJDIR_RELEASE)\\src\\Core\\Font.o $(OBJDIR_RELEASE)\\src\\Core\\Error.o $(OBJDIR_RELEASE)\\src\\Core\\CoreMain.o $(OBJDIR_RELEASE)\\src\\ACGCross\\str2wstr.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Slider.o $(OBJDIR_RELEASE)\\src\\ACGCross\\SettingUI.o $(OBJDIR_RELEASE)\\src\\ACGCross\\SaveUI.o $(OBJDIR_RELEASE)\\src\\ACGCross\\NumTexture.o $(OBJDIR_RELEASE)\\src\\ACGCross\\MathFunc.o $(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o $(OBJDIR_RELEASE)\\icon.o
 
 all: before_build build_debug build_release after_build
 
@@ -57,6 +57,7 @@ before_debug:
 	cmd /c if not exist bin\\Debug md bin\\Debug
 	cmd /c if not exist $(OBJDIR_DEBUG)\\src\\ACGCross md $(OBJDIR_DEBUG)\\src\\ACGCross
 	cmd /c if not exist $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity md $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity
+	cmd /c if not exist $(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame md $(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame
 	cmd /c if not exist $(OBJDIR_DEBUG)\\src md $(OBJDIR_DEBUG)\\src
 	cmd /c if not exist $(OBJDIR_DEBUG)\\src\\SMLanguage md $(OBJDIR_DEBUG)\\src\\SMLanguage
 	cmd /c if not exist $(OBJDIR_DEBUG)\\src\\Core md $(OBJDIR_DEBUG)\\src\\Core
@@ -72,8 +73,8 @@ debug: before_build build_debug after_build
 out_debug: before_debug $(OBJ_DEBUG) $(DEP_DEBUG)
 	$(LD) $(LIBDIR_DEBUG) -o $(OUT_DEBUG) $(OBJ_DEBUG)  $(LDFLAGS_DEBUG) $(LIB_DEBUG)
 
-$(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
-	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o
+$(OBJDIR_DEBUG)\\src\\ACGCross\\KeyMapActivity.o: src\\ACGCross\\KeyMapActivity.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\KeyMapActivity.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\KeyMapActivity.o
 
 $(OBJDIR_DEBUG)\\src\\ACGCross\\GameDataMgr.o: src\\ACGCross\\GameDataMgr.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\GameDataMgr.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\GameDataMgr.o
@@ -122,6 +123,9 @@ $(OBJDIR_DEBUG)\\src\\ACGCross\\FadeLable.o: src\\ACGCross\\FadeLable.cpp
 
 $(OBJDIR_DEBUG)\\src\\ACGCross\\Ending.o: src\\ACGCross\\Ending.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\Ending.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\Ending.o
+
+$(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o
 
 $(OBJDIR_DEBUG)\\src\\ACGCross\\Button.o: src\\ACGCross\\Button.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\Button.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\Button.o
@@ -195,6 +199,9 @@ $(OBJDIR_DEBUG)\\src\\ACGCross\\NumTexture.o: src\\ACGCross\\NumTexture.cpp
 $(OBJDIR_DEBUG)\\src\\ACGCross\\MathFunc.o: src\\ACGCross\\MathFunc.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\MathFunc.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\MathFunc.o
 
+$(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_DEBUG)\\src\\ACGCross\\Mask.o
+
 $(OBJDIR_DEBUG)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_DEBUG)\\icon.o -O coff $(INC_DEBUG)
 
@@ -203,6 +210,7 @@ clean_debug:
 	cmd /c rd bin\\Debug
 	cmd /c rd $(OBJDIR_DEBUG)\\src\\ACGCross
 	cmd /c rd $(OBJDIR_DEBUG)\\src\\ACGCross\\GalgameActivity
+	cmd /c rd $(OBJDIR_DEBUG)\\src\\ACGCross\\DanmakuGame
 	cmd /c rd $(OBJDIR_DEBUG)\\src
 	cmd /c rd $(OBJDIR_DEBUG)\\src\\SMLanguage
 	cmd /c rd $(OBJDIR_DEBUG)\\src\\Core
@@ -213,6 +221,7 @@ before_release:
 	cmd /c if not exist bin\\Release md bin\\Release
 	cmd /c if not exist $(OBJDIR_RELEASE)\\src\\ACGCross md $(OBJDIR_RELEASE)\\src\\ACGCross
 	cmd /c if not exist $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity md $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity
+	cmd /c if not exist $(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame md $(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame
 	cmd /c if not exist $(OBJDIR_RELEASE)\\src md $(OBJDIR_RELEASE)\\src
 	cmd /c if not exist $(OBJDIR_RELEASE)\\src\\SMLanguage md $(OBJDIR_RELEASE)\\src\\SMLanguage
 	cmd /c if not exist $(OBJDIR_RELEASE)\\src\\Core md $(OBJDIR_RELEASE)\\src\\Core
@@ -228,8 +237,8 @@ release: before_build build_release after_build
 out_release: before_release $(OBJ_RELEASE) $(DEP_RELEASE)
 	$(LD) $(LIBDIR_RELEASE) -o $(OUT_RELEASE) $(OBJ_RELEASE)  $(LDFLAGS_RELEASE) -mwindows $(LIB_RELEASE)
 
-$(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
-	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o
+$(OBJDIR_RELEASE)\\src\\ACGCross\\KeyMapActivity.o: src\\ACGCross\\KeyMapActivity.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\KeyMapActivity.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\KeyMapActivity.o
 
 $(OBJDIR_RELEASE)\\src\\ACGCross\\GameDataMgr.o: src\\ACGCross\\GameDataMgr.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\GameDataMgr.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\GameDataMgr.o
@@ -278,6 +287,9 @@ $(OBJDIR_RELEASE)\\src\\ACGCross\\FadeLable.o: src\\ACGCross\\FadeLable.cpp
 
 $(OBJDIR_RELEASE)\\src\\ACGCross\\Ending.o: src\\ACGCross\\Ending.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\Ending.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\Ending.o
+
+$(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o
 
 $(OBJDIR_RELEASE)\\src\\ACGCross\\Button.o: src\\ACGCross\\Button.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\Button.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\Button.o
@@ -354,6 +366,9 @@ $(OBJDIR_RELEASE)\\src\\ACGCross\\NumTexture.o: src\\ACGCross\\NumTexture.cpp
 $(OBJDIR_RELEASE)\\src\\ACGCross\\MathFunc.o: src\\ACGCross\\MathFunc.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\MathFunc.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\MathFunc.o
 
+$(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_RELEASE)\\src\\ACGCross\\Mask.o
+
 $(OBJDIR_RELEASE)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_RELEASE)\\icon.o -O coff $(INC_RELEASE)
 
@@ -362,6 +377,7 @@ clean_release:
 	cmd /c rd bin\\Release
 	cmd /c rd $(OBJDIR_RELEASE)\\src\\ACGCross
 	cmd /c rd $(OBJDIR_RELEASE)\\src\\ACGCross\\GalgameActivity
+	cmd /c rd $(OBJDIR_RELEASE)\\src\\ACGCross\\DanmakuGame
 	cmd /c rd $(OBJDIR_RELEASE)\\src
 	cmd /c rd $(OBJDIR_RELEASE)\\src\\SMLanguage
 	cmd /c rd $(OBJDIR_RELEASE)\\src\\Core

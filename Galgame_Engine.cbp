@@ -22,6 +22,7 @@
 					<Add directory="include/ACGCross" />
 					<Add directory="include/Core" />
 					<Add directory="include/ACGCross/GalgameActivity" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -41,6 +42,7 @@
 					<Add directory="include/ACGCross" />
 					<Add directory="include/Core" />
 					<Add directory="include/ACGCross/GalgameActivity" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -76,6 +78,7 @@
 		</Unit>
 		<Unit filename="include/ACGCross/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/Button.h" />
+		<Unit filename="include/ACGCross/DanmakuGame/DanmakuGame.h" />
 		<Unit filename="include/ACGCross/Ending.h" />
 		<Unit filename="include/ACGCross/FadeLable.h" />
 		<Unit filename="include/ACGCross/GalgameActivity/Bg.h" />
@@ -93,6 +96,7 @@
 		<Unit filename="include/ACGCross/GalgameActivity/TextWindow.h" />
 		<Unit filename="include/ACGCross/Game.h" />
 		<Unit filename="include/ACGCross/GameDataMgr.h" />
+		<Unit filename="include/ACGCross/KeyMapActivity.h" />
 		<Unit filename="include/ACGCross/Mask.h" />
 		<Unit filename="include/ACGCross/MathFunc.h" />
 		<Unit filename="include/ACGCross/NumTexture.h" />
@@ -127,6 +131,7 @@
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/ACGCross/Button.cpp" />
+		<Unit filename="src/ACGCross/DanmakuGame/DanmakuGame.cpp" />
 		<Unit filename="src/ACGCross/Ending.cpp" />
 		<Unit filename="src/ACGCross/FadeLable.cpp" />
 		<Unit filename="src/ACGCross/GalgameActivity/Bg.cpp" />
@@ -143,6 +148,7 @@
 		<Unit filename="src/ACGCross/GalgameActivity/TextWindow.cpp" />
 		<Unit filename="src/ACGCross/Game.cpp" />
 		<Unit filename="src/ACGCross/GameDataMgr.cpp" />
+		<Unit filename="src/ACGCross/KeyMapActivity.cpp" />
 		<Unit filename="src/ACGCross/Mask.cpp" />
 		<Unit filename="src/ACGCross/MathFunc.cpp" />
 		<Unit filename="src/ACGCross/NumTexture.cpp" />

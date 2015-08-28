@@ -63,6 +63,7 @@ public:
     }
 };
 
+#include "ACGCross/DanmakuGame/DanmakuGame.h"
 
 int main( int argc, char * argv[] )
 {
@@ -90,9 +91,25 @@ int main( int argc, char * argv[] )
         InitGame();
         #ifdef _DEBUG
         //TestActivity t;
-        //CoreMain(pGal);
 
-        CoreMain(pGal);
+
+        if(SDL_NumJoysticks()){ //如果使用手柄
+            SDL_Joystick* pJoy = SDL_JoystickOpen(0);
+            SDL_JoystickID id = SDL_JoystickInstanceID(pJoy);
+            KeyMapActivity::SetJoyKeyMap(id,0,GKEY_UP);
+            KeyMapActivity::SetJoyKeyMap(id,2,GKEY_DOWN);
+            KeyMapActivity::SetJoyKeyMap(id,3,GKEY_LEFT);
+            KeyMapActivity::SetJoyKeyMap(id,1,GKEY_RIGHT);
+            KeyMapActivity::SetJoyKeyMap(id,7,GKEY_SLOW);
+        }else{  //不使用手柄
+            KeyMapActivity::SetKeyboardMap(SDLK_w,GKEY_UP);
+            KeyMapActivity::SetKeyboardMap(SDLK_s,GKEY_DOWN);
+            KeyMapActivity::SetKeyboardMap(SDLK_a,GKEY_LEFT);
+            KeyMapActivity::SetKeyboardMap(SDLK_d,GKEY_RIGHT);
+            KeyMapActivity::SetKeyboardMap(SDLK_LSHIFT,GKEY_SLOW);
+        }
+        CoreMain(new DanmakuGame);  //启动弹幕游戏活动
+        //CoreMain(pGal);   //启动Galgame活动
         #else
 
         ACGCross::Logo l;
