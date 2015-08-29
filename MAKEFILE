@@ -18,7 +18,7 @@ LIBDIR = -L$(SDL2_LIB)
 LIB = -lmingw32 -lSDL2main -lSDL2_image SDL2.dll -luser32 -lgdi32 -lwinmm -ldxguid -lSDL2_mixer -lSDL2_ttf
 LDFLAGS = -pg -lgmon
 
-INC_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude
+INC_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude -Iinclude\ACGCross\Demo
 CFLAGS_DEBUG = $(CFLAGS) -pg -g -D_DEBUG
 RESINC_DEBUG = $(RESINC)
 RCFLAGS_DEBUG = $(RCFLAGS)
@@ -29,7 +29,7 @@ OBJDIR_DEBUG = bin\\Debug\\obj
 DEP_DEBUG = 
 OUT_DEBUG = bin\\Debug\\Galgame_Engine.exe
 
-INC_RELEASE = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude
+INC_RELEASE = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude -Iinclude\ACGCross\Demo
 CFLAGS_RELEASE = $(CFLAGS) -pg -g
 RESINC_RELEASE = $(RESINC)
 RCFLAGS_RELEASE = $(RCFLAGS)

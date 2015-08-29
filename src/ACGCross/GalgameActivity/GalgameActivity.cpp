@@ -339,8 +339,11 @@ void GalgameActivity::OnShow(){
     m_actGlbTimer.Reset();
 }
 
+SDL_Texture* fffff;
 void GalgameActivity::OnInit()
 {
+    fffff = SDL_CreateTexture(pRnd,SDL_PIXELFORMAT_ARGB8888,SDL_TEXTUREACCESS_TARGET,1024,768);
+
     PNT("GALGAMEACTIVITY:ONINIT");
 
     m_name_font.Open(r.Str("AFX_FONT"));
@@ -433,8 +436,12 @@ void GalgameActivity::OnNext()
     }
 }
 
+double angle = 0;
+int st = 0;
 void GalgameActivity::OnDraw()
 {
+
+    pRnd.SetRenderTarget(fffff);
     SDL_SetRenderDrawColor(pRnd,255,255,255,255);
     pRnd.Clear();
 
@@ -466,6 +473,15 @@ void GalgameActivity::OnDraw()
             pRnd.Clear();
         }
     }
+
+    pRnd.SetRenderTarget(nullptr);
+    if(st == 6) st = 0;
+    if(st == 0 || st == 1) SDL_SetTextureColorMod(fffff,255,0,0);
+    else if(st == 2 || st ==3) SDL_SetTextureColorMod(fffff,0,255,0);
+    else if(st == 4 || st == 5) {SDL_SetTextureColorMod(fffff,0,0,255);}
+    st++;
+    SDL_RenderCopyEx(pRnd,fffff,nullptr,nullptr,angle,nullptr,SDL_FLIP_NONE);
+    angle += 32;
 }
 
 void GalgameActivity::OnEvent(const SDL_Event& e)

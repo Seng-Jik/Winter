@@ -108,8 +108,8 @@ int main( int argc, char * argv[] )
             KeyMapActivity::SetKeyboardMap(SDLK_d,GKEY_RIGHT);
             KeyMapActivity::SetKeyboardMap(SDLK_LSHIFT,GKEY_SLOW);
         }
-        CoreMain(new DanmakuGame);  //启动弹幕游戏活动
-        //CoreMain(pGal);   //启动Galgame活动
+        //CoreMain(new DanmakuGame);  //启动弹幕游戏活动
+        CoreMain(pGal);   //启动Galgame活动
         #else
 
         ACGCross::Logo l;

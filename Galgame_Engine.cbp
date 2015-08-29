@@ -23,6 +23,7 @@
 					<Add directory="include/Core" />
 					<Add directory="include/ACGCross/GalgameActivity" />
 					<Add directory="include" />
+					<Add directory="include/ACGCross/Demo" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -43,6 +44,7 @@
 					<Add directory="include/Core" />
 					<Add directory="include/ACGCross/GalgameActivity" />
 					<Add directory="include" />
+					<Add directory="include/ACGCross/Demo" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />

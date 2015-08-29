@@ -39,3 +39,15 @@ void RndPtr::Destory(){
     SDL_DestroyRenderer(m_rnd);
     SDL_DestroyWindow(m_wnd);
 }
+
+SDL_Texture* RndPtr::GetRenderTarget(){
+    return SDL_GetRenderTarget(pRnd);
+}
+
+void RndPtr::SetRenderTarget(SDL_Texture* s){
+    SDL_SetRenderTarget(pRnd,s);
+}
+
+bool RndPtr::RenderTargetSupported(){
+    return SDL_RenderTargetSupported(pRnd);
+}

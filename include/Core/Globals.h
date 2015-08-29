@@ -49,6 +49,9 @@ namespace Core{
         inline Uint64 GetFpsCount(){return m_fps;};   //取已经过的fps数
         inline operator SDL_Window* (){return m_wnd;};
         inline operator SDL_Renderer* (){return m_rnd;};
+        void SetRenderTarget(SDL_Texture*);
+        SDL_Texture* GetRenderTarget();
+        bool RenderTargetSupported();
     };
 }
 

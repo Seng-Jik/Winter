@@ -10,7 +10,7 @@ using namespace ACGCross::Galgame;
 
 void Corner::OnDraw()
 {
-        if(m_stat != 0) m_corner.OnDraw();
+    if(m_stat != 0) m_corner.OnDraw();
 }
 
 void Corner::OnNext()
