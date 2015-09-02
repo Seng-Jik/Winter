@@ -80,6 +80,7 @@
 		</Unit>
 		<Unit filename="include/ACGCross/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/Button.h" />
+		<Unit filename="include/ACGCross/CGViewer.h" />
 		<Unit filename="include/ACGCross/DanmakuGame/DanmakuGame.h" />
 		<Unit filename="include/ACGCross/Ending.h" />
 		<Unit filename="include/ACGCross/FadeLable.h" />
@@ -133,6 +134,7 @@
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/ACGCross/Button.cpp" />
+		<Unit filename="src/ACGCross/CGViewer.cpp" />
 		<Unit filename="src/ACGCross/DanmakuGame/DanmakuGame.cpp" />
 		<Unit filename="src/ACGCross/Ending.cpp" />
 		<Unit filename="src/ACGCross/FadeLable.cpp" />

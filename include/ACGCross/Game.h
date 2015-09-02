@@ -17,6 +17,7 @@ namespace ACGCross{
     extern Core::Activity* pSaveUI;
     extern Core::Activity* pTitle;
     extern Core::Activity* pSettingUI;
+    extern Core::Activity* pCGViewer;
     extern Galgame::TextBox* pTextBox;
     extern Galgame::Clock* pClock;
 

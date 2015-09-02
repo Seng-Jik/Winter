@@ -105,6 +105,8 @@ void Title::OnNext()
         }else if(m_btnOpr == &m_bLoad){
             ((SaveUI*)pSaveUI) -> SetCallByTitle(true);
             Call(pSaveUI);
+        }else if(m_btnOpr == &m_bCG){
+            Call(pCGViewer);
         }
         m_btnOpr = nullptr;
     }

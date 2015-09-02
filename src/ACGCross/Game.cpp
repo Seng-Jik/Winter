@@ -6,6 +6,7 @@
 #include "ACGCross/Ending.h"
 #include "ACGCross/SaveUI.h"
 #include "ACGCross/SettingUI.h"
+#include "ACGCross/CGViewer.h"
 using namespace std;
 using namespace Core;
 using namespace ACGCross;
@@ -18,6 +19,7 @@ Core::Activity* ACGCross::pTitle;
 Core::Activity* ACGCross::pEd;
 Core::Activity* ACGCross::pSaveUI;
 Core::Activity* ACGCross::pSettingUI;
+Core::Activity* ACGCross::pCGViewer;
 ACGCross::Galgame::TextBox* ACGCross::pTextBox;
 ACGCross::Galgame::Clock* ACGCross::pClock;
 
@@ -66,6 +68,7 @@ void ACGCross::InitGame(){
     pEd = new Ending;
     pSaveUI = new SaveUI;
     pSettingUI = new SettingUI;
+    pCGViewer = new Galgame::CGViewer;
 
 
     /*SDL_LogOutputFunction* pReporter = nullptr;
