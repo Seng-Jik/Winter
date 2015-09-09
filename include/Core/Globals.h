@@ -5,33 +5,29 @@
 
 #define FOR_EACH(val,begin,end) for(auto val = begin;val != end;++val)
 #include "SDLbase.h"
+#include <vector>
 #include <string>
 #include "../Core/Debug.h"
+
+void Main(const std::vector<std::string>& args);
+
 namespace Core{
     class Activity;
     class RndPtr;
 
-    void CoreInit(const std::string& title,const bool FullScreen,const int w,const int h);
-    //框架初始化并创建窗口
-    //运行该代码后再单开代码块，声明和初始化各个活动
-
     extern RndPtr pRnd;
-    void CoreMain(Activity&);   //框架执行
+    void CoreRun(Activity* start,const std::string& title,const bool fullScreen,const int w,const int h);  //框架执行
     //初始化活动的代码块的最后一行调用此函数，传入第一个执行的活动即可
-
-    void CoreQuit();    //框架销毁
-    //在代码块外执行该函数
 
     void Goto(Activity*);   //跳转活动
     void Call(Activity*);  //调用活动
     void Return();  //活动调用返回
     void JumpDraw();    //不渲染当前帧
+    void Exit(int exitcode = 0);    //安全退出
     //Activity* GetParent();  //获取父活动
 
     class RndPtr{   //渲染器和窗口智能指针
-    friend void CoreInit(const std::string& title,const bool FullScreen,const int w,const int h);
-    friend void CoreQuit();
-    friend void CoreMain(Activity* start);
+    friend void CoreRun(Activity* start,const std::string& title,const bool fullScreen,const int w,const int h);
     private:
         SDL_Window* m_wnd;
         SDL_Renderer* m_rnd;

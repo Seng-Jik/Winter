@@ -65,7 +65,7 @@ public:
 
 #include "ACGCross/DanmakuGame/DanmakuGame.h"
 
-int main( int argc, char * argv[] )
+void Main(const std::vector<std::string> args)
 {
     srand(time(NULL));
     screen screenmode[] ={
@@ -83,14 +83,9 @@ int main( int argc, char * argv[] )
         {-1,-1,true}
     };
 
-    CoreInit("冬",screenmode[gameData.GetGrpMode()].full,
-             screenmode[gameData.GetGrpMode()].w,
-             screenmode[gameData.GetGrpMode()].h);
-
-    {
-        InitGame();
-        #ifdef _DEBUG
-        //TestActivity t;
+    InitGame();
+    #ifdef _DEBUG
+    //TestActivity t;
 
 
         if(SDL_NumJoysticks()){ //如果使用手柄
@@ -109,18 +104,18 @@ int main( int argc, char * argv[] )
             KeyMapActivity::SetKeyboardMap(SDLK_LSHIFT,GKEY_SLOW);
         }
         //CoreMain(new DanmakuGame);  //启动弹幕游戏活动
-        CoreMain(pGal);   //启动Galgame活动
+        CoreRun(pGal,"冬",screenmode[gameData.GetGrpMode()].full,
+             screenmode[gameData.GetGrpMode()].w,
+             screenmode[gameData.GetGrpMode()].h);   //启动Galgame活动
         #else
 
         ACGCross::Logo l;
         l.SetGoto(*pTitle);
-        CoreMain(&l);
+        CoreRun(&l,"冬",screenmode[gameData.GetGrpMode()].full,
+             screenmode[gameData.GetGrpMode()].w,
+             screenmode[gameData.GetGrpMode()].h);
         #endif // _DEBUG
         //QuitGame();
-        exit(0);
-    }
-    CoreQuit();
-    return 0;
 }
 /*
 int main( int argc, char * argv[] )

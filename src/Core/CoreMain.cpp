@@ -76,8 +76,22 @@ void Return(){
     //}
 //}
 
-void CoreMain(Activity* start)
+void Exit(int exitcode)
 {
+    if(nowFocus != nullptr) nowFocus -> OnHide();
+    while(!actStack.empty()){
+        Activity*p = actStack.top();
+        p -> OnHide();
+        actStack.pop();
+    }
+    exit(exitcode);
+}
+
+void CoreRun(Activity* start,const string& title,const bool fullScreen,const int w,const int h)
+{
+    pRnd.Create(title,fullScreen,w,h);
+    SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
+
     nowFocus = nullptr;
     nextFocus = start;
     //nowFocus -> OnShow();
@@ -128,6 +142,7 @@ void CoreMain(Activity* start)
                     p -> OnHide();
                     actStack.pop();
                 }
+                pRnd.Destory();
                 return;
             }
             else {
@@ -163,34 +178,6 @@ void CoreMain(Activity* start)
     }
 }
 
-void CoreInit(const string& title,const bool fullScreen,const int w,const int h)
-{
-    SDL_Init(SDL_INIT_EVERYTHING);
-    IMG_Init(IMG_INIT_PNG);
-    TTF_Init();
-
-    pRnd.Create(title,fullScreen,w,h);
-    SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
-
-    Sound::Init();
-
-    nowFocus = nullptr;
-    nextFocus = nullptr;
-}
-
-}
-
-void Core::CoreQuit()
-{
-    exit(0);
-    pRnd.Destory();
-    TTF_Quit();
-    IMG_Quit();
-    Sound::Quit();
-
-    SDL_Quit();
-}
-
 int RndPtr::GetH()
 {
     return nowFocus -> m_logic_h;
@@ -199,4 +186,27 @@ int RndPtr::GetH()
 int RndPtr::GetW()
 {
     return nowFocus -> m_logic_w;
+}
+
+int main(int argc,char** argv)
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    IMG_Init(IMG_INIT_PNG);
+    TTF_Init();
+
+    Sound::Init();
+
+    nowFocus = nullptr;
+    nextFocus = nullptr;
+
+    std::vector<std::string> args;
+    for(int i = 0;i < argc;++i)
+        args.push_back(std::string(argv[i]));
+
+    Main(args);
+
+    return 0;
+
+}
+
 }

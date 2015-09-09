@@ -126,6 +126,7 @@
 		<Unit filename="include/Core/SDLbase.h" />
 		<Unit filename="include/Core/Sound.h" />
 		<Unit filename="include/Core/Surface.h" />
+		<Unit filename="include/Core/TCPNet.h" />
 		<Unit filename="include/Core/Texture.h" />
 		<Unit filename="include/Core/Thread.h" />
 		<Unit filename="include/Core/Timer.h" />
@@ -172,6 +173,7 @@
 		<Unit filename="src/Core/ResVal.cpp" />
 		<Unit filename="src/Core/Sound.cpp" />
 		<Unit filename="src/Core/Surface.cpp" />
+		<Unit filename="src/Core/TCPNet.cpp" />
 		<Unit filename="src/Core/Texture.cpp" />
 		<Unit filename="src/Core/Thread.cpp" />
 		<Unit filename="src/Core/Window.cpp" />

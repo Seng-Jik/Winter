@@ -10,7 +10,7 @@ namespace Core{
     template <Uint32 size>    //传入大小
     class Bundle{
     private:
-        Uint8 m_data[size];
+        Uint8* m_data;
         Uint32 m_wptr;
         Uint32 m_rptr;
     public:
@@ -40,7 +40,7 @@ namespace Core{
         //从文件读取数据包
 
         inline operator void* (){return (void*)&m_data[0];}
-        ~Bundle(){};
+        ~Bundle();
     };
 }
 
@@ -49,7 +49,14 @@ namespace Core{
 template<Uint32 size>
 Core::Bundle<size>::Bundle()
 {
+    m_data = new Uint8[size];
     ResetPtr();
+}
+
+template<Uint32 size>
+Core::Bundle<size>::~Bundle()
+{
+    delete m_data;
 }
 
 template<Uint32 size>

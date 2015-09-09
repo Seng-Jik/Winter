@@ -12,9 +12,7 @@ namespace Core{
 
     class Activity
     {
-    friend void Core::CoreMain(Activity*);
-    friend void Core::Call(Activity*);
-    friend void Core::Return();
+    friend void CoreRun(Activity* start,const std::string& title,const bool fullScreen,const int w,const int h);
     friend class RndPtr;
     private:
         std::forward_list<Control*> m_ansList;
