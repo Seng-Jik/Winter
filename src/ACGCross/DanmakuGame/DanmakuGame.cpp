@@ -6,7 +6,7 @@ using namespace Core;
 
 DanmakuGame::DanmakuGame()
 {
-    //ctor
+    SetLogicScreenSize(1024,768);
 }
 
 DanmakuGame::~DanmakuGame()
@@ -18,10 +18,10 @@ void DanmakuGame::OnNext()
 {
     int spd = 5;
     if(m_sloD) spd = 2;
-    if(m_doD && m_char_pos.y < 768) m_char_pos.y+=spd;
-    if(m_upD && m_char_pos.y > 0) m_char_pos.y-=spd;
-    if(m_leD && m_char_pos.x < 1024) m_char_pos.x-=spd;
-    if(m_riD && m_char_pos.x > 0) m_char_pos.x+=spd;
+    if(m_doD && m_char_pos.y < 748) m_char_pos.y+=spd;
+    if(m_upD && m_char_pos.y > 20) m_char_pos.y-=spd;
+    if(m_leD && m_char_pos.x > 20) m_char_pos.x-=spd;
+    if(m_riD && m_char_pos.x < 1004) m_char_pos.x+=spd;
 }
 
 void DanmakuGame::OnDraw()
@@ -41,8 +41,8 @@ void DanmakuGame::OnShow()
     SDL_QueryTexture(m_char,nullptr,nullptr,&m_char_k.w,&m_char_k.h);
     m_char_k.x = m_char_k.y = 0;
     m_char_pos = m_char_k;
-    m_char_pos.x += 530;
-    m_char_pos.y += 530;
+    m_char_pos.x += 200;
+    m_char_pos.y += 200;
 
     m_sloD=m_upD=m_riD=m_leD=m_doD = false;
 }

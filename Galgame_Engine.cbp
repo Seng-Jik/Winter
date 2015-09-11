@@ -70,6 +70,9 @@
 			<Add library="dxguid" />
 			<Add library="SDL2_mixer" />
 			<Add library="SDL2_ttf" />
+			<Add library="SDL2_net" />
+			<Add library="SDL2_test" />
+			<Add library="SDL2" />
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>

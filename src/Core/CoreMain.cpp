@@ -84,12 +84,13 @@ void Exit(int exitcode)
         p -> OnHide();
         actStack.pop();
     }
-    exit(exitcode);
+    SDL_Event e;
+    e.type = SDL_QUIT;
+    SDL_PushEvent(&e);
 }
 
-void CoreRun(Activity* start,const string& title,const bool fullScreen,const int w,const int h)
+void CoreRun(Activity* start)
 {
-    pRnd.Create(title,fullScreen,w,h);
     SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
 
     nowFocus = nullptr;
@@ -99,21 +100,7 @@ void CoreRun(Activity* start,const string& title,const bool fullScreen,const int
     SDL_Event e;
     Timer FPSKiller;
 
-    #ifdef _DEBUG
-    Timer FPSCounter;
-    int fps = 0;
-    #endif // _DEBUG
-
     while(1){
-        #ifdef _DEBUG
-        fps++;
-        if(FPSCounter.GetTimer()>=1000)
-        {
-            PNT("FPS:"<<fps);
-            fps = 0;
-            FPSCounter.Reset();
-        }
-        #endif // _DEBUG
 
         /**** 如果有Goto消息则执行Goto ****/
         if(nextFocus != nullptr){
@@ -168,12 +155,54 @@ void CoreRun(Activity* start,const string& title,const bool fullScreen,const int
             jumpDraw = false;
             continue;
         }
-        SDL_RenderClear(pRnd);
+        //SDL_RenderClear(pRnd);
         nowFocus -> OnDraw();
+
+        //高精度FPS控制
+        static int fps_count=0,count0t;
+        static int f[FPS];
+        static double ave;
+
+        {
+            int term,i,gnt;
+            static int t=0;
+            if(fps_count==0){
+                if(t==0)
+                    term=0;
+                else
+                    term=count0t+1000-SDL_GetTicks();
+            }
+            else
+                term = (int)(count0t+fps_count*(1000.0/FPS))-SDL_GetTicks();
+
+            if(term>0)
+                SDL_Delay(term);
+
+            gnt=SDL_GetTicks();
+
+            if(fps_count==0)
+                count0t=gnt;
+            f[fps_count]=gnt-t;
+            t=gnt;
+            if(fps_count==FPS-1){
+                ave=0;
+                for(i=0;i<FPS;i++)
+                    ave+=f[i];
+                ave/=FPS;
+            }
+            ++fps_count;
+            fps_count = fps_count%FPS ;
+        }
+
+        #ifdef _DEBUG
+        char buf [8];
+        sprintf(buf,"FPS:%f",1000.0/ave);
+        SDL_SetWindowTitle(pRnd,buf);
+        #endif // _DEBUG
         SDL_RenderPresent(pRnd);
 
-        FPSKiller.WaitTimer(1000/FPS);   //FPS限制
-        FPSKiller.Reset();
+        //FPSKiller.WaitTimer(1000/FPS);   //FPS限制
+        //FPSKiller.Reset();
         pRnd.m_fps++;
     }
 }
@@ -187,6 +216,10 @@ int RndPtr::GetW()
 {
     return nowFocus -> m_logic_w;
 }
+
+}
+
+
 
 int main(int argc,char** argv)
 {
@@ -206,7 +239,5 @@ int main(int argc,char** argv)
     Main(args);
 
     return 0;
-
-}
 
 }

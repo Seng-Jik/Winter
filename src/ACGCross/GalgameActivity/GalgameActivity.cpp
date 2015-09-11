@@ -181,7 +181,7 @@ void GalgameActivity::SMEProc(bool fast)
 {
     PNT("SMEProcessor:PROC BEGIN");
     if(!m_SMEProc_ProcCalled){
-        if(m_SMEProc_sme.type ==SMEType::END) exit(0);
+        if(m_SMEProc_sme.type ==SMEType::END) Exit(0);
         switch(m_SMEProc_sme.type){
         case SAY:
             PNT("SMEProcessor:PROC say");

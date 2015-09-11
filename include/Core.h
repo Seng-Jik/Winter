@@ -14,5 +14,6 @@
 #include "Core/Thread.h"
 #include "Core/Timer.h"
 #include "Core/ResVal.h"
+#include "Core/TCPNet.h"
 
 #endif // _HEAD_CORE_

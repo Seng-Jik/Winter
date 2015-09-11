@@ -34,6 +34,7 @@ void BugReporter(void*           userdata,
 }
 
 void ACGCross::InitGame(){
+
     //LoadUI
     r.Load("ResVal/UI_BASE.txt");
     if(gameData.Get16_9()) r.Load("ResVal/UI_16_9.txt");

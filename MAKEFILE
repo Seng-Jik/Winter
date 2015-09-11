@@ -15,7 +15,7 @@ INC = -I$(SDL2_INCLUDE)\\SDL2 -Iinclude
 CFLAGS = -Wall -pg -g
 RESINC = 
 LIBDIR = -L$(SDL2_LIB)
-LIB = -lmingw32 -lSDL2main -lSDL2_image SDL2.dll -luser32 -lgdi32 -lwinmm -ldxguid -lSDL2_mixer -lSDL2_ttf
+LIB = -lmingw32 -lSDL2main -lSDL2_image SDL2.dll -luser32 -lgdi32 -lwinmm -ldxguid -lSDL2_mixer -lSDL2_ttf -lSDL2_net -lSDL2_test -lSDL2
 LDFLAGS = -pg -lgmon
 
 INC_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude -Iinclude\ACGCross\Demo

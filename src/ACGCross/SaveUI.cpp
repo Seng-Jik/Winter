@@ -9,6 +9,7 @@ using namespace ACGCross::Galgame;
 using namespace std;
 SaveUI::SaveUI()
 {
+    SetLogicScreenSize(1024,r.Int("TITLE_LOGICSCREEN_HEIGHT"));
     //ctor
 }
 

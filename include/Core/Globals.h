@@ -9,14 +9,14 @@
 #include <string>
 #include "../Core/Debug.h"
 
-void Main(const std::vector<std::string>& args);
+void Main(const std::vector<std::string> args);
 
 namespace Core{
     class Activity;
     class RndPtr;
 
     extern RndPtr pRnd;
-    void CoreRun(Activity* start,const std::string& title,const bool fullScreen,const int w,const int h);  //框架执行
+    void CoreRun(Activity* start);  //框架执行
     //初始化活动的代码块的最后一行调用此函数，传入第一个执行的活动即可
 
     void Goto(Activity*);   //跳转活动
@@ -27,16 +27,16 @@ namespace Core{
     //Activity* GetParent();  //获取父活动
 
     class RndPtr{   //渲染器和窗口智能指针
-    friend void CoreRun(Activity* start,const std::string& title,const bool fullScreen,const int w,const int h);
+    friend void Core::CoreRun(Activity* start);
     private:
         SDL_Window* m_wnd;
         SDL_Renderer* m_rnd;
         Uint64 m_fps;
         int m_w,m_h;
 
+    public:
         void Create(const std::string& title,const bool FullScreen,const int w,const int h);
         void Destory();
-    public:
         void Clear();
         int GetW(); //逻辑宽
         int GetH(); //逻辑高
