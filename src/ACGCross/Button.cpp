@@ -26,6 +26,7 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
     if(m_stat > 0){
         if(e.type == SDL_MOUSEMOTION){
             if(InRect(m_r,e.motion.x,e.motion.y)){
+                PNT("BUTTON MOTION UP");
                 m_stat = 2;
                 ActivityEvent(2);
                 return false;
@@ -57,11 +58,11 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
 
 void Button::OnDraw()
 {
-    if(m_stat >=2){
+    /*if(m_stat >=2){
         int x,y;
         SDL_GetMouseState(&x,&y);
         if(!InRect(m_r,x,y)) m_stat = 1;
-    }
+    }*/
     if(m_stat != 0) switch(m_stat){
     case 2:
         m_motion.OnDraw();break;

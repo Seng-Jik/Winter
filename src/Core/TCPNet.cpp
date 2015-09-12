@@ -2,19 +2,29 @@
 
 using namespace Core;
 
-TCPConnection* TCPConnection::ConnectToServer(const std::string host,Uint16 port){
-	auto ret = new TCPConnection;
-	if(SDLNet_ResolveHost(&(ret -> m_ip),host.c_str(),port) == -1){
-		delete ret;
-		return nullptr;
+bool TCPConnection::ConnectToServer(const std::string host,Uint16 port){
+	if(SDLNet_ResolveHost(&m_ip,host.c_str(),port) == -1){
+        m_socket = nullptr;
+        return false;
 	}
-	ret -> m_socket = SDLNet_TCP_Open(&(ret -> m_ip));
-	if(ret -> m_socket == nullptr){
-		delete ret;
-		return nullptr;
+	m_socket = SDLNet_TCP_Open(&m_ip);
+	if(m_socket == nullptr){
+		return false;
 	}
-	return ret;
+	return true;
 }
+
+void TCPConnection::Close()
+{
+    if(m_socket != nullptr) SDLNet_TCP_Close(m_socket);
+    m_socket = nullptr;
+}
+
+bool TCPConnection::Connected()
+{
+    return m_socket != nullptr;
+}
+
 
 int TCPConnection::Send(const void* m,int size){
 	return SDLNet_TCP_Send(m_socket,m,size);
@@ -35,7 +45,7 @@ int TCPConnection::WaitRecv(void* m,int size){
 }
 
 TCPConnection::~TCPConnection(){
-	SDLNet_TCP_Close(m_socket);
+	Close();
 }
 
 TCPServer::TCPServer(Uint16 port){
@@ -47,20 +57,19 @@ TCPServer::~TCPServer(){
 	SDLNet_TCP_Close(m_socket);
 }
 
-TCPConnection* TCPServer::Accept(){
+bool TCPServer::Accept(TCPConnection& t){
 	auto sock = SDLNet_TCP_Accept(m_socket);
-	if(sock == nullptr) return nullptr;
-
-	auto ret = new TCPConnection;
-	ret -> m_socket = sock;
-	return ret;
+	if(sock == nullptr) return false;
+    else{
+        t.m_socket = sock;
+        return true;
+    }
 }
 
-TCPConnection* TCPServer::ListenAndAccept(){
+void TCPServer::ListenAndAccept(TCPConnection& t){
 	while(1){
-		auto ret = Accept();
-		if(ret != nullptr) return ret;
-		SDL_Delay(5);
+        if(Accept(t)) return;
+		else SDL_Delay(5);
 	}
 }
 

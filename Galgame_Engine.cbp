@@ -133,6 +133,7 @@
 		<Unit filename="include/Core/Texture.h" />
 		<Unit filename="include/Core/Thread.h" />
 		<Unit filename="include/Core/Timer.h" />
+		<Unit filename="include/Core/UDPNet.h" />
 		<Unit filename="include/SMLanguage/SMI.h" />
 		<Unit filename="src/ACGCross/ACGCross_Logo.cpp">
 			<Option target="Release" />
@@ -179,6 +180,7 @@
 		<Unit filename="src/Core/TCPNet.cpp" />
 		<Unit filename="src/Core/Texture.cpp" />
 		<Unit filename="src/Core/Thread.cpp" />
+		<Unit filename="src/Core/UDPNet.cpp" />
 		<Unit filename="src/Core/Window.cpp" />
 		<Unit filename="src/SMLanguage/SMI.cpp" />
 		<Unit filename="src/main.cpp" />

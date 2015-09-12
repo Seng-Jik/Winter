@@ -114,9 +114,7 @@ void Main(const std::vector<std::string> args)
 
         ACGCross::Logo l;
         l.SetGoto(*pTitle);
-        CoreRun(&l,"冬",screenmode[gameData.GetGrpMode()].full,
-             screenmode[gameData.GetGrpMode()].w,
-             screenmode[gameData.GetGrpMode()].h);
+        CoreRun(&l);
         #endif // _DEBUG
         exit(0);
 }

@@ -15,5 +15,6 @@
 #include "Core/Timer.h"
 #include "Core/ResVal.h"
 #include "Core/TCPNet.h"
+#include "Core/UDPNet.h"
 
 #endif // _HEAD_CORE_
