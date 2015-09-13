@@ -1,5 +1,5 @@
-#include "ResFile.h"
-#include "Error.h"
+#include "Core/ResFile.h"
+#include "Core/Error.h"
 #include <fstream>
 
 using namespace Core;

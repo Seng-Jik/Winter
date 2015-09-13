@@ -1,5 +1,4 @@
-#include "TCPNet.h"
-
+#include "Core/TCPNet.h"
 using namespace Core;
 
 bool TCPConnection::ConnectToServer(const std::string host,Uint16 port){

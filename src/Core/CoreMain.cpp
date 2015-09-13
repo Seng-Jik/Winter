@@ -155,7 +155,7 @@ void CoreRun(Activity* start)
             jumpDraw = false;
             continue;
         }
-        //SDL_RenderClear(pRnd);
+        SDL_RenderClear(pRnd);
         nowFocus -> OnDraw();
 
         //高精度FPS控制
