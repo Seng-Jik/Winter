@@ -18,8 +18,8 @@ namespace Core
     void ReturnMsg(THREAD_ID obj,const int msg);  //返回一个消息给Thread对象使其可以使用成员函数获取
     void WaitMsg(THREAD_ID,const int); //等待指定消息传入且排除其它消息
     int WaitMsg(THREAD_ID);   //等待一个非0消息传入
-    void* GetData(THREAD_ID);  //取得一个来自Thread类对象的数据，如果有数据则返回，否则等待一个数据传入
-    void ReturnData(THREAD_ID,void* const);   //把一个数据返回给Thread类对象，如果其中有一个数据未被接受，则等待它接受
+    volatile void* GetData(THREAD_ID);  //取得一个来自Thread类对象的数据，如果有数据则返回，否则等待一个数据传入
+    void ReturnData(THREAD_ID,volatile void*);   //把一个数据返回给Thread类对象，如果其中有一个数据未被接受，则等待它接受
 
     /*
     class Locker
@@ -48,8 +48,8 @@ namespace Core
         friend int LaunchThread(void*);
         friend int GetMsg(THREAD_ID);
         friend void ReturnMsg(THREAD_ID,const int);
-        friend void* GetData(THREAD_ID);
-        friend void ReturnData(THREAD_ID,void* const);
+        friend volatile void* GetData(THREAD_ID);
+        friend void ReturnData(THREAD_ID,volatile void*);
 
     private:
         void (*m_func)(THREAD_ID);
@@ -70,8 +70,8 @@ namespace Core
         int WaitMsg();  //等待并返回一个非0的消息
         void WaitMsg(const int msg);    //等待指定消息，并且排除其它消息
         void SendMsg(const int msg);    //发送消息，如果子线有消息未接受，等待子线完成接受后再传入
-        void SendData(void* const); //发送数据，如果子线有数据还没被取得则等待其取得后再发送
-        void* GetData();    //取得数据，如果没有要取得数据则等待一个数据被发出
+        void SendData(volatile void*); //发送数据，如果子线有数据还没被取得则等待其取得后再发送
+        volatile void* GetData();    //取得数据，如果没有要取得数据则等待一个数据被发出
     };
 }
 #endif // _HEAD_THREAD_

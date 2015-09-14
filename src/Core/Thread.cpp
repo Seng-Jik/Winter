@@ -69,7 +69,7 @@ namespace Core
         return ret;
     }
 
-    void* GetData(THREAD_ID obj)
+    volatile void* GetData(THREAD_ID obj)
     {
         void* ret;
         while(1)
@@ -89,7 +89,7 @@ namespace Core
             }
         }
     }
-    void ReturnData(THREAD_ID obj,void* const data)
+    void ReturnData(THREAD_ID obj,volatile void* data)
     {
         while(1)
         {
@@ -116,6 +116,8 @@ namespace Core
         m_running = false;
         m_thread = nullptr;
         m_func = func;
+        m_idata = nullptr;
+        m_odata = nullptr;
     }
 
     Thread::~Thread()
@@ -191,7 +193,7 @@ namespace Core
         while(GetMsg() != msg) SDL_Delay(THREAD_WAIT);
     }
 
-    void Thread::SendData(void* const data)
+    void Thread::SendData(volatile void* data)
     {
         while(1)
         {
@@ -210,7 +212,7 @@ namespace Core
         }
     }
 
-    void* Thread::GetData()
+    volatile void* Thread::GetData()
     {
         void* ret;
         while(1)

@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="TCPDemo" />
-	<File name="src\Core\Window.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Core\Thread.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="608" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TCPDemo.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1635" topLine="81" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\GalgameActivity\Corner.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="184" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\GalgameActivity\MaskCmdTarget.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2611" topLine="63" />
-		</Cursor>
-	</File>
-	<File name="include\Core\UDPNet.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1569" topLine="57" />
+			<Cursor1 position="3235" topLine="106" />
 		</Cursor>
 	</File>
 	<File name="include\SMLanguage\SMI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -36,29 +11,29 @@
 			<Cursor1 position="811" topLine="39" />
 		</Cursor>
 	</File>
-	<File name="src\Core\Surface.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\GameDataMgr.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="796" topLine="0" />
+			<Cursor1 position="1702" topLine="71" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\GalgameActivity\ChrMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Core\Texture.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="314" topLine="0" />
+			<Cursor1 position="357" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\ACGCross\ACGCross_Logo.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Core\Globals.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="95" topLine="2" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Core\Error.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\KeyMapActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="885" topLine="34" />
+			<Cursor1 position="1115" topLine="26" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\Button.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\GalgameActivity\Corner.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1347" topLine="57" />
+			<Cursor1 position="184" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Core\ResFile.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -71,69 +46,9 @@
 			<Cursor1 position="344" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="include\Core.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\GalgameActivity\MaskCmdTarget.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="425" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\Game.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1094" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Misc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="803" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\KeyMapActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1115" topLine="26" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Globals.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\Title\Title.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="834" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="include\Core\SDLbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="407" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\Title\Title.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2799" topLine="88" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\GalgameActivity\TextWindow.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="275" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\SaveUI.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="354" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\DanmakuGame\DanmakuGame.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="492" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\Game.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="478" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\SettingUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="449" topLine="81" />
+			<Cursor1 position="2611" topLine="63" />
 		</Cursor>
 	</File>
 	<File name="include\ACGCross\CGViewer.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -141,19 +56,9 @@
 			<Cursor1 position="385" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="include\Core\Surface.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\ACGCross_Logo.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1128" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\DanmakuGame\DanmakuGame.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="534" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\KeyMapActivity.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1345" topLine="3" />
+			<Cursor1 position="4199" topLine="118" />
 		</Cursor>
 	</File>
 	<File name="src\ACGCross\Title\MovingBG.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -161,79 +66,34 @@
 			<Cursor1 position="1344" topLine="55" />
 		</Cursor>
 	</File>
-	<File name="include\Core\TCPNet.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="603" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\GameDataMgr.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1702" topLine="71" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Activity.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="443" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="src\Core\UDPNet.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="15" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Bundle.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="329" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\TCPNet.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="266" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Texture.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="357" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\ACGCross_Logo.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4199" topLine="118" />
-		</Cursor>
-	</File>
-	<File name="src\Core\ResFile.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="42" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\GalgameActivity\Bg.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2553" topLine="107" />
-		</Cursor>
-	</File>
 	<File name="include\ACGCross\GalgameActivity\Bg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1967" topLine="31" />
 		</Cursor>
 	</File>
-	<File name="src\SMLanguage\SMI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Core\SDLbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="16740" topLine="806" />
+			<Cursor1 position="407" topLine="5" />
 		</Cursor>
 	</File>
-	<File name="include\ACGCross\GalgameActivity\Chr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\GalgameActivity\ChrMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="462" topLine="23" />
+			<Cursor1 position="314" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Core\CoreMain.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\SaveUI.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6083" topLine="12" />
+			<Cursor1 position="354" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\ACGCross\GalgameActivity\ChrMgr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Core\TCPNet.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="425" topLine="24" />
+			<Cursor1 position="361" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\DanmakuGame\DanmakuGame.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="534" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="src\ACGCross\GalgameActivity\GalgameActivity.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -241,9 +101,39 @@
 			<Cursor1 position="5500" topLine="183" />
 		</Cursor>
 	</File>
-	<File name="include\ACGCross\GalgameActivity\TextBox.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Core\CoreMain.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="477" topLine="24" />
+			<Cursor1 position="6082" topLine="223" />
+		</Cursor>
+	</File>
+	<File name="src\Core\Surface.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="796" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\GalgameActivity\ChrMgr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="425" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\ACGCross_Logo.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="95" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="src\SMLanguage\SMI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16740" topLine="806" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\Button.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1347" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\SettingUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="449" topLine="81" />
 		</Cursor>
 	</File>
 	<File name="include\ACGCross\GalgameActivity\GalgameActivity.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -251,14 +141,134 @@
 			<Cursor1 position="3378" topLine="119" />
 		</Cursor>
 	</File>
+	<File name="src\ACGCross\CGViewer.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="146" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\Game.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="478" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\DanmakuGame\DanmakuGame.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="492" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\GalgameActivity\TextWindow.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="275" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\Title\Title.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="834" topLine="13" />
+		</Cursor>
+	</File>
 	<File name="src\Core\Misc.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="284" topLine="152" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\CGViewer.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\ACGCross\GalgameActivity\Chr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="146" topLine="0" />
+			<Cursor1 position="462" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Activity.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="443" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\GalgameActivity\Bg.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2553" topLine="107" />
+		</Cursor>
+	</File>
+	<File name="src\Core\ResFile.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Bundle.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="329" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Core\Error.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="885" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Surface.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1128" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\Game.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1094" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\GalgameActivity\TextBox.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="477" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="src\Core\UDPNet.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\TCPNet.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="603" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\Core.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="425" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\Title\Title.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2799" topLine="88" />
+		</Cursor>
+	</File>
+	<File name="src\Core\Window.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="608" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Thread.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1833" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="src\TCPDemo.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="634" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Misc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="803" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="src\main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1569" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\KeyMapActivity.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1345" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="include\Core\UDPNet.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="76" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

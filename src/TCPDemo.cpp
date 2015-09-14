@@ -10,10 +10,12 @@ void Send(THREAD_ID id) {
     bool* data = (bool*)GetData(id);
 
     while(1) {
+        cout<<"Send";
+        for(int i = 0;i<6;++i) cout<<data[i];
+        cout<<endl;
         if(tcp.Send(data, sizeof(bool[8]))<1) {
-            Exit(-1);
+            return;
         }
-
         if(data[0]) {
             return;
         }
@@ -22,14 +24,15 @@ void Send(THREAD_ID id) {
 
 class TCPDemo:public Activity {
 private:
-    SDL_Rect m_r;
-    bool m_b[8] = {false};
+    SDL_Rect m_r ={0,0,10,10};
+    volatile bool m_b[8] = {false};
     Thread t;
 public:
     TCPDemo():t(&Send)
     {};
     void OnShow() {
         t.Run();
+        cout<<m_b[0]<<endl;
         t.SendData(&m_b);
     }
 
@@ -59,25 +62,26 @@ public:
         }
 
         std::string b(SDL_GetKeyName(e.key.keysym.sym));
+        cout<<b<<endl;
 
         if(b == "Up") {
-            b[4] = s;
+            m_b[4] = s;
         }
 
         if(b == "Right") {
-            b[1] = s;
+            m_b[1] = s;
         }
 
         if(b == "Down") {
-            b[2] = s;
+            m_b[2] = s;
         }
 
         if(b == "Left") {
-            b[3] = s;
+            m_b[3] = s;
         }
 
         if(b == "Left Shift") {
-            b[5] = s;
+            m_b[5] = s;
         }
     }
 
@@ -90,7 +94,7 @@ void Main(const std::vector<std::string> args){
     ResVal r;
     r.Load("tcpdemo.rv");
     TCPDemo a;
-    tcp.ConnectToServer("192.168.1.100",13099);
+    tcp.ConnectToServer("127.0.0.1",16384);
 
     if(!tcp.Connected()) {
         cout<<"fail"<<SDLNet_GetError();
