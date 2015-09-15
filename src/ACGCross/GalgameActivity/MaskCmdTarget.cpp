@@ -89,7 +89,7 @@ void MaskCmdTarget::OnNext()
         if(per >= 1.0) StopMask();
         else{
             m_m.ApplyToSurfaceARGB8888(m_newBgSur,per);
-            m_tex.Load(m_newBgSur);
+            m_tex.Update(m_newBgSur->pixels,m_newBgSur->pitch);
         }
     }
 }

@@ -1,1 +1,2 @@
 STR IP = "127.0.0.1"
+INT SENDDEALY = 32

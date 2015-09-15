@@ -57,8 +57,11 @@ namespace Core
         void SetRollAngle(double);
         void SetRollCenter(int,int);
         void SetRollEnable(bool);
-        //设置旋转
-        //TODO:未实现
+
+        void Update(const SDL_Rect& area,const void* pixels,int pitch);
+        void Update(const void* pixels,int pitch);
+        void* Lock(const SDL_Rect& area,int& pitch);
+        void Unlock();
 
         inline operator SDL_Texture* (){return m_tex;}
         virtual ~Texture();

@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 using namespace Core;
+ResVal r;
 
 TCPConnection tcp;
 
@@ -10,15 +11,16 @@ void Send(THREAD_ID id) {
     bool* data = (bool*)GetData(id);
 
     while(1) {
-        cout<<"Send";
-        for(int i = 0;i<6;++i) cout<<data[i];
-        cout<<endl;
+        //cout<<"Send";
+        //for(int i = 0;i<6;++i) cout<<data[i];
+        //cout<<endl;
         if(tcp.Send(data, sizeof(bool[8]))<1) {
             return;
         }
         if(data[0]) {
             return;
         }
+        SDL_Delay(r.Int("SENDDEALY"));
     }
 }
 
@@ -62,7 +64,7 @@ public:
         }
 
         std::string b(SDL_GetKeyName(e.key.keysym.sym));
-        cout<<b<<endl;
+        //cout<<b<<endl;
 
         if(b == "Up") {
             m_b[4] = s;
@@ -91,10 +93,9 @@ public:
 };
 
 void Main(const std::vector<std::string> args){
-    ResVal r;
     r.Load("tcpdemo.rv");
     TCPDemo a;
-    tcp.ConnectToServer("127.0.0.1",16384);
+    tcp.ConnectToServer(r.Str("IP"),16384);
 
     if(!tcp.Connected()) {
         cout<<"fail"<<SDLNet_GetError();

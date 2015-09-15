@@ -185,3 +185,27 @@ void Texture::SetZoom(float w, float h)
     GetSize(wk,hk);
     SetZoom(int(w*wk),int(h*hk));
 }
+
+void Texture::Update(const SDL_Rect& area,const void* pixels,int pitch)
+{
+    SDL_UpdateTexture(m_tex,&area,pixels,pitch);
+}
+
+void Texture::Update(const void* pixels,int pitch)
+{
+    SDL_UpdateTexture(m_tex,&m_src,pixels,pitch);
+}
+
+
+void* Texture::Lock(const SDL_Rect& area,int& pitch)
+{
+    void* ret;
+    SDL_LockTexture(m_tex,&area,&ret,&pitch);
+    return ret;
+}
+
+void Texture::Unlock()
+{
+    SDL_UnlockTexture(m_tex);
+}
+
