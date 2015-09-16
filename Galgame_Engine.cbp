@@ -58,6 +58,7 @@
 				<Compiler>
 					<Add option="-pg" />
 					<Add option="-g" />
+					<Add directory="include/Core" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -73,6 +74,7 @@
 				<Compiler>
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O2" />
+					<Add directory="include/Core" />
 				</Compiler>
 			</Target>
 			<Target title="UDPDemo">
@@ -83,6 +85,7 @@
 				<Compiler>
 					<Add option="-pg" />
 					<Add option="-g" />
+					<Add directory="include/Core" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -255,6 +258,7 @@
 		<Unit filename="include/Core.h" />
 		<Unit filename="include/Core/Activity.h" />
 		<Unit filename="include/Core/Bundle.h" />
+		<Unit filename="include/Core/CSVReader.h" />
 		<Unit filename="include/Core/Control.h" />
 		<Unit filename="include/Core/Debug.h" />
 		<Unit filename="include/Core/Error.h" />
@@ -403,6 +407,7 @@
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
 		</Unit>
+		<Unit filename="src/Core/CSVReader.cpp" />
 		<Unit filename="src/Core/CoreMain.cpp" />
 		<Unit filename="src/Core/Error.cpp" />
 		<Unit filename="src/Core/Font.cpp" />

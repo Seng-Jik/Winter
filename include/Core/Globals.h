@@ -9,7 +9,7 @@
 #include <string>
 #include "../Core/Debug.h"
 
-void Main(const std::vector<std::string> args);
+extern void Main(const std::vector<std::string> args);
 
 namespace Core{
     class Activity;
