@@ -16,6 +16,7 @@
 #include "Core/ResVal.h"
 #include "Core/TCPNet.h"
 #include "Core/UDPNet.h"
+#include "Core/CSVEditor.h"
 #include "Core/CSVReader.h"
 
 #endif // _HEAD_CORE_

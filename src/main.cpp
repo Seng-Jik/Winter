@@ -1,13 +1,13 @@
 #include "Core.h"
-#include "ACGCross/ACGCross_Logo.h"
-#include "ACGCross/GalgameActivity/GalgameActivity.h"
-#include "ACGCross/Title/Title.h"
+#include "ACGCross/PAW01_Winter/ACGCross_Logo.h"
+#include "ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+#include "ACGCross/PAW01_Winter/Title/Title.h"
 
-#include "ACGCross/Game.h"
+#include "ACGCross/PAW01_Winter/Game.h"
 #include "Core/ResVal.h"
 #include <stdlib.h>
 #include <time.h>
-#include "ACGCross/Ending.h"
+#include "ACGCross/PAW01_Winter/Ending.h"
 
 #define GAME_TITLE "冬"
 
@@ -24,7 +24,7 @@ struct screen{
     bool full;
 };
 
-#include "Mask.h"
+/*#include "ACGCross\PAW01_Winter\Mask.h"
 class TestActivity:public Core::Activity{
 private:
     Timer m_t;
@@ -61,9 +61,9 @@ public:
         //if(e.type == SDL_MOUSEWHEEL)
             //Goto(pTitle);
     }
-};
+};*/
 
-#include "ACGCross/DanmakuGame/DanmakuGame.h"
+#include "ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h"
 
 
 void Main(const std::vector<std::string> args)
@@ -89,6 +89,7 @@ void Main(const std::vector<std::string> args)
 
     #ifdef _DEBUG
     //TestActivity t;
+    //CoreRun(&t);
 
 
         if(SDL_NumJoysticks()){ //如果使用手柄

@@ -73,15 +73,15 @@ OBJDIR_UDPDEMO = bin\\UDPDemo\\obj
 DEP_UDPDEMO = 
 OUT_UDPDEMO = bin\\TCPDemo\\Galgame_Engine.exe
 
-OBJ_WINTER_DEBUG = $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\MathFunc.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Mask.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\KeyMapActivity.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Game.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\FadeLable.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Ending.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\CGViewer.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Button.o $(OBJDIR_WINTER_DEBUG)\\src\\main.o $(OBJDIR_WINTER_DEBUG)\\src\\SMLanguage\\SMI.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Window.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\UDPNet.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Thread.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Texture.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\TCPNet.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Surface.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Sound.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\ResVal.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\ResFile.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Misc.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Font.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Error.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CoreMain.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVReader.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\str2wstr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Slider.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SettingUI.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SaveUI.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\NumTexture.o $(OBJDIR_WINTER_DEBUG)\\icon.o
+OBJ_WINTER_DEBUG = $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Mask.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Game.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Ending.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Button.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o $(OBJDIR_WINTER_DEBUG)\\src\\main.o $(OBJDIR_WINTER_DEBUG)\\src\\SMLanguage\\SMI.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Window.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\UDPNet.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Thread.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Texture.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\TCPNet.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Surface.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Sound.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\ResVal.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\ResFile.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Misc.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Font.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\Error.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CoreMain.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVReader.o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVEditor.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Slider.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o $(OBJDIR_WINTER_DEBUG)\\icon.o
 
-OBJ_WINTER_RELEASE = $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\MathFunc.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Mask.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\KeyMapActivity.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GameDataMgr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Game.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextWindow.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextBox.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Snow.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\NameCard.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GameMenu.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Corner.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Clock.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Chr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Bg.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\FadeLable.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Ending.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\CGViewer.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Button.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\ACGCross_Logo.o $(OBJDIR_WINTER_RELEASE)\\src\\main.o $(OBJDIR_WINTER_RELEASE)\\src\\SMLanguage\\SMI.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Window.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\UDPNet.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Thread.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Texture.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\TCPNet.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Surface.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Sound.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\ResVal.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\ResFile.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Misc.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Font.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Error.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CoreMain.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVReader.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\str2wstr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\TitleButton.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\Title.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\MovingBG.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\GameLogo.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Slider.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SettingUI.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SaveUI.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\NumTexture.o $(OBJDIR_WINTER_RELEASE)\\icon.o
+OBJ_WINTER_RELEASE = $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Mask.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Game.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Ending.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Button.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o $(OBJDIR_WINTER_RELEASE)\\src\\main.o $(OBJDIR_WINTER_RELEASE)\\src\\SMLanguage\\SMI.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Window.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\UDPNet.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Thread.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Texture.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\TCPNet.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Surface.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Sound.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\ResVal.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\ResFile.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Misc.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Font.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\Error.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CoreMain.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVReader.o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVEditor.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Slider.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o $(OBJDIR_WINTER_RELEASE)\\icon.o
 
-OBJ_TCPDEMO = $(OBJDIR_TCPDEMO)\\src\\TCPDemo.o $(OBJDIR_TCPDEMO)\\src\\Core\\Window.o $(OBJDIR_TCPDEMO)\\src\\Core\\UDPNet.o $(OBJDIR_TCPDEMO)\\src\\Core\\Thread.o $(OBJDIR_TCPDEMO)\\src\\Core\\Texture.o $(OBJDIR_TCPDEMO)\\src\\Core\\TCPNet.o $(OBJDIR_TCPDEMO)\\src\\Core\\Surface.o $(OBJDIR_TCPDEMO)\\src\\Core\\Sound.o $(OBJDIR_TCPDEMO)\\src\\Core\\ResVal.o $(OBJDIR_TCPDEMO)\\src\\Core\\ResFile.o $(OBJDIR_TCPDEMO)\\src\\Core\\Misc.o $(OBJDIR_TCPDEMO)\\src\\Core\\Font.o $(OBJDIR_TCPDEMO)\\src\\Core\\Error.o $(OBJDIR_TCPDEMO)\\src\\Core\\CoreMain.o $(OBJDIR_TCPDEMO)\\src\\Core\\CSVReader.o $(OBJDIR_TCPDEMO)\\icon.o
+OBJ_TCPDEMO = $(OBJDIR_TCPDEMO)\\src\\TCPDemo.o $(OBJDIR_TCPDEMO)\\src\\Core\\Window.o $(OBJDIR_TCPDEMO)\\src\\Core\\UDPNet.o $(OBJDIR_TCPDEMO)\\src\\Core\\Thread.o $(OBJDIR_TCPDEMO)\\src\\Core\\Texture.o $(OBJDIR_TCPDEMO)\\src\\Core\\TCPNet.o $(OBJDIR_TCPDEMO)\\src\\Core\\Surface.o $(OBJDIR_TCPDEMO)\\src\\Core\\Sound.o $(OBJDIR_TCPDEMO)\\src\\Core\\ResVal.o $(OBJDIR_TCPDEMO)\\src\\Core\\ResFile.o $(OBJDIR_TCPDEMO)\\src\\Core\\Misc.o $(OBJDIR_TCPDEMO)\\src\\Core\\Font.o $(OBJDIR_TCPDEMO)\\src\\Core\\Error.o $(OBJDIR_TCPDEMO)\\src\\Core\\CoreMain.o $(OBJDIR_TCPDEMO)\\src\\Core\\CSVReader.o $(OBJDIR_TCPDEMO)\\src\\Core\\CSVEditor.o $(OBJDIR_TCPDEMO)\\icon.o
 
-OBJ_SNOWENGINE = $(OBJDIR_SNOWENGINE)\\src\\Core\\Window.o $(OBJDIR_SNOWENGINE)\\src\\Core\\UDPNet.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Thread.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Texture.o $(OBJDIR_SNOWENGINE)\\src\\Core\\TCPNet.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Surface.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Sound.o $(OBJDIR_SNOWENGINE)\\src\\Core\\ResVal.o $(OBJDIR_SNOWENGINE)\\src\\Core\\ResFile.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Misc.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Font.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Error.o $(OBJDIR_SNOWENGINE)\\src\\Core\\CoreMain.o $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVReader.o
+OBJ_SNOWENGINE = $(OBJDIR_SNOWENGINE)\\src\\Core\\Window.o $(OBJDIR_SNOWENGINE)\\src\\Core\\UDPNet.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Thread.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Texture.o $(OBJDIR_SNOWENGINE)\\src\\Core\\TCPNet.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Surface.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Sound.o $(OBJDIR_SNOWENGINE)\\src\\Core\\ResVal.o $(OBJDIR_SNOWENGINE)\\src\\Core\\ResFile.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Misc.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Font.o $(OBJDIR_SNOWENGINE)\\src\\Core\\Error.o $(OBJDIR_SNOWENGINE)\\src\\Core\\CoreMain.o $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVReader.o $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVEditor.o
 
-OBJ_UDPDEMO = $(OBJDIR_UDPDEMO)\\src\\TCPDemo.o $(OBJDIR_UDPDEMO)\\src\\Core\\Window.o $(OBJDIR_UDPDEMO)\\src\\Core\\UDPNet.o $(OBJDIR_UDPDEMO)\\src\\Core\\Thread.o $(OBJDIR_UDPDEMO)\\src\\Core\\Texture.o $(OBJDIR_UDPDEMO)\\src\\Core\\TCPNet.o $(OBJDIR_UDPDEMO)\\src\\Core\\Surface.o $(OBJDIR_UDPDEMO)\\src\\Core\\Sound.o $(OBJDIR_UDPDEMO)\\src\\Core\\ResVal.o $(OBJDIR_UDPDEMO)\\src\\Core\\ResFile.o $(OBJDIR_UDPDEMO)\\src\\Core\\Misc.o $(OBJDIR_UDPDEMO)\\src\\Core\\Font.o $(OBJDIR_UDPDEMO)\\src\\Core\\Error.o $(OBJDIR_UDPDEMO)\\src\\Core\\CoreMain.o $(OBJDIR_UDPDEMO)\\src\\Core\\CSVReader.o $(OBJDIR_UDPDEMO)\\icon.o
+OBJ_UDPDEMO = $(OBJDIR_UDPDEMO)\\src\\TCPDemo.o $(OBJDIR_UDPDEMO)\\src\\Core\\Window.o $(OBJDIR_UDPDEMO)\\src\\Core\\UDPNet.o $(OBJDIR_UDPDEMO)\\src\\Core\\Thread.o $(OBJDIR_UDPDEMO)\\src\\Core\\Texture.o $(OBJDIR_UDPDEMO)\\src\\Core\\TCPNet.o $(OBJDIR_UDPDEMO)\\src\\Core\\Surface.o $(OBJDIR_UDPDEMO)\\src\\Core\\Sound.o $(OBJDIR_UDPDEMO)\\src\\Core\\ResVal.o $(OBJDIR_UDPDEMO)\\src\\Core\\ResFile.o $(OBJDIR_UDPDEMO)\\src\\Core\\Misc.o $(OBJDIR_UDPDEMO)\\src\\Core\\Font.o $(OBJDIR_UDPDEMO)\\src\\Core\\Error.o $(OBJDIR_UDPDEMO)\\src\\Core\\CoreMain.o $(OBJDIR_UDPDEMO)\\src\\Core\\CSVReader.o $(OBJDIR_UDPDEMO)\\src\\Core\\CSVEditor.o $(OBJDIR_UDPDEMO)\\icon.o
 
 all: before_build build_winter_debug build_winter_release build_tcpdemo build_snowengine build_udpdemo after_build
 
@@ -94,13 +94,13 @@ after_build:
 
 before_winter_debug: 
 	cmd /c if not exist bin\\Debug md bin\\Debug
-	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross
-	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity
-	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame
+	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter
+	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity
+	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame
 	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src md $(OBJDIR_WINTER_DEBUG)\\src
 	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\SMLanguage md $(OBJDIR_WINTER_DEBUG)\\src\\SMLanguage
 	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\Core md $(OBJDIR_WINTER_DEBUG)\\src\\Core
-	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title
+	cmd /c if not exist $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title md $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title
 	cmd /c if not exist $(OBJDIR_WINTER_DEBUG) md $(OBJDIR_WINTER_DEBUG)
 
 after_winter_debug: 
@@ -112,71 +112,74 @@ winter_debug: before_build build_winter_debug after_build
 out_winter_debug: before_winter_debug $(OBJ_WINTER_DEBUG) $(DEP_WINTER_DEBUG)
 	$(LD) $(LIBDIR_WINTER_DEBUG) -o $(OUT_WINTER_DEBUG) $(OBJ_WINTER_DEBUG)  $(LDFLAGS_WINTER_DEBUG) $(LIB_WINTER_DEBUG)
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\MathFunc.o: src\\ACGCross\\MathFunc.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\MathFunc.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\MathFunc.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o: src\\ACGCross\\PAW01_Winter\\MathFunc.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\MathFunc.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Mask.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Mask.o: src\\ACGCross\\PAW01_Winter\\Mask.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Mask.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Mask.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\KeyMapActivity.o: src\\ACGCross\\KeyMapActivity.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\KeyMapActivity.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\KeyMapActivity.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o: src\\ACGCross\\PAW01_Winter\\KeyMapActivity.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\KeyMapActivity.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GameDataMgr.o: src\\ACGCross\\GameDataMgr.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GameDataMgr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GameDataMgr.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o: src\\ACGCross\\PAW01_Winter\\GameDataMgr.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GameDataMgr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Game.o: src\\ACGCross\\Game.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Game.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Game.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Game.o: src\\ACGCross\\PAW01_Winter\\Game.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Game.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Game.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextWindow.o: src\\ACGCross\\GalgameActivity\\TextWindow.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\TextWindow.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextWindow.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextBox.o: src\\ACGCross\\GalgameActivity\\TextBox.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\TextBox.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\TextBox.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Snow.o: src\\ACGCross\\GalgameActivity\\Snow.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\Snow.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Snow.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\NameCard.o: src\\ACGCross\\GalgameActivity\\NameCard.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\NameCard.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\NameCard.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o: src\\ACGCross\\GalgameActivity\\MaskCmdTarget.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\MaskCmdTarget.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GameMenu.o: src\\ACGCross\\GalgameActivity\\GameMenu.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\GameMenu.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GameMenu.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o: src\\ACGCross\\GalgameActivity\\GalgameActivity.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\GalgameActivity.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Corner.o: src\\ACGCross\\GalgameActivity\\Corner.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\Corner.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Corner.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Clock.o: src\\ACGCross\\GalgameActivity\\Clock.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\Clock.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Clock.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o: src\\ACGCross\\GalgameActivity\\ChrMgr.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\ChrMgr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Chr.o: src\\ACGCross\\GalgameActivity\\Chr.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\Chr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Chr.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Bg.o: src\\ACGCross\\GalgameActivity\\Bg.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\GalgameActivity\\Bg.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity\\Bg.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\FadeLable.o: src\\ACGCross\\FadeLable.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\FadeLable.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\FadeLable.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o: src\\ACGCross\\PAW01_Winter\\FadeLable.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\FadeLable.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Ending.o: src\\ACGCross\\Ending.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Ending.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Ending.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Ending.o: src\\ACGCross\\PAW01_Winter\\Ending.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Ending.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Ending.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\CGViewer.o: src\\ACGCross\\CGViewer.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\CGViewer.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\CGViewer.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o: src\\ACGCross\\PAW01_Winter\\CGViewer.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\CGViewer.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Button.o: src\\ACGCross\\Button.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Button.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Button.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Button.o: src\\ACGCross\\PAW01_Winter\\Button.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Button.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Button.o
+
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o: src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o
 
 $(OBJDIR_WINTER_DEBUG)\\src\\main.o: src\\main.cpp
 	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\main.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\main.o
@@ -226,32 +229,35 @@ $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CoreMain.o: src\\Core\\CoreMain.cpp
 $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVReader.o: src\\Core\\CSVReader.cpp
 	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\Core\\CSVReader.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVReader.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\str2wstr.o: src\\ACGCross\\str2wstr.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\str2wstr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\str2wstr.o
+$(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVEditor.o: src\\Core\\CSVEditor.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\Core\\CSVEditor.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\Core\\CSVEditor.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\TitleButton.o: src\\ACGCross\\Title\\TitleButton.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Title\\TitleButton.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\TitleButton.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o: src\\ACGCross\\PAW01_Winter\\str2wstr.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\str2wstr.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\Title.o: src\\ACGCross\\Title\\Title.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Title\\Title.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\Title.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o: src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\MovingBG.o: src\\ACGCross\\Title\\MovingBG.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Title\\MovingBG.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\MovingBG.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o: src\\ACGCross\\PAW01_Winter\\Title\\Title.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Title\\Title.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\GameLogo.o: src\\ACGCross\\Title\\GameLogo.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Title\\GameLogo.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title\\GameLogo.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o: src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Slider.o: src\\ACGCross\\Slider.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\Slider.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Slider.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o: src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SettingUI.o: src\\ACGCross\\SettingUI.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\SettingUI.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SettingUI.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Slider.o: src\\ACGCross\\PAW01_Winter\\Slider.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\Slider.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Slider.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SaveUI.o: src\\ACGCross\\SaveUI.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\SaveUI.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\SaveUI.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o: src\\ACGCross\\PAW01_Winter\\SettingUI.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\SettingUI.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o
 
-$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\NumTexture.o: src\\ACGCross\\NumTexture.cpp
-	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\NumTexture.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\NumTexture.o
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o: src\\ACGCross\\PAW01_Winter\\SaveUI.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\SaveUI.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o
+
+$(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o: src\\ACGCross\\PAW01_Winter\\NumTexture.cpp
+	$(CXX) $(CFLAGS_WINTER_DEBUG) $(INC_WINTER_DEBUG) -c src\\ACGCross\\PAW01_Winter\\NumTexture.cpp -o $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o
 
 $(OBJDIR_WINTER_DEBUG)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_WINTER_DEBUG)\\icon.o -O coff $(INC_WINTER_DEBUG)
@@ -259,24 +265,24 @@ $(OBJDIR_WINTER_DEBUG)\\icon.o: icon.rc
 clean_winter_debug: 
 	cmd /c del /f $(OBJ_WINTER_DEBUG) $(OUT_WINTER_DEBUG)
 	cmd /c rd bin\\Debug
-	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross
-	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\GalgameActivity
-	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\DanmakuGame
+	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter
+	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity
+	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame
 	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src
 	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\SMLanguage
 	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\Core
-	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\Title
+	cmd /c rd $(OBJDIR_WINTER_DEBUG)\\src\\ACGCross\\PAW01_Winter\\Title
 	cmd /c rd $(OBJDIR_WINTER_DEBUG)
 
 before_winter_release: 
 	cmd /c if not exist bin\\Release md bin\\Release
-	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross
-	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity
-	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame
+	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter
+	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity
+	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame
 	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src md $(OBJDIR_WINTER_RELEASE)\\src
 	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\SMLanguage md $(OBJDIR_WINTER_RELEASE)\\src\\SMLanguage
 	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\Core md $(OBJDIR_WINTER_RELEASE)\\src\\Core
-	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title
+	cmd /c if not exist $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title md $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title
 	cmd /c if not exist $(OBJDIR_WINTER_RELEASE) md $(OBJDIR_WINTER_RELEASE)
 
 after_winter_release: 
@@ -288,74 +294,74 @@ winter_release: before_build build_winter_release after_build
 out_winter_release: before_winter_release $(OBJ_WINTER_RELEASE) $(DEP_WINTER_RELEASE)
 	$(LD) $(LIBDIR_WINTER_RELEASE) -o $(OUT_WINTER_RELEASE) $(OBJ_WINTER_RELEASE)  $(LDFLAGS_WINTER_RELEASE) -mwindows $(LIB_WINTER_RELEASE)
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\MathFunc.o: src\\ACGCross\\MathFunc.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\MathFunc.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\MathFunc.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o: src\\ACGCross\\PAW01_Winter\\MathFunc.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\MathFunc.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\MathFunc.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Mask.o: src\\ACGCross\\Mask.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Mask.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Mask.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Mask.o: src\\ACGCross\\PAW01_Winter\\Mask.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Mask.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Mask.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\KeyMapActivity.o: src\\ACGCross\\KeyMapActivity.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\KeyMapActivity.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\KeyMapActivity.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o: src\\ACGCross\\PAW01_Winter\\KeyMapActivity.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\KeyMapActivity.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\KeyMapActivity.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GameDataMgr.o: src\\ACGCross\\GameDataMgr.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GameDataMgr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GameDataMgr.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o: src\\ACGCross\\PAW01_Winter\\GameDataMgr.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GameDataMgr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GameDataMgr.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Game.o: src\\ACGCross\\Game.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Game.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Game.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Game.o: src\\ACGCross\\PAW01_Winter\\Game.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Game.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Game.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextWindow.o: src\\ACGCross\\GalgameActivity\\TextWindow.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\TextWindow.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextWindow.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextWindow.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextBox.o: src\\ACGCross\\GalgameActivity\\TextBox.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\TextBox.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\TextBox.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\TextBox.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Snow.o: src\\ACGCross\\GalgameActivity\\Snow.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\Snow.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Snow.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Snow.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\NameCard.o: src\\ACGCross\\GalgameActivity\\NameCard.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\NameCard.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\NameCard.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\NameCard.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o: src\\ACGCross\\GalgameActivity\\MaskCmdTarget.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\MaskCmdTarget.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\MaskCmdTarget.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\MaskCmdTarget.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GameMenu.o: src\\ACGCross\\GalgameActivity\\GameMenu.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\GameMenu.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GameMenu.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GameMenu.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o: src\\ACGCross\\GalgameActivity\\GalgameActivity.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\GalgameActivity.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\GalgameActivity.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\GalgameActivity.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Corner.o: src\\ACGCross\\GalgameActivity\\Corner.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\Corner.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Corner.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Corner.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Clock.o: src\\ACGCross\\GalgameActivity\\Clock.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\Clock.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Clock.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Clock.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o: src\\ACGCross\\GalgameActivity\\ChrMgr.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\ChrMgr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\ChrMgr.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\ChrMgr.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Chr.o: src\\ACGCross\\GalgameActivity\\Chr.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\Chr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Chr.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Chr.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Bg.o: src\\ACGCross\\GalgameActivity\\Bg.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\GalgameActivity\\Bg.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity\\Bg.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o: src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity\\Bg.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\FadeLable.o: src\\ACGCross\\FadeLable.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\FadeLable.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\FadeLable.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o: src\\ACGCross\\PAW01_Winter\\FadeLable.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\FadeLable.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\FadeLable.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Ending.o: src\\ACGCross\\Ending.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Ending.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Ending.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Ending.o: src\\ACGCross\\PAW01_Winter\\Ending.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Ending.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Ending.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame\\DanmakuGame.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o: src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame\\DanmakuGame.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\CGViewer.o: src\\ACGCross\\CGViewer.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\CGViewer.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\CGViewer.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o: src\\ACGCross\\PAW01_Winter\\CGViewer.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\CGViewer.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\CGViewer.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Button.o: src\\ACGCross\\Button.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Button.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Button.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Button.o: src\\ACGCross\\PAW01_Winter\\Button.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Button.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Button.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\ACGCross_Logo.o: src\\ACGCross\\ACGCross_Logo.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\ACGCross_Logo.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\ACGCross_Logo.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o: src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\ACGCross_Logo.o
 
 $(OBJDIR_WINTER_RELEASE)\\src\\main.o: src\\main.cpp
 	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\main.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\main.o
@@ -405,32 +411,35 @@ $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CoreMain.o: src\\Core\\CoreMain.cpp
 $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVReader.o: src\\Core\\CSVReader.cpp
 	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\Core\\CSVReader.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVReader.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\str2wstr.o: src\\ACGCross\\str2wstr.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\str2wstr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\str2wstr.o
+$(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVEditor.o: src\\Core\\CSVEditor.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\Core\\CSVEditor.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\Core\\CSVEditor.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\TitleButton.o: src\\ACGCross\\Title\\TitleButton.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Title\\TitleButton.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\TitleButton.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o: src\\ACGCross\\PAW01_Winter\\str2wstr.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\str2wstr.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\str2wstr.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\Title.o: src\\ACGCross\\Title\\Title.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Title\\Title.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\Title.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o: src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\TitleButton.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\MovingBG.o: src\\ACGCross\\Title\\MovingBG.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Title\\MovingBG.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\MovingBG.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o: src\\ACGCross\\PAW01_Winter\\Title\\Title.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Title\\Title.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\Title.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\GameLogo.o: src\\ACGCross\\Title\\GameLogo.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Title\\GameLogo.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title\\GameLogo.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o: src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\MovingBG.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Slider.o: src\\ACGCross\\Slider.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\Slider.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Slider.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o: src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title\\GameLogo.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SettingUI.o: src\\ACGCross\\SettingUI.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\SettingUI.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SettingUI.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Slider.o: src\\ACGCross\\PAW01_Winter\\Slider.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\Slider.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Slider.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SaveUI.o: src\\ACGCross\\SaveUI.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\SaveUI.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\SaveUI.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o: src\\ACGCross\\PAW01_Winter\\SettingUI.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\SettingUI.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SettingUI.o
 
-$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\NumTexture.o: src\\ACGCross\\NumTexture.cpp
-	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\NumTexture.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\NumTexture.o
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o: src\\ACGCross\\PAW01_Winter\\SaveUI.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\SaveUI.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\SaveUI.o
+
+$(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o: src\\ACGCross\\PAW01_Winter\\NumTexture.cpp
+	$(CXX) $(CFLAGS_WINTER_RELEASE) $(INC_WINTER_RELEASE) -c src\\ACGCross\\PAW01_Winter\\NumTexture.cpp -o $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\NumTexture.o
 
 $(OBJDIR_WINTER_RELEASE)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_WINTER_RELEASE)\\icon.o -O coff $(INC_WINTER_RELEASE)
@@ -438,13 +447,13 @@ $(OBJDIR_WINTER_RELEASE)\\icon.o: icon.rc
 clean_winter_release: 
 	cmd /c del /f $(OBJ_WINTER_RELEASE) $(OUT_WINTER_RELEASE)
 	cmd /c rd bin\\Release
-	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross
-	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\GalgameActivity
-	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\DanmakuGame
+	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter
+	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\GalgameActivity
+	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\DanmakuGame
 	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src
 	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\SMLanguage
 	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\Core
-	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\Title
+	cmd /c rd $(OBJDIR_WINTER_RELEASE)\\src\\ACGCross\\PAW01_Winter\\Title
 	cmd /c rd $(OBJDIR_WINTER_RELEASE)
 
 before_tcpdemo: 
@@ -506,6 +515,9 @@ $(OBJDIR_TCPDEMO)\\src\\Core\\CoreMain.o: src\\Core\\CoreMain.cpp
 
 $(OBJDIR_TCPDEMO)\\src\\Core\\CSVReader.o: src\\Core\\CSVReader.cpp
 	$(CXX) $(CFLAGS_TCPDEMO) $(INC_TCPDEMO) -c src\\Core\\CSVReader.cpp -o $(OBJDIR_TCPDEMO)\\src\\Core\\CSVReader.o
+
+$(OBJDIR_TCPDEMO)\\src\\Core\\CSVEditor.o: src\\Core\\CSVEditor.cpp
+	$(CXX) $(CFLAGS_TCPDEMO) $(INC_TCPDEMO) -c src\\Core\\CSVEditor.cpp -o $(OBJDIR_TCPDEMO)\\src\\Core\\CSVEditor.o
 
 $(OBJDIR_TCPDEMO)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_TCPDEMO)\\icon.o -O coff $(INC_TCPDEMO)
@@ -572,6 +584,9 @@ $(OBJDIR_SNOWENGINE)\\src\\Core\\CoreMain.o: src\\Core\\CoreMain.cpp
 $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVReader.o: src\\Core\\CSVReader.cpp
 	$(CXX) $(CFLAGS_SNOWENGINE) $(INC_SNOWENGINE) -c src\\Core\\CSVReader.cpp -o $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVReader.o
 
+$(OBJDIR_SNOWENGINE)\\src\\Core\\CSVEditor.o: src\\Core\\CSVEditor.cpp
+	$(CXX) $(CFLAGS_SNOWENGINE) $(INC_SNOWENGINE) -c src\\Core\\CSVEditor.cpp -o $(OBJDIR_SNOWENGINE)\\src\\Core\\CSVEditor.o
+
 clean_snowengine: 
 	cmd /c del /f $(OBJ_SNOWENGINE) $(OUT_SNOWENGINE)
 	cmd /c rd bin\\SnowEngineDLL
@@ -636,6 +651,9 @@ $(OBJDIR_UDPDEMO)\\src\\Core\\CoreMain.o: src\\Core\\CoreMain.cpp
 
 $(OBJDIR_UDPDEMO)\\src\\Core\\CSVReader.o: src\\Core\\CSVReader.cpp
 	$(CXX) $(CFLAGS_UDPDEMO) $(INC_UDPDEMO) -c src\\Core\\CSVReader.cpp -o $(OBJDIR_UDPDEMO)\\src\\Core\\CSVReader.o
+
+$(OBJDIR_UDPDEMO)\\src\\Core\\CSVEditor.o: src\\Core\\CSVEditor.cpp
+	$(CXX) $(CFLAGS_UDPDEMO) $(INC_UDPDEMO) -c src\\Core\\CSVEditor.cpp -o $(OBJDIR_UDPDEMO)\\src\\Core\\CSVEditor.o
 
 $(OBJDIR_UDPDEMO)\\icon.o: icon.rc
 	$(WINDRES) -i icon.rc -J rc -o $(OBJDIR_UDPDEMO)\\icon.o -O coff $(INC_UDPDEMO)
