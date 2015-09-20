@@ -5,6 +5,7 @@
 #include "Core/Control.h"
 #include "Core/Debug.h"
 #include <stack>
+#include <cstdlib>
 
 using namespace Core;
 using namespace std;
@@ -78,15 +79,19 @@ void Return(){
 
 void Exit(int exitcode)
 {
-    if(nowFocus != nullptr) nowFocus -> OnHide();
-    while(!actStack.empty()){
-        Activity*p = actStack.top();
-        p -> OnHide();
-        actStack.pop();
+    if(exitcode < 0) exit(exitcode);
+    else {
+        if(nowFocus != nullptr) nowFocus -> OnHide();
+        while(!actStack.empty()){
+            Activity*p = actStack.top();
+            p -> OnHide();
+            actStack.pop();
+        }
+        SDL_Event e;
+        e.type = SDL_QUIT;
+        if(exitcode == 0) SDL_PushEvent(&e);
+        else exit(exitcode);
     }
-    SDL_Event e;
-    e.type = SDL_QUIT;
-    SDL_PushEvent(&e);
 }
 
 void CoreRun(Activity* start)
