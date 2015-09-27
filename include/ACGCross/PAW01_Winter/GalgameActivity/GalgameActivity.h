@@ -18,6 +18,8 @@
 #include "SMEProcUnit.h"
 #include <map>
 #include <stack>
+#include <list>
+#include "GalSelButton.h"
 
 namespace ACGCross{
 namespace Galgame{
@@ -31,6 +33,9 @@ void BGMLoader(Core::THREAD_ID id);
 class GalgameActivity:public Core::Activity,SMEProcUnit{
     friend class TextWindow;
 private:
+    std::list<GalSelButton> m_sels;
+    std::vector<std::wstring> m_selGoto;
+
     class TextWindowButton:public ACGCross::Button,public TextWindow::Widget{
     public:
         virtual void TWPos(int x,int y){
@@ -55,7 +60,6 @@ private:
     TextBox* m_text = nullptr;
     TextBoxCmdTarget m_text_cmdtarget;
     NameCard m_name;
-    Core::Font m_name_font;
     bool m_name_isEmpty = true;    //Current text has namecard?
     TextWindow m_textWindow;
     TextWindowButton m_textWindow_X;
@@ -128,6 +132,7 @@ private:
     void LowerSaveGame();
 
 public:
+    Core::Font m_name_font;
     Corner corner;
     static std::list<TextBoxLog> textLog;
     static std::list<std::string> cvLog;

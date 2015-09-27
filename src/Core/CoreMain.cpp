@@ -134,7 +134,6 @@ void CoreRun(Activity* start)
                     p -> OnHide();
                     actStack.pop();
                 }
-                pRnd.Destory();
                 return;
             }
             else {

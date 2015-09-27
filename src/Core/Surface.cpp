@@ -3,7 +3,7 @@
 
 using namespace Core;
 
-Surface::Surface(){};
+Surface::Surface(){}
 
 Surface::Surface(SDL_Surface* p)
 {
@@ -12,7 +12,7 @@ Surface::Surface(SDL_Surface* p)
 
 Surface::Surface(const std::string& f){
     Load(f);
-};
+}
 
 void Surface::ConvertFormat(Uint32 sdlFormat)
 {
@@ -73,4 +73,4 @@ void Surface::Clear(){
 
 void Surface::BlitWithSubSurface(Surface& src,SDL_Rect& srcr,SDL_Rect& dst){
     SDL_BlitSurface(src,&srcr,m_sur,&dst);
-};
+}

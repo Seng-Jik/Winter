@@ -18,5 +18,6 @@
 #include "Core/UDPNet.h"
 #include "Core/CSVEditor.h"
 #include "Core/CSVReader.h"
+#include "Core/RenderTarget.h"
 
 #endif // _HEAD_CORE_

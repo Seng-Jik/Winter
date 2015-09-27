@@ -18,7 +18,7 @@ void Core::Sound_CallBack(const int channel)
 
 void Sound::Init()
 {
-	Mix_Init(MIX_INIT_OGG | MIX_INIT_MP3);
+	Mix_Init(MIX_INIT_OGG | MIX_INIT_FLAC | MIX_INIT_MOD | MIX_INIT_MP3);
 	Mix_OpenAudio(44100,AUDIO_S16SYS,2,8192);
 	Mix_ChannelFinished(&Sound_CallBack);
 }

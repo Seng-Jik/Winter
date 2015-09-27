@@ -36,6 +36,7 @@ void GalgameActivity::SetWindowStyle_Normal()
 
 void GalgameActivity::SMEClick()
 {
+    if(!m_sels.empty()) return;
     SMEUpdateStat();
     if(m_SMEProc_stat == PROCESSING){
         SMEProc(true);
@@ -45,6 +46,7 @@ void GalgameActivity::SMEClick()
             m_SMEProc_FastProcCalled = false;
             SMEProc(true);
             SMEUpdateStat();
+            if(!m_sels.empty()) break;
         }
         m_SMEProc_stat = WAITCLICK;
         SMEText_lb();
@@ -106,7 +108,7 @@ void GalgameActivity::SMEUpdateStat()
         if(m_SMEProc_map.count(m_SMEProc_sme.cmd)){
             if(m_SMEProc_map[m_SMEProc_sme.cmd] -> SMEFinished(&m_SMEProc_sme))
                 m_SMEProc_stat = FINISHED;
-                else m_SMEProc_stat = PROCESSING;
+            else m_SMEProc_stat = PROCESSING;
         }
 
         break;
@@ -299,6 +301,8 @@ GalgameActivity::GalgameActivity(TextBox* b,Clock* c):m_bgm_loader(&BGMLoader),m
     REGSMCMD(L"bgmstop",*this); //T
     REGSMCMD(L"se",*this);
 
+    REGSMCMD(L"select_goto",*this);
+
     REGSMCMD(L"cgopen",*this);
 
     REGSMCMD(L"end",*this); //T
@@ -422,8 +426,22 @@ void GalgameActivity::OnNext()
     m_name.OnNext();
     m_snow.OnNext();
 
+    if(!m_sels.empty()){
+        bool allOver = true;
+        FOR_EACH(p,m_sels.begin(),m_sels.end()){
+            p -> OnNext();
+            if(!p -> Killed()){
+                allOver = false;
+            }
+        }
+        if(allOver){
+            m_sels.clear();
+            m_selGoto.clear();
+        }
+    }
+
         //PNT("IFSME");
-    if(m_astat == RUNNING){
+    if(m_astat == RUNNING && m_sels.empty()){
         SMENext();
     }
 
@@ -444,6 +462,11 @@ void GalgameActivity::OnDraw()
     m_mask.OnDraw();
     m_snow.OnDraw();
     m_chrs.OnDraw();
+
+    if(!m_sels.empty()){
+        FOR_EACH(p,m_sels.begin(),m_sels.end())
+            p -> OnDraw();
+    }
 
     m_textWindow.OnDraw();
     m_text -> OnDraw();
@@ -476,6 +499,12 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
     if(e.type == SDL_MOUSEBUTTONDOWN) cout<<"MOUSE:"<<e.button.x<<","<<e.button.y<<endl;
     else if(e.type == SDL_KEYDOWN) cout<<"KEY:"<<SDL_GetKeyName(e.key.keysym.sym)<<endl;
     #endif
+
+    if(!m_sels.empty()){
+        FOR_EACH(p,m_sels.begin(),m_sels.end())
+            p -> OnEvent(e,*this);
+    }
+
     if(e.type == SDL_MOUSEBUTTONUP && m_astat == WINDOWHIDDEN) ShowWindow();
     else if(e.type == SDL_MOUSEBUTTONUP){
         m_SMEProc_autoing = false;
@@ -571,6 +600,13 @@ void GalgameActivity::OnEvent(Core::Control* c, const Sint32 msg)
             m_text -> SetEffectSpeed(r.Int("GAL_TEXTBOX_EFFECTSPEED"));
         }
     }
+    if(msg >= 100){
+        int sel = msg -100;
+        m_SMEProc_smi.Goto(m_selGoto[sel]);
+        FOR_EACH(p,m_sels.begin(),m_sels.end())
+            p -> Hide();
+        m_text -> Clear();
+    }
 }
 
 void GalgameActivity::SMEProc(SMI::SMEvent* pSme)
@@ -607,6 +643,19 @@ void GalgameActivity::SMEProc(SMI::SMEvent* pSme)
         gameData.AddUpdateTask(-2);
         gameData.UpdateData();
         Goto(pEd);
+    }else if(pSme -> cmd == L"select_goto"){
+        int count = pSme ->argv.size()/2;
+        int single = (r.Int("TITLE_LOGICSCREEN_HEIGHT") - 248) / (count+1);
+        int nowY = single;
+        for(int i = 0;i<count;i++){
+            m_sels.push_back(GalSelButton());
+            auto p = --m_sels.end();
+            p -> SetText(pSme -> argv[2*i]);
+            p -> SetY(nowY);
+            nowY += single;
+            m_selGoto.push_back(pSme->argv[2*i+1]);
+            p -> Show(i);
+        }
     }
 }
 
@@ -622,6 +671,9 @@ bool GalgameActivity::SMEFinished(SMI::SMEvent* pSme)
     if(pSme -> cmd == L"w"){
         if(m_waiter.GetTimer() >= (unsigned int)(_wtoi(pSme ->argv[0].c_str())) || m_waiterBroken)
             return true;
+        else return false;
+    }else if(pSme -> cmd == L"select_goto"){
+        if(m_sels.empty()) return true;
         else return false;
     }
 

@@ -7,9 +7,11 @@
 #include "ACGCross/PAW01_Winter/SaveUI.h"
 #include "ACGCross/PAW01_Winter/SettingUI.h"
 #include "ACGCross/PAW01_Winter/CGViewer.h"
+#include "ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
 using namespace std;
 using namespace Core;
 using namespace ACGCross;
+using namespace ACGCross::Galgame;
 
 GameDataMgr ACGCross::gameData;
 ResVal ACGCross::r;
@@ -54,6 +56,15 @@ void ACGCross::InitGame(){
     case 0x411 :
         r.Load("ResVal/LNG_JPN.txt");break;
     }
+
+    //Init Class Static Member Value
+    static ResFile selBk[3];
+    selBk[0].Load("GalGameSystem/selBk1.png");
+    GalSelButton::m_btnbk[0] = IMG_LoadTexture_RW(pRnd,selBk[0],selBk[0].Size());
+    selBk[1].Load("GalGameSystem/selBk2.png");
+    GalSelButton::m_btnbk[1] = IMG_LoadTexture_RW(pRnd,selBk[1],selBk[1].Size());
+    selBk[2].Load("GalGameSystem/selBk3.png");
+    GalSelButton::m_btnbk[2] = IMG_LoadTexture_RW(pRnd,selBk[2],selBk[2].Size());
 
     //Load Font
 

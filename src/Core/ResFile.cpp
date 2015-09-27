@@ -40,7 +40,7 @@ void ResFile::InstallReader(ResFileReader* r){
     m_readers.push_back(r);
 }
 
-ResFile::ResFile(){};
+ResFile::ResFile(){}
 
 ResFile::ResFile(const std::string& s)
 {

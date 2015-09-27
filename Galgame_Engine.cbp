@@ -167,6 +167,10 @@
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
 		</Unit>
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h">
+			<Option target="Winter_Debug" />
+			<Option target="Winter_Release" />
+		</Unit>
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h">
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
@@ -267,6 +271,7 @@
 		<Unit filename="include/Core/Globals.h" />
 		<Unit filename="include/Core/Misc.h" />
 		<Unit filename="include/Core/OS.h" />
+		<Unit filename="include/Core/RenderTarget.h" />
 		<Unit filename="include/Core/ResFile.h" />
 		<Unit filename="include/Core/ResVal.h" />
 		<Unit filename="include/Core/SDLbase.h" />
@@ -322,6 +327,10 @@
 			<Option target="Winter_Release" />
 		</Unit>
 		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Corner.cpp">
+			<Option target="Winter_Debug" />
+			<Option target="Winter_Release" />
+		</Unit>
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.cpp">
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
 		</Unit>
@@ -415,6 +424,7 @@
 		<Unit filename="src/Core/Error.cpp" />
 		<Unit filename="src/Core/Font.cpp" />
 		<Unit filename="src/Core/Misc.cpp" />
+		<Unit filename="src/Core/RenderTarget.cpp" />
 		<Unit filename="src/Core/ResFile.cpp" />
 		<Unit filename="src/Core/ResVal.cpp" />
 		<Unit filename="src/Core/Sound.cpp" />
