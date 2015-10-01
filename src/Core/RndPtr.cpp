@@ -1,7 +1,17 @@
-#include "Core/Globals.h"
+#include "Core/RndPtr.h"
+#include "Core/Activity.h"
+#include <stack>
 
 using namespace Core;
 using namespace std;
+
+namespace Core{
+    RndPtr pRnd;
+    Activity* nowFocus;
+    Activity* nextFocus;
+    stack<Activity*> actStack;
+    bool jumpDraw = false;
+}
 
 void RndPtr::Create(const std::string& title,const bool FullScreen,const int w,const int h)
 {
@@ -44,10 +54,17 @@ SDL_Texture* RndPtr::GetRenderTarget(){
     return SDL_GetRenderTarget(pRnd);
 }
 
-void RndPtr::SetRenderTarget(SDL_Texture* s){
-    SDL_SetRenderTarget(pRnd,s);
-}
-
 bool RndPtr::RenderTargetSupported(){
     return SDL_RenderTargetSupported(pRnd);
 }
+
+int RndPtr::GetH()
+{
+    return nowFocus -> m_logic_h;
+}
+
+int RndPtr::GetW()
+{
+    return nowFocus -> m_logic_w;
+}
+

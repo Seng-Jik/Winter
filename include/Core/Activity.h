@@ -3,6 +3,7 @@
 #include <forward_list>
 #include "SDLbase.h"
 #include "Globals.h"
+#include "RndPtr.h"
 #include <stack>
 
 namespace Core{
@@ -25,7 +26,7 @@ namespace Core{
         {m_logic_h = h;m_logic_w = w;}
         //设置屏幕逻辑大小
     public:
-        Activity(){m_logic_h = pRnd.GetPhH();m_logic_w = pRnd.GetPhW();}
+        Activity(){m_logic_h = Core::pRnd.GetPhH();m_logic_w = Core::pRnd.GetPhW();}
         virtual ~Activity(){};
         virtual void OnShow(){};    //当Goto到这个活动时执行
         virtual void OnHide(){};    //当Goto出这个活动时执行

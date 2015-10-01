@@ -1,4 +1,5 @@
 #include "ACGCross/PAW01_Winter/NumTexture.h"
+#include "Core/Debug.h"
 using namespace ACGCross;
 
 

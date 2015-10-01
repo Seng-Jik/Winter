@@ -1,8 +1,8 @@
 #ifndef _HEAD_MISC_
 #define _HEAD_MISC_
 #include <fstream>
-#include "Core/SDLbase.h"
-#include "Core/ResFile.h"
+#include "SDLbase.h"
+#include "ResFile.h"
 struct SDL_Rect;
 namespace Core
 {

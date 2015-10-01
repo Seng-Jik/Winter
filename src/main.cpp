@@ -888,8 +888,9 @@ public:
 };
 
 
-void Main(const std::vector<std::string> args)
+int main(int argc,char** argv)
 {
+    Init();
     srand(time(NULL));
     screen screenmode[] ={
         {800,600,false},

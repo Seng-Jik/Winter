@@ -1,7 +1,7 @@
-#include "CSVEditor.h"
-#include "ResFile.h"
-#include "Misc.h"
-#include "SDLbase.h"
+#include "Core/CSVEditor.h"
+#include "Core/ResFile.h"
+#include "Core/Misc.h"
+#include "Core/SDLbase.h"
 using namespace std;
 using namespace Core;
 

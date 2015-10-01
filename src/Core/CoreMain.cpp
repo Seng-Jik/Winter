@@ -14,11 +14,10 @@ using namespace std;
 
 namespace Core{
 
-RndPtr pRnd;
-Activity* nowFocus;
-Activity* nextFocus;
-stack<Activity*> actStack;
-bool jumpDraw = false;
+extern Activity* nowFocus;
+extern Activity* nextFocus;
+extern stack<Activity*> actStack;
+extern bool jumpDraw;
 
 void JumpDraw(){
     jumpDraw = true;
@@ -211,38 +210,18 @@ void CoreRun(Activity* start)
     }
 }
 
-int RndPtr::GetH()
-{
-    return nowFocus -> m_logic_h;
-}
-
-int RndPtr::GetW()
-{
-    return nowFocus -> m_logic_w;
-}
-
-}
-
-
-
-int main(int argc,char** argv)
-{
+void Init(){
     SDL_Init(SDL_INIT_EVERYTHING);
     IMG_Init(IMG_INIT_PNG);
     TTF_Init();
     SDLNet_Init();
 
-    Sound::Init();
+    Core::Sound::Init();
 
-    nowFocus = nullptr;
-    nextFocus = nullptr;
-
-    std::vector<std::string> args;
-    for(int i = 0;i < argc;++i)
-        args.push_back(std::string(argv[i]));
-
-    Main(args);
-
-    return 0;
+    Core::nowFocus = nullptr;
+    Core::nextFocus = nullptr;
+}
 
 }
+
+

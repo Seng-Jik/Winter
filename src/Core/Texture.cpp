@@ -4,6 +4,7 @@
 #include <string>
 #include "Core/Misc.h"
 #include "Core/Debug.h"
+#include "Core/RndPtr.h"
 using namespace std;
 using namespace Core;
 

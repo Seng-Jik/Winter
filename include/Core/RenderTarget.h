@@ -1,6 +1,6 @@
 #ifndef _HEAD_RENDERTARGER_HEAD_
 #define _HEAD_RENDERTARGER_HEAD_
-#include "Core/Thread.h"
+#include "Thread.h"
 namespace Core{
 class RenderTarget  //你可以把本应绘制到屏幕缓存的数据绘制到这个类的对象里
 {

@@ -66,30 +66,12 @@
 			</Target>
 			<Target title="SnowEngine">
 				<Option platforms="Windows;" />
-				<Option output="bin/SnowEngineDLL/Snow_Engine" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
-				<Option object_output="bin/SnowEngine/obj/" />
-				<Option type="2" />
+				<Option output="bin/SnowEngine/Snow" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="Snow" />
+				<Option object_output="bin/SnowEngine/" />
+				<Option type="3" />
 				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-fexpensive-optimizations" />
-					<Add option="-O2" />
-					<Add directory="include/Core" />
-				</Compiler>
-			</Target>
-			<Target title="UDPDemo">
-				<Option output="bin/TCPDemo/Galgame_Engine" prefix_auto="1" extension_auto="1" />
-				<Option object_output="bin/UDPDemo/obj/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-pg" />
-					<Add option="-g" />
-					<Add directory="include/Core" />
-				</Compiler>
-				<Linker>
-					<Add option="-pg -lgmon" />
-				</Linker>
+				<Option createStaticLib="1" />
 			</Target>
 		</Build>
 		<Compiler>
@@ -121,7 +103,6 @@
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
 			<Option target="TCPDemo" />
-			<Option target="UDPDemo" />
 		</Unit>
 		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h">
 			<Option target="Winter_Debug" />
@@ -274,6 +255,7 @@
 		<Unit filename="include/Core/RenderTarget.h" />
 		<Unit filename="include/Core/ResFile.h" />
 		<Unit filename="include/Core/ResVal.h" />
+		<Unit filename="include/Core/RndPtr.h" />
 		<Unit filename="include/Core/SDLbase.h" />
 		<Unit filename="include/Core/Sound.h" />
 		<Unit filename="include/Core/Surface.h" />
@@ -427,20 +409,19 @@
 		<Unit filename="src/Core/RenderTarget.cpp" />
 		<Unit filename="src/Core/ResFile.cpp" />
 		<Unit filename="src/Core/ResVal.cpp" />
+		<Unit filename="src/Core/RndPtr.cpp" />
 		<Unit filename="src/Core/Sound.cpp" />
 		<Unit filename="src/Core/Surface.cpp" />
 		<Unit filename="src/Core/TCPNet.cpp" />
 		<Unit filename="src/Core/Texture.cpp" />
 		<Unit filename="src/Core/Thread.cpp" />
 		<Unit filename="src/Core/UDPNet.cpp" />
-		<Unit filename="src/Core/Window.cpp" />
 		<Unit filename="src/SMLanguage/SMI.cpp">
 			<Option target="Winter_Debug" />
 			<Option target="Winter_Release" />
 		</Unit>
 		<Unit filename="src/TCPDemo.cpp">
 			<Option target="TCPDemo" />
-			<Option target="UDPDemo" />
 		</Unit>
 		<Unit filename="src/main.cpp">
 			<Option target="Winter_Debug" />

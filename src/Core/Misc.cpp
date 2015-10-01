@@ -2,6 +2,7 @@
 #include "Core/SDLbase.h"
 #include "Core/Activity.h"
 #include "Core/Globals.h"
+#include "Core/RndPtr.h"
 
 #include <set>
 #include <stack>

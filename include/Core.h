@@ -14,6 +14,7 @@
 #include "Core/Thread.h"
 #include "Core/Timer.h"
 #include "Core/ResVal.h"
+#include "Core/RndPtr.h"
 #include "Core/TCPNet.h"
 #include "Core/UDPNet.h"
 #include "Core/CSVEditor.h"

@@ -1,6 +1,6 @@
-#include "CSVReader.h"
-#include "Misc.h"
-#include "Debug.h"
+#include "Core/CSVReader.h"
+#include "Core/Misc.h"
+#include "Core/Debug.h"
 #include <cstdlib>
 #include <cstdio>
 
