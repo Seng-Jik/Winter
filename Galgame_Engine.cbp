@@ -29,6 +29,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
+					<Add library="lib/libSnow_Dbg.a" />
 				</Linker>
 			</Target>
 			<Target title="Winter_Release">
@@ -49,29 +50,9 @@
 					<Add directory="include" />
 					<Add directory="include/ACGCross/Demo" />
 				</Compiler>
-			</Target>
-			<Target title="TCPDemo">
-				<Option output="bin/TCPDemo/Galgame_Engine" prefix_auto="1" extension_auto="1" />
-				<Option object_output="bin/TCPDemo/obj/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-pg" />
-					<Add option="-g" />
-					<Add directory="include/Core" />
-				</Compiler>
 				<Linker>
-					<Add option="-pg -lgmon" />
+					<Add library="lib/libSnow.a" />
 				</Linker>
-			</Target>
-			<Target title="SnowEngine">
-				<Option platforms="Windows;" />
-				<Option output="bin/SnowEngine/Snow" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="Snow" />
-				<Option object_output="bin/SnowEngine/" />
-				<Option type="3" />
-				<Option compiler="gcc" />
-				<Option createStaticLib="1" />
 			</Target>
 		</Build>
 		<Compiler>
@@ -82,17 +63,9 @@
 		<Linker>
 			<Add library="mingw32" />
 			<Add library="SDL2main" />
-			<Add library="SDL2_image" />
-			<Add library="SDL2.dll" />
-			<Add library="user32" />
-			<Add library="gdi32" />
-			<Add library="winmm" />
-			<Add library="dxguid" />
-			<Add library="SDL2_mixer" />
-			<Add library="SDL2_ttf" />
-			<Add library="SDL2_net" />
-			<Add library="SDL2_test" />
 			<Add library="SDL2" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2_ttf" />
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>
@@ -100,146 +73,41 @@
 		</ExtraCommands>
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-			<Option target="TCPDemo" />
 		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Button.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/CGViewer.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Ending.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/FadeLable.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Bg.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Chr.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Clock.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Corner.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/NameCard.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Snow.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextBox.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Game.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/GameDataMgr.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/KeyMapActivity.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Mask.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/MathFunc.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/NumTexture.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/SaveUI.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/SettingUI.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Slider.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Title/GameLogo.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Title/MovingBG.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Title/Title.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/Title/TitleButton.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="include/ACGCross/PAW01_Winter/str2wstr.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
+		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Button.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/CGViewer.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Ending.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/FadeLable.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Bg.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Chr.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Clock.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Corner.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/NameCard.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Snow.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextBox.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Game.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GameDataMgr.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/KeyMapActivity.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Mask.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/MathFunc.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/NumTexture.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/SaveUI.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/SettingUI.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Slider.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Title/GameLogo.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Title/MovingBG.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Title/Title.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/Title/TitleButton.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/str2wstr.h" />
 		<Unit filename="include/Core.h" />
 		<Unit filename="include/Core/Activity.h" />
 		<Unit filename="include/Core/Bundle.h" />
@@ -264,169 +132,42 @@
 		<Unit filename="include/Core/Thread.h" />
 		<Unit filename="include/Core/Timer.h" />
 		<Unit filename="include/Core/UDPNet.h" />
-		<Unit filename="include/SMLanguage/SMI.h">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/ACGCross_Logo.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Button.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/CGViewer.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Ending.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/FadeLable.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Bg.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Chr.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Clock.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Corner.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GameMenu.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/NameCard.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Snow.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/TextBox.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Game.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/GameDataMgr.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/KeyMapActivity.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Mask.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/MathFunc.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/NumTexture.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/SaveUI.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/SettingUI.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Slider.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Title/GameLogo.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Title/MovingBG.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Title/Title.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/Title/TitleButton.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/ACGCross/PAW01_Winter/str2wstr.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/Core/CSVEditor.cpp" />
-		<Unit filename="src/Core/CSVReader.cpp" />
-		<Unit filename="src/Core/CoreMain.cpp" />
-		<Unit filename="src/Core/Error.cpp" />
-		<Unit filename="src/Core/Font.cpp" />
-		<Unit filename="src/Core/Misc.cpp" />
-		<Unit filename="src/Core/RenderTarget.cpp" />
-		<Unit filename="src/Core/ResFile.cpp" />
-		<Unit filename="src/Core/ResVal.cpp" />
-		<Unit filename="src/Core/RndPtr.cpp" />
-		<Unit filename="src/Core/Sound.cpp" />
-		<Unit filename="src/Core/Surface.cpp" />
-		<Unit filename="src/Core/TCPNet.cpp" />
-		<Unit filename="src/Core/Texture.cpp" />
-		<Unit filename="src/Core/Thread.cpp" />
-		<Unit filename="src/Core/UDPNet.cpp" />
-		<Unit filename="src/SMLanguage/SMI.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
-		<Unit filename="src/TCPDemo.cpp">
-			<Option target="TCPDemo" />
-		</Unit>
-		<Unit filename="src/main.cpp">
-			<Option target="Winter_Debug" />
-			<Option target="Winter_Release" />
-		</Unit>
+		<Unit filename="include/SMLanguage/SMI.h" />
+		<Unit filename="src/ACGCross/PAW01_Winter/ACGCross_Logo.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Button.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/CGViewer.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Ending.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/FadeLable.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Bg.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Chr.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Clock.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Corner.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/GameMenu.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/NameCard.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Snow.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/TextBox.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Game.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/GameDataMgr.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/KeyMapActivity.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Mask.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/MathFunc.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/NumTexture.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/SaveUI.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/SettingUI.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Slider.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Title/GameLogo.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Title/MovingBG.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Title/Title.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/Title/TitleButton.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/str2wstr.cpp" />
+		<Unit filename="src/SMLanguage/SMI.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

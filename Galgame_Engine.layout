@@ -1,279 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="SnowEngine" />
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19963" topLine="597" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Activity.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="649" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\TextWindow.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="48" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Bundle.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="329" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\UDPNet.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="15" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\NameCard.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="109" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Texture.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="170" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="include\SMLanguage\SMI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="811" topLine="39" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GalSelButton.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="857" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="include\Core\SDLbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="407" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Timer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1323" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Sound.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="888" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="src\SMLanguage\SMI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16740" topLine="806" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\ACGCross_Logo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="82" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\ChrMgr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="231" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Surface.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1128" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Sound.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1116" topLine="36" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GameMenu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="48" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\Game.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2087" topLine="59" />
-		</Cursor>
-	</File>
-	<File name="include\Core\TCPNet.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="603" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Thread.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1833" topLine="40" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\Ending.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="246" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Globals.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="292" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Corner.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="48" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\ChrMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="100" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Clock.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="77" topLine="0" />
-		</Cursor>
-	</File>
+	<ActiveTarget name="Winter_Debug" />
 	<File name="include\ACGCross\PAW01_Winter\Title\GameLogo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="116" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\PAW01_Winter\KeyMapActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1137" topLine="40" />
-		</Cursor>
-	</File>
-	<File name="include\Core\Texture.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2234" topLine="44" />
-		</Cursor>
-	</File>
-	<File name="src\Core\RenderTarget.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="83" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\Title\GameLogo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="38" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\Title\MovingBG.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalSelButton.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1720" topLine="54" />
-		</Cursor>
-	</File>
-	<File name="src\Core\RndPtr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="119" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\CSVEditor.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="95" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\DanmakuGame\DanmakuGame.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="32" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\str2wstr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="32" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="807" topLine="57" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Snow.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="32" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Error.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="885" topLine="34" />
-		</Cursor>
-	</File>
-	<File name="src\Core\CSVReader.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="352" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GameDataMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1724" topLine="72" />
-		</Cursor>
-	</File>
-	<File name="src\TCPDemo.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="370" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\Title\Title.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="189" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\MaskCmdTarget.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="140" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\TextBox.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="217" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\ACGCross_Logo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="70" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Surface.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="796" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\Title\MovingBG.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="32" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="src\ACGCross\PAW01_Winter\Slider.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="75" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\NumTexture.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="42" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\TCPNet.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="509" topLine="51" />
-		</Cursor>
-	</File>
-	<File name="src\Core\CoreMain.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6291" topLine="206" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\Bg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="229" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\ResVal.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1177" topLine="9" />
 		</Cursor>
 	</File>
 	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\Chr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -286,109 +21,19 @@
 			<Cursor1 position="55" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\TextBox.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="54" />
-		</Cursor>
-	</File>
-	<File name="src\Core\Thread.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3235" topLine="106" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GameMenu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="46" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\UDPNet.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\NameCard.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="204" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\MathFunc.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="259" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\CGViewer.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="600" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\Title\Title.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="271" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\ResFile.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="735" topLine="30" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\DanmakuGame\DanmakuGame.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="80" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\NumTexture.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="69" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\SettingUI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="160" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="include\Core\Misc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="72" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Chr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\PAW01_Winter\Title\Title.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="88" topLine="0" />
+			<Cursor1 position="189" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Core\Misc.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\PAW01_Winter\ACGCross_Logo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="514" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\SettingUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="271" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\Title\TitleButton.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="65" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Core\RndPtr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="550" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="include\Core\CSVEditor.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="209" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Core\ResFile.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="42" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ACGCross\PAW01_Winter\FadeLable.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="32" topLine="0" />
+			<Cursor1 position="82" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Core\RenderTarget.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -396,9 +41,139 @@
 			<Cursor1 position="78" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\ACGCross\PAW01_Winter\Title\MovingBG.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="27586" topLine="902" />
+			<Cursor1 position="67" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Clock.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="77" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\str2wstr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\NameCard.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="109" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\Title\Title.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="271" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\TextBox.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="373" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\DanmakuGame\DanmakuGame.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="80" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\Title\TitleButton.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="65" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Timer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1362" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Globals.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="292" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Title\GameLogo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="38" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GalSelButton.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="857" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\FadeLable.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Sound.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="888" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\ChrMgr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="231" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\UDPNet.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="76" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\CSVEditor.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="209" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\NumTexture.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\TextWindow.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="48" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Surface.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1128" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Activity.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="649" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\Core\TCPNet.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="603" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Chr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="88" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalSelButton.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1720" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GameDataMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1724" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Snow.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\MaskCmdTarget.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="140" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\ACGCross\PAW01_Winter\Mask.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -406,9 +181,154 @@
 			<Cursor1 position="1562" topLine="39" />
 		</Cursor>
 	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\Corner.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="48" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\NumTexture.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="69" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Thread.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1833" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\TextBox.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\ChrMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="100" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Ending.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="246" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="807" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\CGViewer.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="600" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Texture.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2234" topLine="44" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\ACGCross_Logo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="70" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="include\Core.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="405" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GameMenu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="48" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\GameMenu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="46" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\KeyMapActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1137" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="include\Core\Bundle.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="329" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Title\MovingBG.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\DanmakuGame\DanmakuGame.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="761" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\NameCard.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="204" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\GalgameActivity\Bg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="229" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\SettingUI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="271" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Core\SDLbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="407" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="src\SMLanguage\SMI.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16740" topLine="806" />
+		</Cursor>
+	</File>
+	<File name="include\SMLanguage\SMI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="811" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="include\Core\RndPtr.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="550" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\MathFunc.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="259" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="19963" topLine="597" />
+		</Cursor>
+	</File>
+	<File name="src\main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="27586" topLine="902" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\SettingUI.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="160" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Game.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2087" topLine="59" />
+		</Cursor>
+	</File>
+	<File name="include\Core\ResFile.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="735" topLine="30" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
