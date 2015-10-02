@@ -887,10 +887,18 @@ public:
 	}
 };
 
-
+#include "ACGCross/DASPReader.h"
 int main(int argc,char** argv)
 {
     Init();
+
+    /*DASPReader dasp;
+    ifstream inDic("dic.dasdic",ios::binary);
+    char dic[4096];inDic.read(dic,4096);
+    dasp.SetDic(dic);
+    dasp.OpenDASP("out.dasp");
+    ResFile::InstallReader(&dasp);*/
+
     srand(time(NULL));
     screen screenmode[] ={
         {800,600,false},

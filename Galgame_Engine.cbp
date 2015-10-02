@@ -66,6 +66,7 @@
 			<Add library="SDL2" />
 			<Add library="SDL2_image" />
 			<Add library="SDL2_ttf" />
+			<Add library="lib/libDAS_Coder.a" />
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>
@@ -74,6 +75,8 @@
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="include/ACGCross/DASPReader.h" />
+		<Unit filename="include/ACGCross/DAS_Decoder.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Button.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/CGViewer.h" />
@@ -133,6 +136,7 @@
 		<Unit filename="include/Core/Timer.h" />
 		<Unit filename="include/Core/UDPNet.h" />
 		<Unit filename="include/SMLanguage/SMI.h" />
+		<Unit filename="src/ACGCross/DASPReader.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/ACGCross_Logo.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/Button.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/CGViewer.cpp" />

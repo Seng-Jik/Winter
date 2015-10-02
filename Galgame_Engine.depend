@@ -1,0 +1,914 @@
+# depslib dependency file v1.0
+1443504184 source:f:\winterproject\icon.rc
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\acgcross_logo.cpp
+	"ACGCross/PAW01_Winter/ACGCross_Logo.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\acgcross_logo.h
+	"Core.h"
+	"../ACGCross/PAW01_Winter/MathFunc.h"
+
+1443744972 f:\winterproject\include\core.h
+	"Core/Activity.h"
+	"Core/Bundle.h"
+	"Core/Control.h"
+	"Core/Error.h"
+	"Core/ResFile.h"
+	"Core/Font.h"
+	"Core/Globals.h"
+	"Core/Misc.h"
+	"Core/Sound.h"
+	"Core/Texture.h"
+	"Core/Thread.h"
+	"Core/Timer.h"
+	"Core/ResVal.h"
+	"Core/RndPtr.h"
+	"Core/TCPNet.h"
+	"Core/UDPNet.h"
+	"Core/CSVEditor.h"
+	"Core/CSVReader.h"
+	"Core/RenderTarget.h"
+
+1443744972 f:\winterproject\include\core\activity.h
+	<forward_list>
+	"SDLbase.h"
+	"Globals.h"
+	"RndPtr.h"
+	<stack>
+
+1443504184 f:\winterproject\include\core\sdlbase.h
+	"OS.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_net.h>
+	<SDL2/SDL_test.h>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_net.h>
+	<SDL_test.h>
+
+1443504184 f:\winterproject\include\core\os.h
+	<windows.h>
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\begin_code.h
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\close_code.h
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1376156426 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1376156342 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1376156543 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1376156503 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_net.h
+	<stdint.h>
+	"SDL.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test.h
+	"SDL.h"
+	"SDL_test_common.h"
+	"SDL_test_font.h"
+	"SDL_test_random.h"
+	"SDL_test_fuzzer.h"
+	"SDL_test_crc32.h"
+	"SDL_test_md5.h"
+	"SDL_test_log.h"
+	"SDL_test_assert.h"
+	"SDL_test_harness.h"
+	"SDL_test_images.h"
+	"SDL_test_compare.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_common.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_font.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_random.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_fuzzer.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_crc32.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_md5.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_log.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_assert.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_harness.h
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_images.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_compare.h
+	"SDL.h"
+	"SDL_test_images.h"
+	"begin_code.h"
+	"close_code.h"
+
+1443744972 f:\winterproject\include\core\globals.h
+	"SDLbase.h"
+	<vector>
+	<string>
+	"Sound.h"
+	"OS.h"
+
+1443504184 f:\winterproject\include\core\sound.h
+	"SDLbase.h"
+	<map>
+	"ResFile.h"
+
+1443504184 f:\winterproject\include\core\resfile.h
+	"SDLBase.h"
+	<vector>
+	<string>
+
+1443744972 f:\winterproject\include\core\rndptr.h
+	"SDLbase.h"
+	<string>
+
+1443504184 f:\winterproject\include\core\bundle.h
+	"Globals.h"
+	<fstream>
+	"mem.h"
+
+1443504184 f:\winterproject\include\core\control.h
+	"SDLbase.h"
+
+1443504184 f:\winterproject\include\core\error.h
+	"SDLbase.h"
+	<string>
+	"OS.h"
+
+1443504184 f:\winterproject\include\core\font.h
+	"SDLbase.h"
+	<string>
+	"ResFile.h"
+
+1443744972 f:\winterproject\include\core\misc.h
+	<fstream>
+	"SDLbase.h"
+	"ResFile.h"
+
+1443504184 f:\winterproject\include\core\texture.h
+	"Globals.h"
+	"ResFile.h"
+	"Surface.h"
+
+1443504184 f:\winterproject\include\core\surface.h
+	"ResFile.h"
+
+1443504184 f:\winterproject\include\core\thread.h
+	"SDLbase.h"
+
+1443504184 f:\winterproject\include\core\timer.h
+	"../Core/Debug.h"
+	"SDLbase.h"
+	"Globals.h"
+
+1443504184 f:\winterproject\include\core\debug.h
+	<iostream>
+	<string>
+
+1443504184 f:\winterproject\include\core\resval.h
+	<map>
+
+1443504184 f:\winterproject\include\core\tcpnet.h
+	"SDLBase.h"
+	<string>
+
+1443504184 f:\winterproject\include\core\udpnet.h
+	<string>
+	"SDLbase.h"
+
+1443504184 f:\winterproject\include\core\csveditor.h
+	<iostream>
+	<fstream>
+	<string>
+	<map>
+	<vector>
+
+1443504184 f:\winterproject\include\core\csvreader.h
+	"ResFile.h"
+	<string>
+
+1443744972 f:\winterproject\include\core\rendertarget.h
+	"Thread.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\mathfunc.h
+	"Core.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\game.h
+	"GameDataMgr.h"
+	"Core.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\gamedatamgr.h
+	"Core.h"
+	<fstream>
+	<set>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\button.cpp
+	"ACGCross/PAW01_Winter/Button.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\button.h
+	"Core.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\cgviewer.cpp
+	"ACGCross/PAW01_Winter/CGViewer.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\cgviewer.h
+	"Core.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\danmakugame\danmakugame.cpp
+	"ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h"
+	"Core.h"
+	<iostream>
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\danmakugame\danmakugame.h
+	"ACGCross/PAW01_Winter/KeyMapActivity.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\keymapactivity.h
+	"Core/Activity.h"
+	<map>
+	<vector>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\ending.cpp
+	"ACGCross/PAW01_Winter/Ending.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\ending.h
+	"Core.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\fadelable.cpp
+	"ACGCross/PAW01_Winter/FadeLable.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\fadelable.h
+	"Core.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\bg.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Bg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\bg.h
+	"SMEProcUnit.h"
+	"../ACGCross/PAW01_Winter/str2wstr.h"
+	"core.h"
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\smeprocunit.h
+	"Core.h"
+	"SMLanguage/SMI.h"
+
+1443504184 f:\winterproject\include\smlanguage\smi.h
+	<iostream>
+	<fstream>
+	<string>
+	<unordered_map>
+	<unordered_set>
+	<vector>
+	<stack>
+	<algorithm>
+	<sstream>
+	<memory.h>
+	"../Core/Bundle.h"
+	"../Core/ResFile.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\str2wstr.h
+	<string>
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\galgameactivity.h
+	"Core.h"
+	"Clock.h"
+	"TextBox.h"
+	"NameCard.h"
+	"Corner.h"
+	"Snow.h"
+	"Bg.h"
+	"../../../SMLanguage/SMI.h"
+	"TextWindow.h"
+	"MaskCmdTarget.h"
+	"../Button.h"
+	"ChrMgr.h"
+	"SMEProcUnit.h"
+	<map>
+	<stack>
+	<list>
+	"GalSelButton.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\clock.h
+	"../NumTexture.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\numtexture.h
+	"../Core/Texture.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\textbox.h
+	"SMEProcUnit.h"
+	"ACGCross/PAW01_Winter/game.h"
+	<string>
+	<vector>
+	<list>
+	"Core.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\namecard.h
+	"ACGCross/PAW01_Winter/FadeLable.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"SMLanguage/SMI.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\corner.h
+	"Core.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\snow.h
+	"Core.h"
+	"SMEProcUnit.h"
+	<list>
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\textwindow.h
+	"Core.h"
+	<list>
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\maskcmdtarget.h
+	"ACGCross/PAW01_Winter/Mask.h"
+	"bg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\mask.h
+	<string>
+	"Core.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\chrmgr.h
+	"SMEProcUnit.h"
+	"Chr.h"
+	"../ACGCross/PAW01_Winter/str2wstr.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\chr.h
+	"core.h"
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\galselbutton.h
+	"Core.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\chr.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Chr.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\chrmgr.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\clock.cpp
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/Clock.h"
+	<ctime>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\corner.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Corner.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\saveui.h
+	"Core.h"
+	"Button.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\galselbutton.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\gamemenu.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
+	"Core.h"
+	"ACGCross/PAW01_Winter/NumTexture.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\galgameactivity\gamemenu.h
+	"ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
+	"Core.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\maskcmdtarget.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\namecard.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/NameCard.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\snow.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Snow.h"
+	"stdlib.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\textbox.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\galgameactivity\textwindow.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/TextWindow.h"
+	"ACGCross/PAW01_Winter/game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\game.cpp
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/Clock.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/Ending.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	"ACGCross/PAW01_Winter/SettingUI.h"
+	"ACGCross/PAW01_Winter/CGViewer.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\title\title.h
+	"Core.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/Title/MovingBg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/Snow.h"
+	"ACGCross/PAW01_Winter/Title/GameLogo.h"
+	"ACGCross/PAW01_Winter/Title/TitleButton.h"
+	<vector>
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\title\movingbg.h
+	"Core.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\title\gamelogo.h
+	"ACGCross/PAW01_Winter/GalgameActivity/Corner.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\title\titlebutton.h
+	"Core.h"
+	"ACGCross/PAW01_Winter/Button.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\settingui.h
+	"Core.h"
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/Button.h"
+
+1443504184 f:\winterproject\include\acgcross\paw01_winter\slider.h
+	"Core.h"
+	<string>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\gamedatamgr.cpp
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+	<string>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\keymapactivity.cpp
+	"ACGCross/PAW01_Winter/KeyMapActivity.h"
+	<iostream>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\mask.cpp
+	"ACGCross/PAW01_Winter/Mask.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\mathfunc.cpp
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	<math.h>
+	<mem.h>
+	<string.h>
+
+1443744972 source:f:\winterproject\src\acgcross\paw01_winter\numtexture.cpp
+	"ACGCross/PAW01_Winter/NumTexture.h"
+	"Core/Debug.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\saveui.cpp
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\settingui.cpp
+	"ACGCross/PAW01_Winter/SettingUI.h"
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"Core.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	<cstdlib>
+	<string>
+	<sstream>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\slider.cpp
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\str2wstr.cpp
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	<mem.h>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\title\gamelogo.cpp
+	"ACGCross/PAW01_Winter/Title/GameLogo.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\title\movingbg.cpp
+	"ACGCross/PAW01_Winter/Title/MovingBG.h"
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\title\title.cpp
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	<cstdlib>
+	<fstream>
+
+1443504184 source:f:\winterproject\src\acgcross\paw01_winter\title\titlebutton.cpp
+	"ACGCross/PAW01_Winter/Title/TitleButton.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1443504184 source:f:\winterproject\src\smlanguage\smi.cpp
+	"../../include/SMLanguage/SMI.h"
+
+1443783529 source:f:\winterproject\src\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+	<windows.h>
+	"Core.h"
+	"ACGCross/PAW01_Winter/ACGCross_Logo.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"Core/ResVal.h"
+	<stdlib.h>
+	<time.h>
+	"ACGCross/PAW01_Winter/Ending.h"
+	"ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h"
+	"ACGCross/DASPReader.h"
+
+1443783419 f:\winterproject\include\acgcross\daspreader.h
+	"Core.h"
+	<map>
+
+1443784063 source:f:\winterproject\src\acgcross\daspreader.cpp
+	"DASPReader.h"
+	"DAS_Decoder.h"
+
+1443607438 f:\winterproject\include\acgcross\das_decoder.h
+
