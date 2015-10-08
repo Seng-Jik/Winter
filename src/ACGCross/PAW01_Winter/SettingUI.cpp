@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/SettingUI.h"
 #include "ACGCross/PAW01_Winter/Slider.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/Game.h"
 #include "ACGCross/PAW01_Winter/str2wstr.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
@@ -10,7 +10,7 @@
 #include <sstream>
 
 using namespace ACGCross;
-using namespace Core;
+using namespace ::Snow;
 using namespace std;
 
 struct screen{
@@ -69,13 +69,11 @@ SettingUI::SettingUI()
     RegControl(m_title);
 
     screen screenmode[] ={
-        {L"4:3-Win-800x600",false},
         {L"4:3-Win-1024x768",false},
         {L"4:3-Win-1280x960",false},
         {L"4:3-Full-1024x768",true},
         {L"4:3-Full-1280x960",true},
         {L"4:3-Full-Auto",true},
-        {L"16:9-Win-800x450",false},
         {L"16:9-Win-1024x576",false},
         {L"16:9-Win-1280x720",false},
         {L"16:9-Full-1024x576",true},
@@ -86,7 +84,7 @@ SettingUI::SettingUI()
     m_grp_title.Load(m_font,StringToWString(r.Str("CFG_SCREENMODE")));
     m_grp_title.SetPos(150,100+r.Int("CFG_YOFFSET"));
     //m_grp_title.SetZoom(0.4);
-    for(int i = 0;i < 12;++i){
+    for(int i = 0;i < 10;++i){
         wstring wo=screenmode[i].w;
 
         m_grp_list[i].Load(m_font,wo);
@@ -108,7 +106,7 @@ SettingUI::SettingUI()
 }
 
 void SettingUI::updateGrpState(){
-    for(int i = 0;i<12;++i){
+    for(int i = 0;i<10;++i){
         if(i != gameData.GetGrpMode())
             m_grp_list[i].SetAlpha(128);
     }
@@ -174,7 +172,7 @@ void SettingUI::OnDraw()
     m_seLab.OnDraw();
 
     m_grp_title.OnDraw();
-    for(int i = 0; i<12;++i) m_grp_list[i].OnDraw();
+    for(int i = 0; i<10;++i) m_grp_list[i].OnDraw();
 
     m_return.OnDraw();
     m_title.OnDraw();
@@ -182,7 +180,7 @@ void SettingUI::OnDraw()
 
 void SettingUI::OnNext()
 {
-    SDL_SetRenderDrawColor(pRnd,0x3A,0xE6,0xFF,255);
+    SDL_SetRenderDrawColor(pRnd,0x02,0x87,0xD4,255);
     if(m_stat == SHOWING){
         float per = ArcFunc(float(m_timer.GetTimer()) / 500);
         if(per == -1){
@@ -204,7 +202,7 @@ void SettingUI::OnNext()
             m_cvLab.SetAlpha(255);
             m_seLab.SetAlpha(255);
             m_grp_title.SetAlpha(255);
-            for(int i = 0;i<12;++i){
+            for(int i = 0;i<10;++i){
                 m_grp_list[i].SetPos(int(50),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255);
                 else m_grp_list[i].SetAlpha(128);
@@ -227,7 +225,7 @@ void SettingUI::OnNext()
             m_seSetting.SetAlpha(192*per);
             m_bgt_o.SetAlpha(255 - 255*per);
             m_bgt.SetAlpha(128*per);
-            for(int i = 0;i<12;++i){
+            for(int i = 0;i<10;++i){
                 m_grp_list[i].SetPos(int(50+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255*per);
                 else m_grp_list[i].SetAlpha(128*per);
@@ -259,7 +257,7 @@ void SettingUI::OnNext()
             m_bgt.SetAlpha(128*per);
 
             m_grpWarn_t.SetAlpha(255*per);
-            for(Uint8 i = 0;i<12;++i){
+            for(Uint8 i = 0;i<10;++i){
                 m_grp_list[i].SetPos(int(50+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255*per);
                 else m_grp_list[i].SetAlpha(128*per);
@@ -292,7 +290,7 @@ void SettingUI::OnNext()
             m_bgt.SetAlpha(128*per);
 
             m_grpWarn_t.SetAlpha(255*per);
-            for(int i = 0;i<12;++i){
+            for(int i = 0;i<10;++i){
                 m_grp_list[i].SetPos(int(650+120*(1-per)),150+30*i+r.Int("CFG_YOFFSET"));
                 if(i == gameData.GetGrpMode()) m_grp_list[i].SetAlpha(255*per);
                 else m_grp_list[i].SetAlpha(128*per);
@@ -326,11 +324,11 @@ void SettingUI::OnEvent(Control* c, const Sint32 msg)
 
 void SettingUI::OnEvent(const SDL_Event& e){
 
-    if(e.type == SDL_MOUSEBUTTONDOWN) PNT("MOUSE:"<<e.button.x<<","<<e.button.y);
+    //if(e.type == SDL_MOUSEBUTTONDOWN) PNT("MOUSE:"<<e.button.x<<","<<e.button.y);
 
     if(e.type == SDL_MOUSEMOTION){
         bool grpSel = false;
-        for(int i = 0;i < 12;++i){
+        for(int i = 0;i < 10;++i){
             if(m_grp_list[i].InRect(e.motion.x,e.motion.y)){
                 grpSel = true;
                 updateGrpState();
@@ -341,12 +339,12 @@ void SettingUI::OnEvent(const SDL_Event& e){
     }
     else if(e.type == SDL_MOUSEBUTTONUP){
         SDL_Rect r = {51,ACGCross::r.Int("CFG_GRPHIG"),259,355};
-        if(InRect(r,e.motion.x,e.motion.y)) for(int i = 0;i < 12;++i){
+        if(InRect(r,e.motion.x,e.motion.y)) for(int i = 0;i < 10;++i){
             if(m_grp_list[i].InRect(e.motion.x,e.motion.y)){
                 gameData.SetGrpMode(i);
                 gameData.AddUpdateTask(-3);
                 m_grpWarn = true;
-                PNT("GRP:"<<i);
+                //PNT("GRP:"<<i);
                 break;
             }
         }

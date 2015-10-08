@@ -9,19 +9,19 @@
 #include "ACGCross/PAW01_Winter/CGViewer.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 using namespace ACGCross::Galgame;
 
 GameDataMgr ACGCross::gameData;
 ResVal ACGCross::r;
 
-Core::Activity* ACGCross::pGal;
-Core::Activity* ACGCross::pTitle;
-Core::Activity* ACGCross::pEd;
-Core::Activity* ACGCross::pSaveUI;
-Core::Activity* ACGCross::pSettingUI;
-Core::Activity* ACGCross::pCGViewer;
+::Snow::Activity* ACGCross::pGal;
+::Snow::Activity* ACGCross::pTitle;
+::Snow::Activity* ACGCross::pEd;
+::Snow::Activity* ACGCross::pSaveUI;
+::Snow::Activity* ACGCross::pSettingUI;
+::Snow::Activity* ACGCross::pCGViewer;
 ACGCross::Galgame::TextBox* ACGCross::pTextBox;
 ACGCross::Galgame::Clock* ACGCross::pClock;
 

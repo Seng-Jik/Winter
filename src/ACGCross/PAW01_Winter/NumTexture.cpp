@@ -1,10 +1,10 @@
 #include "ACGCross/PAW01_Winter/NumTexture.h"
-#include "Core/Debug.h"
+#include "Snow/Debug.h"
 using namespace ACGCross;
 
 
 
-void NumTexture::SetNum(char n)
+void NumSprite::SetNum(char n)
 {
     int w,h;
     GetSize(w,h);
@@ -13,10 +13,10 @@ void NumTexture::SetNum(char n)
 }
 
 
-void NumTexture::Load(const std::string& fileName)
+void NumSprite::Load(const std::string& fileName)
 {
     PNT("NUMT");
-    Texture::Load(fileName);
+    Sprite::Load(fileName);
     PNT("NUMT2");
     int w,h;
     GetSize(w,h);
@@ -25,7 +25,7 @@ void NumTexture::Load(const std::string& fileName)
     PNT("NUMT4");
 }
 
-int NumTexture::GetWei()
+int NumSprite::GetWei()
 {
     int w,h;
     GetSize(w,h);

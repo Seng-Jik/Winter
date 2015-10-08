@@ -4,13 +4,13 @@
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 #define MOVE_EFFECT_H 90
 using namespace ACGCross::Galgame;
-using namespace Core;
+using namespace ::Snow;
 
 TextWindow::TextWindow()
 {
     //ctor
     m_posy = r.Int("GAL_WINDOW_NORMAL_Y");
-    m_fadeFpsTime = Core::Time2Fps(400);
+    m_fadeFpsTime = Snow::Time2Frame(400);
 }
 
 void TextWindow::Quit()

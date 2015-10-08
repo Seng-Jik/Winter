@@ -3,7 +3,7 @@
 #include "ACGCross/PAW01_Winter/Title/Title.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 using namespace ACGCross::Galgame;
 using namespace std;
@@ -57,7 +57,7 @@ void SaveUI::OnShow()
         int x = r.Int("SAV_BESTLEFT_X");
         for(int j = 0;j < 4;++j){
             if(num >= 16) num = -1;
-            PNT("SAVE UI SETTING BUTTON:"<<num<<":"<<x<<","<<y);
+            //PNT("SAVE UI SETTING BUTTON:"<<num<<":"<<x<<","<<y);
             m_saves[i][j] = new SaveButton(num);
             if(num != -1){
                 if(gameData.GetDataExist(num)){
@@ -77,7 +77,7 @@ void SaveUI::OnShow()
                 else
                     m_saves[i][j] ->LoadSurface(noData);
             }else{
-                Core::Surface sur;
+                ::Snow::Surface sur;
                 sur.Load("GalGameSystem/saveUI_back.png");
                 m_saves[i][j] -> LoadSurface(sur);
             }
@@ -134,7 +134,7 @@ void SaveUI::OnDraw()
     if(m_stat == HIDING && m_dLoad != -1){
         SDL_SetRenderDrawBlendMode(pRnd,SDL_BLENDMODE_BLEND);
         SDL_SetRenderDrawColor(pRnd,0,0,0,m_dLoad_fg);
-        PNT("DLOADFG:"<<(int)m_dLoad_fg);
+        //PNT("DLOADFG:"<<(int)m_dLoad_fg);
         pRnd.Clear();
     }
 }
@@ -184,7 +184,7 @@ void SaveUI::OnEvent(const SDL_Event& e){
         MoveDuang(e.motion.x,e.motion.y);
 }
 
-void SaveUI::OnEvent(Core::Control* c, const Sint32 sav)
+void SaveUI::OnEvent(::Snow::Control* c, const Sint32 sav)
 {
     if(sav == -1){
         NeedReturn();
@@ -290,7 +290,7 @@ void SaveUI::Really::SetInit(int x, int y, int dataNum,SaveButton* b)
         m_del.SetPos(x,y+90+37*2);
     }
     m_saveNum = dataNum;
-    PNT("SAVEUI::REALLY::SETINIT");
+    //PNT("SAVEUI::REALLY::SETINIT");
 }
 
 SaveUI::Really::Really()
@@ -430,6 +430,13 @@ void SaveUI::Really::OnShow()
     m_save.GetNormal() -> SetAlpha(0);
     m_load.GetNormal() -> SetAlpha(0);
     m_del.GetNormal() -> SetAlpha(0);
+
+    SDL_Event forKillState;
+    forKillState.type = SDL_MOUSEMOTION;
+    forKillState.motion.x = forKillState.motion.y = 0;
+    m_save.OnEvent(forKillState,*this);
+    m_load.OnEvent(forKillState,*this);
+    m_del.OnEvent(forKillState,*this);
 }
 
 void SaveUI::Really::OnEvent(const SDL_Event& e)
@@ -455,7 +462,7 @@ void SaveUI::Really::OnEvent(const SDL_Event& e)
     }
 }
 
-void SaveUI::Really::OnEvent(Core::Control* c,const Sint32 msg){
+void SaveUI::Really::OnEvent(::Snow::Control* c,const Sint32 msg){
     if(msg == 4){
         UnRegAllControl();
         if(c == (Control*)&m_save){

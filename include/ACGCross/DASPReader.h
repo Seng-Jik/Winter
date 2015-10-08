@@ -1,7 +1,7 @@
-#include "Core.h"
+#include "Snow.h"
 #include <map>
 namespace ACGCross{
-class DASPReader : public Core::ResFileReader
+class DASPReader : public ::Snow::ResFileReader
 {
     public:
         void OpenDASP(const char*);

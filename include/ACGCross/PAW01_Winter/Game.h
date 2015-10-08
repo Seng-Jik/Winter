@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GameDataMgr.h"
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
     namespace Galgame{
@@ -9,20 +9,20 @@ namespace ACGCross{
         class Clock;
     }
     extern GameDataMgr gameData;
-    extern Core::ResVal r;
+    extern ::Snow::ResVal r;
 
-    extern Core::Activity* pGal;
-    extern Core::Activity* pTitle;
-    extern Core::Activity* pEd;
-    extern Core::Activity* pSaveUI;
-    extern Core::Activity* pTitle;
-    extern Core::Activity* pSettingUI;
-    extern Core::Activity* pCGViewer;
+    extern ::Snow::Activity* pGal;
+    extern ::Snow::Activity* pTitle;
+    extern ::Snow::Activity* pEd;
+    extern ::Snow::Activity* pSaveUI;
+    extern ::Snow::Activity* pTitle;
+    extern ::Snow::Activity* pSettingUI;
+    extern ::Snow::Activity* pCGViewer;
     extern Galgame::TextBox* pTextBox;
     extern Galgame::Clock* pClock;
 
 
-    void AutoSaver(Core::THREAD_ID);
+    void AutoSaver(::Snow::THREAD_ID);
     void InitGame();
     void QuitGame();
 

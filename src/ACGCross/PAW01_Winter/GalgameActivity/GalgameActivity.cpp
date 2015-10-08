@@ -2,12 +2,13 @@
 #include "ACGCross/PAW01_Winter/str2wstr.h"
 #include "ACGCross/PAW01_Winter/Game.h"
 #include "ACGCross/PAW01_Winter/SaveUI.h"
+#include "../Snow/Debug.h"
 
 #define IFFAST if(fast)
 #define REGSMCMD(s,u) m_SMEProc_map[s] = (SMEProcUnit*)&u
 
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 using namespace ACGCross::Galgame;
 
@@ -52,13 +53,11 @@ void GalgameActivity::SMEClick()
         SMEText_lb();
     }
     else if(m_SMEProc_stat == WAITCLICK){
-        LowerSaveGame();
+        m_SMEProc_stat = PROCESSING;
         if(!gameData.GetCSaveExist()){
             gameData.SetDataExist(0,true);
             gameData.AddUpdateTask(-2);
         }
-
-        m_SMEProc_stat = PROCESSING;
         m_text_cmdtarget.ClearTextLog();
         m_text -> Clear();
         m_text -> SetColor(255,255,255);
@@ -85,6 +84,7 @@ void GalgameActivity::SMENext()
             SMEClick();
     }
     while(m_SMEProc_stat == FINISHED && m_textWindow.Finished()){
+        LowerSaveGame();
         m_SMEProc_smi.PullEvent(m_SMEProc_sme);
         m_SMEProc_ProcCalled = false;
         m_SMEProc_FastProcCalled = false;
@@ -98,7 +98,9 @@ void GalgameActivity::SMEUpdateStat()
     if(m_SMEProc_sme.type == SMI::SMEType::END) m_SMEProc_stat = SMEProcessorState::END;
     else if(m_SMEProc_sme.type == SAY || (m_SMEProc_sme.type == SAYEND && m_SMEProc_stat != WAITCLICK))
     {
-        if(m_SMEProc_Say -> SMEFinished(&m_SMEProc_sme)) {m_SMEProc_stat = FINISHED;}
+        if(m_SMEProc_Say -> SMEFinished(&m_SMEProc_sme)) {
+            m_SMEProc_stat = FINISHED;
+        }
         else m_SMEProc_stat = PROCESSING;
     }
     else switch(m_SMEProc_sme.type){
@@ -136,6 +138,7 @@ void GalgameActivity::RefreshSaveScreen()
     m_snow.OnDraw();
     m_chrs.OnDraw();
 
+
     Uint8* pixels = saveScreen_org;
     Uint32 rm = 0xff0000,gm=0x00ff00,bm=0x0000FF,am=0;int bpp=24;
     SDL_PixelFormatEnumToMasks(SDL_PIXELFORMAT_RGB24,
@@ -167,6 +170,10 @@ void GalgameActivity::RefreshSaveScreen()
             dstpx[i] = orgpx[i];
     }
 
+    if(!m_sels.empty()){
+        FOR_EACH(p,m_sels.begin(),m_sels.end())
+            p -> OnDraw();
+    }
     m_textWindow.OnDraw();
     m_text -> OnDraw();
     m_textWindow_X.OnDraw();
@@ -187,8 +194,13 @@ void GalgameActivity::SMEProc(bool fast)
         switch(m_SMEProc_sme.type){
         case SAY:
             PNT("SMEProcessor:PROC say");
-            if(m_name_isEmpty) {m_name.SetText(L"");m_name.UpdateText();}
-            m_SMEProc_Say -> SMEProc(&m_SMEProc_sme);break;
+            if(m_name_isEmpty && !m_name_isLoaded) {
+                m_name.SetText(L"");
+                m_name.UpdateText();
+            }
+            m_name_isLoaded = false;
+            m_SMEProc_Say -> SMEProc(&m_SMEProc_sme);
+            break;
         case SAYEND:
             PNT("SMEProcessor:PROC sayend");
             m_SMEProc_stat = WAITCLICK;SMEText_lb();
@@ -202,7 +214,7 @@ void GalgameActivity::SMEProc(bool fast)
         case CMD:
             PNT("SMEProcessor:PROC cmd");
             if(m_SMEProc_map.count(m_SMEProc_sme.cmd)) m_SMEProc_map [m_SMEProc_sme.cmd] -> SMEProc(&m_SMEProc_sme);
-            else PNT("SMEProcessor:UNKNOWN CMD "<<WStringToString(m_SMEProc_sme.cmd));
+            else PNT(string("SMEProcessor:UNKNOWN CMD ")+WStringToString(m_SMEProc_sme.cmd));
             break;
         default:
             PNT("SMEProcessor:PROC default");
@@ -307,11 +319,11 @@ GalgameActivity::GalgameActivity(TextBox* b,Clock* c):m_bgm_loader(&BGMLoader),m
 
     REGSMCMD(L"end",*this); //T
 
-    REGSMCMD(L"snow_start",m_snow);     //T
-    REGSMCMD(L"snow_setvol",m_snow);    //T
-    REGSMCMD(L"snow_setwind",m_snow);   //T
-    REGSMCMD(L"snow_setspeed",m_snow);  //T
-    REGSMCMD(L"snow_stop",m_snow);  //T
+    REGSMCMD(L"Snow_start",m_snow);     //T
+    REGSMCMD(L"Snow_setvol",m_snow);    //T
+    REGSMCMD(L"Snow_setwind",m_snow);   //T
+    REGSMCMD(L"Snow_setspeed",m_snow);  //T
+    REGSMCMD(L"Snow_stop",m_snow);  //T
 
     REGSMCMD(L"achr_m",m_chrs);   //Add a character with moving acting
 	REGSMCMD(L"achr_ma",m_chrs);  //Add a character with moving acting and alpha changing
@@ -351,7 +363,7 @@ void GalgameActivity::OnInit()
     m_name_font.Open(r.Str("AFX_FONT"));
     m_name.SetFont(&m_name_font);
 
-    PNT("GALGAMEACTIVITY:ONINIT SNOW");
+    PNT("GALGAMEACTIVITY:ONINIT ::Snow");
     m_snow.Init();
     PNT("GALGAMEACTIVITY:ONINIT CORNER");
     corner.Init();
@@ -408,7 +420,7 @@ void GalgameActivity::OnHide()
     m_snow.Quit();
     m_textWindow.Quit();*/
 
-    PNT("DELETE THIS");
+    //PNT("DELETE THIS");
     //delete pGal;
     //pGal = new GalgameActivity(pTextBox,pClock);
 }
@@ -582,7 +594,7 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
 
 }
 
-void GalgameActivity::OnEvent(Core::Control* c, const Sint32 msg)
+void GalgameActivity::OnEvent(::Snow::Control* c, const Sint32 msg)
 {
     if(msg == 4){
         if(c == &m_textWindow_X) HideWindow();
@@ -683,11 +695,15 @@ bool GalgameActivity::SMEFinished(SMI::SMEvent* pSme)
 void GalgameActivity::LoadSave(int num){
     m_bgm_name.clear();
     corner.Hide();
+    m_sels.clear();
+    m_selGoto.clear();
     if(num < 0){
+        m_name.Clear();
         m_SMEProc_skipping = false;
         m_SMEProc_autoing = false;
         m_SMEProc_ProcCalled = false;
         m_SMEProc_FastProcCalled = false;
+        m_SMEProc_stat = PROCESSING;
         m_name_isEmpty = true;
         m_snow.ForceStop();
         m_SMEProc_smi.Goto(L"start");
@@ -759,11 +775,19 @@ void GalgameActivity::LoadSave(int num){
         //Load ChrMgr
         m_chrs.LoadData(saveBundle);
 
-        //Load Snow
+        //Load NameCard
+        string nameCard_name;
+        saveBundle.ReadStr(nameCard_name);
+        SMEvent nameCard;
+        nameCard.type = NAME;
+        nameCard.argv.push_back(StringToWString(nameCard_name));
+
+        //Load Snow Effect
         m_snow.LoadState(saveBundle);
 
         //Load SMI States;
         m_SMEProc_smi.Load(saveBundle);
+        saveBundle.Read<SMEProcessorState>(m_SMEProc_stat);
 
         //Finishing Load
         m_SMEProc_sme.type = SAYEND;
@@ -773,6 +797,8 @@ void GalgameActivity::LoadSave(int num){
         textLog.clear();
         cvLog.clear();
         m_autoUpdateDataTimer.Reset();
+        m_name_isLoaded = true;
+        m_name.SMEProc(&nameCard);
     }
 }
 
@@ -788,6 +814,7 @@ void GalgameActivity::SetVol(Uint8 bgm, Uint8 se, Uint8 cv)
 void GalgameActivity::LowerSaveGame()
 {
     //Get Save Bundle
+    PNT("LOWSAVE");
     GameDataMgr::SAVE& saveBundle = gameData[0];
     saveBundle.ResetPtr();
 
@@ -818,14 +845,19 @@ void GalgameActivity::LowerSaveGame()
     //Save BGM Music
     saveBundle.WriteStr(m_bgm_name);
 
-    //Load ChrMgr
+    //Save ChrMgr
     m_chrs.SaveData(saveBundle);
 
-    //Save Snow
+    //Save NameCard
+    saveBundle.WriteStr(WStringToString(m_name.GetText()));
+    PNT(WStringToString(m_name.GetText()));
+
+    //Save ::Snow
     m_snow.SaveState(saveBundle);
 
     //Save SMI
     m_SMEProc_smi.Save(saveBundle);
+    saveBundle.Write<SMEProcessorState>(m_SMEProc_stat);
 
     //Add Update Task To GameDataMgr
     gameData.AddUpdateTask(0);
@@ -835,6 +867,7 @@ void GalgameActivity::LowerSaveGame()
 
 void GalgameActivity::SaveGame(int num)
 {
+    PNT("SAVEGAME");
     memcpy(gameData[num],gameData[0],65536);
 
     Uint8* pScreenDst = (Uint8*)((void*)gameData[num]);
@@ -854,13 +887,13 @@ GalgameActivity::~GalgameActivity()
 
 
 void ACGCross::Galgame::BGMLoader(THREAD_ID id){
-    Core::Sound* channel = (Core::Sound*) Core::GetData(id);
-    Core::Mutex* lock = (Core::Mutex*) Core::GetData(id);
-    std::wstring* name = (std::wstring*) Core::GetData(id);
+    ::Snow::Sound* channel = (::Snow::Sound*) ::Snow::GetData(id);
+    ::Snow::Mutex* lock = (::Snow::Mutex*) ::Snow::GetData(id);
+    std::wstring* name = (std::wstring*) ::Snow::GetData(id);
 
     lock -> Lock();
     std::string nameAsc = WStringToString(*name);
-    Core::ReturnMsg(id,1);
+    ::Snow::ReturnMsg(id,1);
     channel -> Load("GalRes/bgm/"+nameAsc+".ogg");
     channel -> Volume(gameData.GetBGMVol());
     channel -> Play_Loop();

@@ -4,18 +4,23 @@
 #define OPENSAVEFILE std::ifstream in("PlayerData.dat",ios::binary)
 
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 
 GameDataMgr::GameDataMgr()
 {
     m_mtx.Lock();
     OPENSAVEFILE;
-    if(!in) throw Error(0x31000001,"找不到游戏数据。");
+    if(!in){
+        ERROR_MSGBOX("Can't load GameData.dat");
+        Exit(-1);
+    }
 
     //游戏数据长度效验
     in.seekg(0,ios::end);
-    if(in.tellg() < 8+8+32+65536*16) throw Error(0x31000002,"游戏数据损坏。");
+    if(in.tellg() < 8+8+32+65536*16){
+        ERROR_MSGBOX("GameData.dat is invaild.");
+    }
 
     //加载基本数据
 

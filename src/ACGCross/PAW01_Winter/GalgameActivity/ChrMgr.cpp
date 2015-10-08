@@ -1,6 +1,7 @@
 #include "ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.h"
 #include "ACGCross/PAW01_Winter/Game.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+#include "../Snow/Debug.h"
 
 namespace ACGCross{
     namespace Galgame{
@@ -28,7 +29,7 @@ bool ChrMgr::DetectChr(int p_index,bool p_del){
         }else{
             m_it++;
         }
-    Error(0x30005000,"The index of the chr is not exist.");
+    PNT("Chr:The index of the chr is not exist.");
     return false;
 }
 

@@ -1,6 +1,6 @@
 #ifndef _HEAD_TEXTWINDOW_HEAD_
 #define _HEAD_TEXTWINDOW_HEAD_
-#include "Core.h"
+#include "Snow.h"
 #include <list>
 
 namespace ACGCross{
@@ -14,8 +14,8 @@ private:
     std::list<Widget*> m_widl;
     int m_fadeFpsTime;
     int m_posy;
-    Core::Texture m_tex;
-    Core::FPSTimer m_fps;
+    ::Snow::Sprite m_tex;
+    ::Snow::FrameTimer m_fps;
     enum STATE{
         NOTHING,
         SHOWING,

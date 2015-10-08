@@ -2,7 +2,7 @@
 
 using namespace SMI;
 #ifndef SMI_DEBUG
-using namespace Core;
+using namespace ::Snow;
 #endif
 using namespace std;
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 #include "ACGCross/PAW01_Winter/Title/MovingBg.h"
-#include "ACGCross/PAW01_Winter/GalgameActivity/Snow.h"
+#include "ACGCross/PAW01_Winter/GalgameActivity/SnowEff.h"
 #include "ACGCross/PAW01_Winter/Title/GameLogo.h"
 #include "ACGCross/PAW01_Winter/Title/TitleButton.h"
 #include <vector>
@@ -11,14 +11,14 @@
 namespace ACGCross{
 namespace Galgame{
 
-    class Title:public Core::Activity
+    class Title:public ::Snow::Activity
     {
     private:
         MovingBg m_mbg;
-        Snow m_snow;
+        SnowEff m_snow;
         GameLogoBg m_lbg;
-        Core::Texture m_acgcrossLogo;
-        Core::Texture m_fk;
+        ::Snow::Sprite m_acgcrossLogo;
+        ::Snow::Sprite m_fk;
         int m_stat;
         //0-普通
         //1-正在显示
@@ -39,7 +39,7 @@ namespace Galgame{
         TitleButton* m_btnOpr;
         bool m_dosomething = false;
 
-        Core::FPSTimer m_fpsCounter;
+        ::Snow::FrameTimer m_fpsCounter;
 
     public:
         Title();
@@ -53,7 +53,7 @@ namespace Galgame{
         void OnNext();
         void OnDraw();
         void OnEvent(const SDL_Event&);
-        void OnEvent(Core::Control*, const Sint32);
+        void OnEvent(::Snow::Control*, const Sint32);
     };
 }
 }

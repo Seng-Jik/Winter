@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 
-using namespace Core;
+using namespace ::Snow;
 using namespace std;
 
 namespace ACGCross {
@@ -70,12 +70,12 @@ Uint32 TextBox::ForceAddText(const std::wstring& s)
         m_lineWord[m_lineWord.size()-1] ++;
 
         /*渲染文字纹理*/
-        m_text.push_back(new Core::Texture());
+        m_text.push_back(new ::Snow::Sprite());
         const auto pTex = m_text.size() - 1;
 
 
         auto pSur = TTF_RenderGlyph_Blended(m_tfont,*p,m_color);
-        Core::DrawTextOutLine(pSur);
+        ::Snow::DrawTextOutLine(pSur);
         m_text[pTex]  -> Load(pSur);
         SDL_FreeSurface(pSur);
 
@@ -110,7 +110,7 @@ Uint32 TextBox::ForceAddPic(const std::string& file, const int fps, const int ti
     m_lineWord[m_lineWord.size()-1] ++;
 
     /*渲染纹理*/
-    m_text.push_back(new Core::Texture());
+    m_text.push_back(new ::Snow::Sprite());
     auto pTex = m_text.size() - 1;
 
     m_text[pTex] -> Load(file);
@@ -264,7 +264,7 @@ void TextBox::Destroy()
 {}
 
 void TextBox::SetSpeed(int time)
-{m_fpsSpeed = Core::Time2Fps(time);}
+{m_fpsSpeed = ::Snow::Time2Frame(time);}
 
 void TextBox::SetEffectSpeed(int time)
 {m_fpsEffectSpeed = float(time) / 1000 * FPS;}

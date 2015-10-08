@@ -1,8 +1,8 @@
 #include "ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/NumTexture.h"
 
-using namespace Core;
+using namespace ::Snow;
 using namespace std;
 using namespace ACGCross::Galgame;
 
@@ -24,7 +24,7 @@ using namespace ACGCross::Galgame;
 2 按钮被按下状态
 */
 
-bool GameMenuBtn::OnEvent(const SDL_Event& e, Core::Activity& a)
+bool GameMenuBtn::OnEvent(const SDL_Event& e, ::Snow::Activity& a)
 {
     if(e.type == SDL_MOUSEBUTTONDOWN)
         if(InRect(m_rect,e.button.x,e.button.y))

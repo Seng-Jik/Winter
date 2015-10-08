@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "Snow.h"
 #include "SMLanguage/SMI.h"
 
 namespace ACGCross{

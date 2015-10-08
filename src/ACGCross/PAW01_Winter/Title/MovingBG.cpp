@@ -3,7 +3,7 @@
 #define MIN_ALP 128
 
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross::Galgame;
 
 void MovingBg::InitRectData()
@@ -20,9 +20,12 @@ void MovingBg::InitRectData()
 
 void MovingBg::Init(const string& bg)
 {
-    m_tex = IMG_LoadTexture(pRnd,bg.c_str());
+    ::Snow::ResFile r;
+    r.Load(bg);
+    m_tex = IMG_LoadTexture_RW(pRnd,r,r.Size());
+    //m_tex = IMG_LoadSprite(pRnd,bg.c_str());
     SDL_SetTextureAlphaMod(m_tex,0);
-    m_fpsTimer = 0;
+    m_FrameTimer = 0;
     m_dst.w = pRnd.GetW();
     m_dst.h = pRnd.GetH();
     m_alpha = 255;
@@ -67,7 +70,7 @@ void MovingBg::OnDraw()
 
 void MovingBg::OnNext()
 {
-    m_fpsTimer++;
+    m_FrameTimer++;
     if(m_stat == 1){
         Uint16 i = float(m_timer.GetTimer()) / m_fadeTime*255;
         SDL_SetTextureAlphaMod(m_tex,i);
@@ -85,8 +88,8 @@ void MovingBg::OnNext()
     }
 
 
-    if(m_fpsTimer == 2){
-        m_fpsTimer = 0;
+    if(m_FrameTimer == 2){
+        m_FrameTimer = 0;
 
         if(m_dst1.h == m_dst.h) InitRectData();
         m_dst1.h++;

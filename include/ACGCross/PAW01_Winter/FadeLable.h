@@ -1,6 +1,6 @@
 #ifndef _HEAD_FADELABLE_HEAD_
 #define _HEAD_FADELABLE_HEAD_
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
 
@@ -20,7 +20,7 @@ class FadeLable
         void SetColor(Uint8 r,Uint8 g,Uint8 b);
         void SetSize(int hei);
         void SetPos(int,int);
-        void SetFont(Core::Font* f);
+        void SetFont(::Snow::Font* f);
         void UpdateText();
         void UpdateTextFast();
 
@@ -38,10 +38,10 @@ class FadeLable
         Uint8 m_size;
         int m_pos[2];
         int m_fpsTime;
-        Core::FPSTimer m_timer;
+        ::Snow::FrameTimer m_timer;
 
-        Core::Texture m_tex;
-        Core::Font* m_fnt;
+        ::Snow::Sprite m_tex;
+        ::Snow::Font* m_fnt;
 };
 }
 

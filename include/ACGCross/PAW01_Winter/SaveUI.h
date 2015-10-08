@@ -1,12 +1,12 @@
 #ifndef _HEAD_SAVEUI_HEAD_
 #define _HEAD_SAVEUI_HEAD_
 
-#include "Core.h"
+#include "Snow.h"
 #include "Button.h"
 
 namespace ACGCross{
 
-class SaveUI : public Core::Activity
+class SaveUI : public ::Snow::Activity
 {
     public:
         SaveUI();
@@ -16,7 +16,7 @@ class SaveUI : public Core::Activity
         void OnNext();
         void OnDraw();
         void OnEvent(const SDL_Event& e);
-        void OnEvent(Core::Control*,const Sint32);
+        void OnEvent(::Snow::Control*,const Sint32);
         void NeedReturn();
         void SetCallByTitle(bool b){m_callByTitle = b;}
         bool GetCallByTitle(){return m_callByTitle;}
@@ -24,20 +24,20 @@ class SaveUI : public Core::Activity
     protected:
     private:
         int m_dLoad;Uint8 m_dLoad_fg;
-        Core::Surface m_bg;
-        Core::Texture m_bgt_o;
-        Core::Texture m_bgt;
+        ::Snow::Surface m_bg;
+        ::Snow::Sprite m_bgt_o;
+        ::Snow::Sprite m_bgt;
 
         bool m_callByTitle = false;
 
-        Core::Timer m_timer;
+        ::Snow::Timer m_timer;
         enum {SHOWING,HIDING,NOR,TITLING} m_stat = NOR;
 
-        class SaveButton:public Core::Control{
+        class SaveButton:public ::Snow::Control{
         private:
             Sint8 m_saveID;
             SDL_Point m_orgPos;
-            Core::Texture m_button;
+            ::Snow::Sprite m_button;
         public:
             SaveButton(Sint8 saveID):m_saveID(saveID){};
             bool OnEvent(const SDL_Event&,Activity& a);
@@ -51,7 +51,7 @@ class SaveUI : public Core::Activity
             virtual ~SaveButton(){};
         } *m_saves [4][4];
 
-        class Really:public Core::Activity{
+        class Really:public ::Snow::Activity{
         private:
             SDL_Rect m_bg;
             Button m_save;
@@ -62,7 +62,7 @@ class SaveUI : public Core::Activity
             int m_saveNum;
 
             enum{SO_MENU,SO_BTN,HI_BTN,HI_MENU,NOR} m_state = NOR;
-            Core::Timer m_timer;
+            ::Snow::Timer m_timer;
             bool m_callByTitle;
         public:
             Really();
@@ -72,7 +72,7 @@ class SaveUI : public Core::Activity
             void OnDraw();
             void OnNext();
             void OnEvent(const SDL_Event&);
-            void OnEvent(Core::Control*,const Sint32);
+            void OnEvent(::Snow::Control*,const Sint32);
         }m_actReally;
 };
 }

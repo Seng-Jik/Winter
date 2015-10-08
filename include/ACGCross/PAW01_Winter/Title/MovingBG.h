@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 
 namespace ACGCross{
@@ -17,8 +17,8 @@ namespace Galgame{
         SDL_Rect m_dst;
         Uint16 m_fadeTime;
         int m_stat;
-        Core::Timer m_timer;
-        int m_fpsTimer;
+        ::Snow::Timer m_timer;
+        int m_FrameTimer;
 
         Uint8 m_alpha;
         bool m_alpUp;

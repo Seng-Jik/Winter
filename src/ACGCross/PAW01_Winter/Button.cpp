@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/Button.h"
 
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 
 void Button::Hide()

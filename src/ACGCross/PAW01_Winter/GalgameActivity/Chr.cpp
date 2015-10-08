@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/GalgameActivity/Chr.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 
-using namespace Core;
+using namespace ::Snow;
 using namespace std;
 
 namespace ACGCross{

@@ -1,11 +1,11 @@
 #ifndef _HEAD_ENDING_HEAD_
 #define _HEAD_ENDING_HEAD_
 
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
 
-class Ending : public Core::Activity
+class Ending : public ::Snow::Activity
 {
     public:
         Ending();
@@ -15,9 +15,9 @@ class Ending : public Core::Activity
         void OnNext();
     protected:
     private:
-        Core::Texture m_ed;
-        Core::Timer m_timer;
-        Core::Sound m_bgm;
+        ::Snow::Sprite m_ed;
+        ::Snow::Timer m_timer;
+        ::Snow::Sound m_bgm;
         int m_edtime;
         int m_staffHeightCount;
         int m_edx;

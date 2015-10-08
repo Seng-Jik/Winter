@@ -1,15 +1,15 @@
 #ifndef _HEAD_SLIDER_HEAD_
 #define _HEAD_SLIDER_HEAD_
 
-#include "Core.h"
+#include "Snow.h"
 #include <string>
 
 namespace ACGCross{
 
-class Slider : public Core::Control
+class Slider : public ::Snow::Control
 {
     public:
-        bool OnEvent (const SDL_Event&,Core::Activity& a);
+        bool OnEvent (const SDL_Event&,::Snow::Activity& a);
         // 1 - 移动滑块了
         // 2 - 被按下了
         // 3 - 从这里抬起了
@@ -31,10 +31,10 @@ class Slider : public Core::Control
         enum MouseState{
             DOW,MOT,NOR
         }m_mouse=NOR;
-        Core::Texture m_lener;
-        Core::Texture m_hk;
-        Core::Texture m_hkm;
-        Core::Texture m_hkd;
+        ::Snow::Sprite m_lener;
+        ::Snow::Sprite m_hk;
+        ::Snow::Sprite m_hkm;
+        ::Snow::Sprite m_hkd;
         SDL_Rect m_r = {0,0,0,0};
         SDL_Rect m_re = {0,0,0,0};
         int m_hkxpos_xd = 0;

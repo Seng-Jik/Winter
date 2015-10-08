@@ -17,8 +17,8 @@
 
 
 #ifndef SMI_DEBUG
-#include "../Core/Bundle.h"
-#include "../Core/ResFile.h"
+#include "../Snow/Bundle.h"
+#include "../Snow/ResFile.h"
 
 #else
 typedef char BYTE;
@@ -101,8 +101,8 @@ namespace SMI
 		void Save(const std::string save_file);
 		bool Load(const std::string save_file);
 #else
-		void Save(Core::Bundle<SAVE_SIZE>&);	//保存解释器状态以存档
-		bool Load(Core::Bundle<SAVE_SIZE>&);	//读取解释器状态
+		void Save(::Snow::Bundle<SAVE_SIZE>&);	//保存解释器状态以存档
+		bool Load(::Snow::Bundle<SAVE_SIZE>&);	//读取解释器状态
 #endif
 
 		size_t Serialize(BYTE *buffer);

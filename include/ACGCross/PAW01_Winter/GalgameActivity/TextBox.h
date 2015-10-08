@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/str2wstr.h"
 
 namespace ACGCross {
@@ -93,7 +93,7 @@ class TextBox
         Uint32 ForceAddPic(const std::string& file,const int fps,const int time);
         //返回迭代器，该迭代器指向输入文本的第一文字的迭代器
 
-        //std::vector<Core::Texture*>::iterator GetTextEnd()
+        //std::vector<::Snow::Sprite*>::iterator GetTextEnd()
         //{return m_text.end();}
 
         void ForceClear();  //强制删除文字
@@ -102,10 +102,10 @@ class TextBox
 
     protected:
     private:
-        Core::ResFile m_rfont;
+        ::Snow::ResFile m_rfont;
         TTF_Font* m_tfont = nullptr;
         std::vector<int> m_lineWord;    //每行文字数
-        std::vector<Core::Texture*> m_text;  //文字
+        std::vector<::Snow::Sprite*> m_text;  //文字
         SDL_Color m_color = {255,255,255,255};
         int
             m_fpsSpeed, //FPS/字 速度

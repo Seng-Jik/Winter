@@ -1,7 +1,7 @@
 #ifndef _HEAD_ACGCROSS_GALGAME_CORNER_
 #define _HEAD_ACGCROSS_GALGAME_CORNER_
 
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross {
 namespace Galgame {
@@ -37,9 +37,9 @@ class Corner
         }
 
     protected:
-        Core::Texture m_corner;
+        ::Snow::Sprite m_corner;
         int m_fadeFpsTime;
-        Core::FPSTimer m_fpsCounter;
+        ::Snow::FrameTimer m_fpsCounter;
         int m_stat;
         int m_topAlpha;
         double m_ang;

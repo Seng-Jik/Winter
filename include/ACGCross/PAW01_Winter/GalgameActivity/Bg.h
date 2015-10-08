@@ -5,7 +5,7 @@
 
 #include "SMEProcUnit.h"
 #include "../ACGCross/PAW01_Winter/str2wstr.h"
-#include "core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/GameDataMgr.h"
 
 namespace ACGCross{
@@ -22,7 +22,7 @@ namespace Galgame{
     class Bg:public SMEProcUnit
     {
     private:
-        Core::Timer m_a_timer,
+        ::Snow::Timer m_a_timer,
             m_m_timer,m_z_timer;
         int m_a_time,m_m_time,m_z_time,
             m_a_spend,m_m_spend,m_z_spend,
@@ -31,8 +31,8 @@ namespace Galgame{
         bool m_WillAlpha,m_WillMove,m_WillZoom;
         bool AfterLoad,IsLoaded;
 
-        Core::Surface m_sur;
-        Core::Texture m_tex;
+        ::Snow::Surface m_sur;
+        ::Snow::Sprite m_tex;
 
         Display_Mode m_dp_mode;
         int m_eff_index;

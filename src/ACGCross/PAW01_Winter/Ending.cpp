@@ -28,8 +28,8 @@ void Ending::OnHide()
 
 void Ending::OnDraw()
 {
-    SDL_SetRenderDrawColor(Core::pRnd,255,255,255,255);
-    Core::pRnd.Clear();
+    SDL_SetRenderDrawColor(::Snow::pRnd,255,255,255,255);
+    ::Snow::pRnd.Clear();
     m_ed.OnDraw();
 }
 

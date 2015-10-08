@@ -1,7 +1,7 @@
 #pragma once
-#include "../Core/Texture.h"
+#include "../Snow/Sprite.h"
 namespace ACGCross{
-class NumTexture:public Core::Texture
+class NumSprite:public ::Snow::Sprite
 {
 public:
     void SetNum(char n);

@@ -16,6 +16,7 @@ class NameCard:public ACGCross::FadeLable,public ACGCross::Galgame::SMEProcUnit
         void SMEProc(SMI::SMEvent* e);
         bool SMEFinished(SMI::SMEvent*);
         void SetTextBox(ACGCross::Galgame::TextBox*);
+        void Clear();
     protected:
         TextBox* m_textBox;
     private:

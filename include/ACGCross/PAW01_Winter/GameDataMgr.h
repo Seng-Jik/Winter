@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "Snow.h"
 #include <fstream>
 #include <set>
 namespace ACGCross{
@@ -7,7 +7,7 @@ namespace ACGCross{
 class GameDataMgr   //Thread Safe
 {
     public:
-        typedef Core::Bundle<65536> SAVE;
+        typedef ::Snow::Bundle<65536> SAVE;
         GameDataMgr();
 
         bool GetSaveExist();    //人工存档是否存在
@@ -37,7 +37,7 @@ class GameDataMgr   //Thread Safe
         inline void SetCVVol(Uint8 v){m_cfg_cvVol = v;}
         inline void SetGrpMode(Uint8 g){m_cfg_grpMode = g;}
         inline Uint8 GetGrpMode(){return m_cfg_grpMode;}
-        inline bool Get16_9(){return m_cfg_grpMode >= 6;}
+        inline bool Get16_9(){return m_cfg_grpMode >= 5;}
     protected:
     private:
 
@@ -51,7 +51,7 @@ class GameDataMgr   //Thread Safe
         bool m_dataExist[16];
         bool m_cgState[8*32];
 
-        Core::Mutex m_mtx;
+        ::Snow::Mutex m_mtx;
 
         std::set<int> m_updateTask;
 

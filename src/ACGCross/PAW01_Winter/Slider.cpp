@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/Slider.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 using namespace ACGCross;
-using namespace Core;
+using namespace ::Snow;
 
 bool Slider::OnEvent(const SDL_Event& e, Activity& a)
 {

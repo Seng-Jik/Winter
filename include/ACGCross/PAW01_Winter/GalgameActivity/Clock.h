@@ -5,8 +5,8 @@ namespace Galgame{
 
 class Clock{
 private:
-    Core::Texture m_fg;
-    NumTexture m_clk;
+    ::Snow::Sprite m_fg;
+    NumSprite m_clk;
 
     int m_bx;
 
@@ -23,7 +23,7 @@ private:
     char m_sz [4];
     bool m_fg_showing;
     float m_fg_last = 0.0;
-    Core::Timer m_timer_fg;
+    ::Snow::Timer m_timer_fg;
 public:
     Clock();
     void OnNext();

@@ -1,9 +1,9 @@
-#include "ACGCross/PAW01_Winter/GalgameActivity/Snow.h"
+#include "ACGCross/PAW01_Winter/GalgameActivity/SnowEff.h"
 #include "stdlib.h"
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross::Galgame;
 
-void Snow::InitSnowStat(Snow::SnowStat* s,bool init)    //init为true时自动分配rect的h
+void SnowEff::InitSnowStat(SnowEff::SnowStat* s,bool init)    //init为true时自动分配rect的h
 {
     SDL_QueryTexture(m_tex,nullptr,nullptr,&(s->rect.w),&(s->rect.h));
     s ->rect.h = s -> rect.w = rand() % s->rect.w;
@@ -47,7 +47,7 @@ void Snow::InitSnowStat(Snow::SnowStat* s,bool init)    //init为true时自动�
     s -> rect.x = rand()%pRnd.GetW() - (s -> windSpeed)*(pRnd.GetH()/float(s -> fpsSpeed)/2);
 }
 
-Snow::Snow(){
+SnowEff::SnowEff(){
     m_tex = nullptr;
     m_wind = 0;
     m_wind_p = 1;
@@ -57,14 +57,14 @@ Snow::Snow(){
     m_stat = STOPPED;
 }
 
-void Snow::Init(){
+void SnowEff::Init(){
     m_file.Load("GalGameSystem/Snow.png");
     m_tex = IMG_LoadTexture_RW(pRnd,m_file,m_file.Size());
     //m_file.Free();
     SDL_SetTextureBlendMode(m_tex,SDL_BLENDMODE_BLEND);
 }
 
-void Snow::Quit(){
+void SnowEff::Quit(){
     m_stat = STOPPED;
     m_statList.clear();
     SDL_DestroyTexture(m_tex);
@@ -72,7 +72,7 @@ void Snow::Quit(){
     m_file.Free();
 }
 
-void Snow::OnDraw(){
+void SnowEff::OnDraw(){
     if(m_stat == STOPPED) return;
     FOR_EACH(p,m_statList.begin(),m_statList.end())
     {
@@ -81,37 +81,37 @@ void Snow::OnDraw(){
 
 }
 
-void Snow::Start()
+void SnowEff::Start()
 {
     m_stat = SNOWING;
     m_statList.resize(m_volume);
     FOR_EACH(p,m_statList.begin(),m_statList.end())
-        InitSnowStat(&(*p),true);
+    InitSnowStat(&(*p),true);
 }
 
-void Snow::Stop()
+void SnowEff::Stop()
 {
     m_stat = STOPPING;
 }
 
-void Snow::SetVolume(Uint16 v)
+void SnowEff::SetVolume(Uint16 v)
 {
     m_volume = v;
 }
 
-void Snow::SetWind(int w, int p)
+void SnowEff::SetWind(int w, int p)
 {
     m_wind = w;
     m_wind_p = p;
 }
 
-void Snow::SetSpeed(int s, int p)
+void SnowEff::SetSpeed(int s, int p)
 {
     m_speed = s;
     m_speed_p = p;
 }
 
-void Snow::OnNext()
+void SnowEff::OnNext()
 {
     if(m_stat == STOPPED) return;
 
@@ -144,7 +144,7 @@ void Snow::OnNext()
     }
 }
 
-void Snow::GetNextFpsStat()
+void SnowEff::GetNextFpsStat()
 {
     FOR_EACH(p,m_statList.begin(),m_statList.end())
     {
@@ -165,32 +165,32 @@ void Snow::GetNextFpsStat()
     }
 }
 
-void Snow::SMEProc(SMI::SMEvent* e)
+void SnowEff::SMEProc(SMI::SMEvent* e)
 {
-    if(e -> cmd == L"snow_start")
+    if(e -> cmd == L"::Snow_start")
         Start();
-    else if(e -> cmd == L"snow_setvol")
+    else if(e -> cmd == L"::Snow_setvol")
         SetVolume(_wtoi(e -> argv[0].c_str()));
-    else if(e -> cmd == L"snow_setwind")
+    else if(e -> cmd == L"::Snow_setwind")
         SetWind(_wtoi(e -> argv[0].c_str()),_wtoi(e -> argv[1].c_str()));
-    else if(e -> cmd == L"snow_setspeed")
+    else if(e -> cmd == L"::Snow_setspeed")
         SetSpeed(_wtoi(e -> argv[0].c_str()),_wtoi(e -> argv[1].c_str()));
-    else if(e -> cmd == L"snow_stop")
+    else if(e -> cmd == L"::Snow_stop")
         Stop();
 }
 
-void Snow::SMEFastProc(SMI::SMEvent* e)
+void SnowEff::SMEFastProc(SMI::SMEvent* e)
 {
 
 }
 
-void Snow::ForceStop()
+void SnowEff::ForceStop()
 {
     m_stat = STOPPED;
     m_statList.clear();
 }
 
-void Snow::SaveState(Bundle<65536>& b)
+void SnowEff::SaveState(Bundle<65536>& b)
 {
     b.Write<Stat>(m_stat);
     b.Write<int>(m_wind);
@@ -200,7 +200,7 @@ void Snow::SaveState(Bundle<65536>& b)
     b.Write<Uint16>(m_volume);
 }
 
-void Snow::LoadState(Bundle<65536>& b)
+void SnowEff::LoadState(Bundle<65536>& b)
 {
     b.Read<Stat>(m_stat);
     if(m_stat == STOPPED || m_stat == STOPPING) ForceStop();

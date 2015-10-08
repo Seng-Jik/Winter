@@ -4,7 +4,7 @@
 #define FADE_TIME 500
 #define STRF_TIME 200
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross::Galgame;
 
 SDL_Texture* GalSelButton::m_btnbk[3] = {nullptr};

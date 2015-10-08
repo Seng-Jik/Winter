@@ -15,7 +15,6 @@
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
 				<Compiler>
-					<Add option="-pg" />
 					<Add option="-g" />
 					<Add option="-D_DEBUG" />
 					<Add directory="Core" />
@@ -28,7 +27,6 @@
 					<Add directory="include/ACGCross/Demo" />
 				</Compiler>
 				<Linker>
-					<Add option="-pg -lgmon" />
 					<Add library="lib/libSnow_Dbg.a" />
 				</Linker>
 			</Target>
@@ -66,7 +64,6 @@
 			<Add library="SDL2" />
 			<Add library="SDL2_image" />
 			<Add library="SDL2_ttf" />
-			<Add library="lib/libDAS_Coder.a" />
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>
@@ -75,12 +72,12 @@
 		<Unit filename="icon.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="include/ACGCross/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/DASPReader.h" />
 		<Unit filename="include/ACGCross/DAS_Decoder.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Button.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/CGViewer.h" />
-		<Unit filename="include/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Ending.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/FadeLable.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Bg.h" />
@@ -94,12 +91,11 @@
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/NameCard.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h" />
-		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/Snow.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/SnowEff.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextBox.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Game.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/GameDataMgr.h" />
-		<Unit filename="include/ACGCross/PAW01_Winter/KeyMapActivity.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Mask.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/MathFunc.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/NumTexture.h" />
@@ -111,36 +107,14 @@
 		<Unit filename="include/ACGCross/PAW01_Winter/Title/Title.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Title/TitleButton.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/str2wstr.h" />
-		<Unit filename="include/Core.h" />
-		<Unit filename="include/Core/Activity.h" />
-		<Unit filename="include/Core/Bundle.h" />
-		<Unit filename="include/Core/CSVEditor.h" />
-		<Unit filename="include/Core/CSVReader.h" />
-		<Unit filename="include/Core/Control.h" />
-		<Unit filename="include/Core/Debug.h" />
-		<Unit filename="include/Core/Error.h" />
-		<Unit filename="include/Core/Font.h" />
-		<Unit filename="include/Core/Globals.h" />
-		<Unit filename="include/Core/Misc.h" />
-		<Unit filename="include/Core/OS.h" />
-		<Unit filename="include/Core/RenderTarget.h" />
-		<Unit filename="include/Core/ResFile.h" />
-		<Unit filename="include/Core/ResVal.h" />
-		<Unit filename="include/Core/RndPtr.h" />
-		<Unit filename="include/Core/SDLbase.h" />
-		<Unit filename="include/Core/Sound.h" />
-		<Unit filename="include/Core/Surface.h" />
-		<Unit filename="include/Core/TCPNet.h" />
-		<Unit filename="include/Core/Texture.h" />
-		<Unit filename="include/Core/Thread.h" />
-		<Unit filename="include/Core/Timer.h" />
-		<Unit filename="include/Core/UDPNet.h" />
 		<Unit filename="include/SMLanguage/SMI.h" />
-		<Unit filename="src/ACGCross/DASPReader.cpp" />
-		<Unit filename="src/ACGCross/PAW01_Winter/ACGCross_Logo.cpp" />
+		<Unit filename="src/ACGCross/ACGCross_Logo.cpp" />
+		<Unit filename="src/ACGCross/DASPReader.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="src/ACGCross/PAW01_Winter/Button.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/CGViewer.cpp" />
-		<Unit filename="src/ACGCross/PAW01_Winter/DanmakuGame/DanmakuGame.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/Ending.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/FadeLable.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/Bg.cpp" />
@@ -158,7 +132,6 @@
 		<Unit filename="src/ACGCross/PAW01_Winter/GalgameActivity/TextWindow.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/Game.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/GameDataMgr.cpp" />
-		<Unit filename="src/ACGCross/PAW01_Winter/KeyMapActivity.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/Mask.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/MathFunc.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/NumTexture.cpp" />

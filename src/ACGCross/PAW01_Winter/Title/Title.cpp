@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <fstream>
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross::Galgame;
 
 void Title::ShowButton(){
@@ -123,19 +123,19 @@ void Title::OnHide()
     m_fk.Clear();
 
     m_visableBtn.clear();*/
-    PNT("TITLE::ONHIDE");
+    //PNT("TITLE::ONHIDE");
     pTitle = new Title;
     delete this;
 
 }
 
 void Title::OnInit(){
-    PNT("TITLE::ONINIT");
+    //PNT("TITLE::ONINIT");
 }
 
 void Title::OnShow()
 {
-    PNT("TITLE::ONSHOW");
+    //PNT("TITLE::ONSHOW");
 
     RegControl(m_bSta);
     if(gameData.GetSaveExist()) RegControl(m_bLoad);

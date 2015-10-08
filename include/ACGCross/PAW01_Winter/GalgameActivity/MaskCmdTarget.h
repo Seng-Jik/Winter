@@ -35,9 +35,9 @@ class MaskCmdTarget:public SMEProcUnit
         Bg m_newBg;
         SDL_Surface* m_newBgSur = nullptr;
         SDL_Surface* m_white,*m_black;
-        Core::Texture m_tex;
+        ::Snow::Sprite m_tex;
         ACGCross::Mask m_m;
-        Core::Timer m_timer;
+        ::Snow::Timer m_timer;
         int m_time;
 
         std::string m_arg_file;

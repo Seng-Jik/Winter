@@ -8,7 +8,7 @@
 #include "Chr.h"
 #include "../ACGCross/PAW01_Winter/str2wstr.h"   //to transfomrat the parameter in SMEProc
 
-using namespace Core;
+using namespace ::Snow;
 typedef int index;  //[optional]
 
 namespace ACGCross{

@@ -34,3 +34,11 @@ bool NameCard::SMEFinished(SMI::SMEvent*)
 void NameCard::SetTextBox(ACGCross::Galgame::TextBox* s){
     m_textBox = s;
 };
+
+void NameCard::Clear()
+{
+    SetColor(255,255,255);
+    m_textBox -> SetColor(255,255,255);
+    SetText(L"");
+}
+

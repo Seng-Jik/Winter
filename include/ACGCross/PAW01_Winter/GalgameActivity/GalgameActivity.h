@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "Snow.h"
 
 //#include "TextBox.h"
 #include "Clock.h"
@@ -8,7 +8,7 @@
 #include "NameCard.h"
 //#include "SettingUI.h"
 #include "Corner.h"
-#include "Snow.h"
+#include "SnowEff.h"
 #include "Bg.h"
 #include "../../../SMLanguage/SMI.h"
 #include "TextWindow.h"
@@ -24,13 +24,13 @@
 namespace ACGCross{
 namespace Galgame{
 
-void BGMLoader(Core::THREAD_ID id);
+void BGMLoader(::Snow::THREAD_ID id);
 // I need three data
 //a pointer to m_bgm
 //a pointer to m_bgm_lock
 //and a pointer to string of file basic name.
 
-class GalgameActivity:public Core::Activity,SMEProcUnit{
+class GalgameActivity:public ::Snow::Activity,SMEProcUnit{
     friend class TextWindow;
 private:
     std::list<GalSelButton> m_sels;
@@ -49,7 +49,7 @@ private:
     };
 
     enum {SHOWING,NOR} m_actGlbStat = NOR;
-    Core::Timer m_actGlbTimer;
+    ::Snow::Timer m_actGlbTimer;
 
     enum ActState{
         RUNNING,
@@ -61,6 +61,7 @@ private:
     TextBoxCmdTarget m_text_cmdtarget;
     NameCard m_name;
     bool m_name_isEmpty = true;    //Current text has namecard?
+    bool m_name_isLoaded = false;
     TextWindow m_textWindow;
     TextWindowButton m_textWindow_X;
     TextWindowButton m_textWindow_save;
@@ -68,7 +69,7 @@ private:
     TextWindowButton m_textWindow_skip;
     TextWindowButton m_textWindow_auto;
     //Clock m_clk;
-    //Snow m_snow;
+    //::Snow m_snow;
     //
     //Bg m_bg;wow
 
@@ -98,10 +99,10 @@ private:
     void SMEProc(bool fast = false);    //Process sme
     bool m_SMEProc_skipping = false;
     bool m_SMEProc_autoing = false;
-    Core::Timer m_SMEProc_autoTimer;
+    ::Snow::Timer m_SMEProc_autoTimer;
     int m_SMEProc_skipFPSClicks = 0;
-    Core::FPSTimer m_SMEProc_jg;
-    Core::Timer m_waiter;
+    ::Snow::FrameTimer m_SMEProc_jg;
+    ::Snow::Timer m_waiter;
     bool m_waiterBroken;
 
     void SMEText_lb();
@@ -109,13 +110,13 @@ private:
     void HideWindow();
     void ShowWindow();
 
-    Core::Sound m_cv;
+    ::Snow::Sound m_cv;
     std::string m_cvstr;
-    Core::Sound m_se;
-    Core::Sound m_bgm;  //访问加锁，m_bgm_lock
+    ::Snow::Sound m_se;
+    ::Snow::Sound m_bgm;  //访问加锁，m_bgm_lock
     std::string m_bgm_name;
-    Core::Mutex m_bgm_lock;
-    Core::Thread m_bgm_loader;
+    ::Snow::Mutex m_bgm_lock;
+    ::Snow::Thread m_bgm_loader;
 
     friend class Bg;
     friend class ChrMgr;
@@ -123,16 +124,16 @@ private:
     Bg m_bg;
     ChrMgr m_chrs;
 
-    Snow m_snow;
+    SnowEff m_snow;
 
     Clock* m_clock;
 
-    Core::Timer m_autoUpdateDataTimer;
+    ::Snow::Timer m_autoUpdateDataTimer;
 
     void LowerSaveGame();
 
 public:
-    Core::Font m_name_font;
+    ::Snow::Font m_name_font;
     Corner corner;
     static std::list<TextBoxLog> textLog;
     static std::list<std::string> cvLog;
@@ -151,7 +152,7 @@ public:
     void OnNext();
     void OnDraw();
     void OnEvent(const SDL_Event&);
-    void OnEvent(Core::Control*,const Sint32);
+    void OnEvent(::Snow::Control*,const Sint32);
     virtual void SetVol(Uint8 bgm,Uint8 se,Uint8 cv);
 
     virtual void SMEProc(SMI::SMEvent*);

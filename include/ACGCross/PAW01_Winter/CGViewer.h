@@ -1,12 +1,12 @@
 #ifndef CGVIEWER_H
 #define CGVIEWER_H
 
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
 namespace Galgame{
 
-class CGViewer : public Core::Activity
+class CGViewer : public ::Snow::Activity
 {
     public:
         CGViewer();

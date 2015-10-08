@@ -1,4 +1,5 @@
 #include "ACGCross/PAW01_Winter/CGViewer.h"
+#include "Snow/Debug.h"
 
 using namespace ACGCross::Galgame;
 
@@ -36,7 +37,7 @@ void CGViewer::OnEvent(const SDL_Event& e)
 {
     PNT("CGVIEWER:ONEVENT SDL");
     if(e.type == SDL_MOUSEBUTTONUP){
-        Core::Return();
+        ::Snow::Return();
     }
 }
 

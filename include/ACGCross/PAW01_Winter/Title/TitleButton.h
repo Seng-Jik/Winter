@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/Button.h"
 
 namespace ACGCross{
@@ -11,6 +11,6 @@ class TitleButton : public Button
         void Hide();
     protected:
         float m_per;
-        Core::FPSTimer m_fpsCounter;
+        ::Snow::FrameTimer m_fpsCounter;
 };
 }

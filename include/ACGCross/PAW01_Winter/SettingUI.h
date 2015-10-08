@@ -1,13 +1,13 @@
 #ifndef _HEAD_SETTING_UI_HEAD_
 #define _HEAD_SETTING_UI_HEAD_
 
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/Slider.h"
 #include "ACGCross/PAW01_Winter/Button.h"
 
 namespace ACGCross{
 
-class SettingUI : public Core::Activity
+class SettingUI : public ::Snow::Activity
 {
     public:
         SettingUI();
@@ -19,22 +19,22 @@ class SettingUI : public Core::Activity
         void OnDraw();
         void OnNext();
 
-        void OnEvent(Core::Control*,const Sint32);
+        void OnEvent(::Snow::Control*,const Sint32);
         void OnEvent(const SDL_Event&);
 
     protected:
     private:
-        Core::Surface m_bg;
-        Core::Texture m_bgt_o;
-        Core::Texture m_bgt;
+        ::Snow::Surface m_bg;
+        ::Snow::Sprite m_bgt_o;
+        ::Snow::Sprite m_bgt;
 
         Button m_return;
         Button m_title;
 
         void updateGrpState();
-        Core::Font m_font;
+        ::Snow::Font m_font;
 
-        Core::Texture m_bgmLab,
+        ::Snow::Sprite m_bgmLab,
                             m_cvLab,
                             m_seLab;
         Slider m_bgmSetting;
@@ -42,14 +42,14 @@ class SettingUI : public Core::Activity
         Slider m_cvSetting;
 
 
-        Core::Timer m_timer;
+        ::Snow::Timer m_timer;
 
         enum {SHOWING,HIDING,NOR,TITLING} m_stat = NOR;
 
         bool m_grpWarn = false;
-        Core::Texture m_grpWarn_t;
-        Core::Texture m_grp_title;
-        Core::Texture m_grp_list[12];
+        ::Snow::Sprite m_grpWarn_t;
+        ::Snow::Sprite m_grp_title;
+        ::Snow::Sprite m_grp_list[12];
 };
 }
 

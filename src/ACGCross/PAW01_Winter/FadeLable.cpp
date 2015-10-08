@@ -43,7 +43,7 @@ void FadeLable::UpdateTextFast(){
     }
 }
 
-void FadeLable::SetFont(Core::Font* f)
+void FadeLable::SetFont(::Snow::Font* f)
 {
     m_fnt = f;
 }
@@ -114,7 +114,7 @@ void FadeLable::OnDraw()
 }
 
 void FadeLable::SetFadeTime(int ms){
-    m_fpsTime = Core::Time2Fps(ms);
+    m_fpsTime = ::Snow::Time2Frame(ms);
 }
 
 std::wstring& FadeLable::GetText(){

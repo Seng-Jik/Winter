@@ -3,7 +3,7 @@
 #define FPSSPEED 30
 #define YOFFEST 90
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 
 void TitleButton::Hide()

@@ -1,12 +1,12 @@
 #ifndef _HEAD_GALSELBUTTON_HEAD_
 #define _HEAD_GALSELBUTTON_HEAD_
 
-#include "Core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/Game.h"
 
 namespace ACGCross{
 namespace Galgame{
-class GalSelButton : public Core::Control
+class GalSelButton : public ::Snow::Control
 {
     public:
         GalSelButton();
@@ -15,18 +15,18 @@ class GalSelButton : public Core::Control
         void Hide();
         void OnNext();
         void OnDraw();
-        bool OnEvent(const SDL_Event&,Core::Activity& a);
+        bool OnEvent(const SDL_Event&,::Snow::Activity& a);
         void SetY(int y);
         bool Killed();
     protected:
     private:
         friend void ACGCross::InitGame();
-        Core::Texture m_str;
+        ::Snow::Sprite m_str;
         static SDL_Texture* m_btnbk [3];
         SDL_Rect m_src,m_dst;
         int m_bkW;
         int m_sNum;
-        Core::Timer m_tmr;
+        ::Snow::Timer m_tmr;
         enum{SHOWING,HIDING,NORMAL}m_state;
         int m_mouseState = 0;
         bool m_killed = false;

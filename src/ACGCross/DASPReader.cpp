@@ -2,13 +2,16 @@
 #include "DAS_Decoder.h"
 
 using namespace ACGCross;
-using namespace Core;
+using namespace ::Snow;
 using namespace std;
 
 void DASPReader::OpenDASP(const char* _)
 {
     m_dasp.open(_,ios::binary);
-    if(!m_dasp.good()) throw Error(0x30005100,"Can't open dasp packet.");
+    if(!m_dasp.good()) {
+        ERROR_MSGBOX("Can't open dasp packet.");
+        Exit(-1);
+    }
 
     m_dasp.seekg(-8,ios::end);
     Uint64 fileCount;

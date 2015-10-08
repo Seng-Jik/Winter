@@ -1,7 +1,7 @@
 #include "ACGCross/PAW01_Winter/Mask.h"
 
 using namespace std;
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 
 void Mask::LoadMaskPic(const std::string& s)

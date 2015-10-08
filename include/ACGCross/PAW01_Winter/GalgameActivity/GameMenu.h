@@ -1,14 +1,14 @@
 #pragma once
 #include "ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
-#include "Core.h"
+#include "Snow.h"
 namespace ACGCross{
 
 namespace Galgame{
 
-class GameMenuBtn:public Core::Control
+class GameMenuBtn:public ::Snow::Control
 {
 private:
-    Core::Texture m_btn;
+    ::Snow::Sprite m_btn;
 
     bool m_visible_l;
 
@@ -17,7 +17,7 @@ private:
          m_stat,
          m_showstat;
 
-    Core::Timer m_timer;
+    ::Snow::Timer m_timer;
 
     SDL_Rect m_rect;
 
@@ -31,7 +31,7 @@ public:
     void Show();
     void SetPos(int x,int y);
     bool GetVisible(){return m_visible_l;}
-    bool OnEvent (const SDL_Event& e,Core::Activity&);
+    bool OnEvent (const SDL_Event& e,::Snow::Activity&);
 };
 
 }

@@ -1,6 +1,6 @@
 #include "ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h"
 
-using namespace Core;
+using namespace ::Snow;
 using namespace ACGCross;
 using namespace ACGCross::Galgame;
 

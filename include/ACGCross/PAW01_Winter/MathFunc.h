@@ -1,6 +1,6 @@
 #ifndef _HEAD_MATHFUNC_
 #define _HEAD_MATHFUNC_
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
     float ArcFunc(float x); //圆弧函数，先快后慢

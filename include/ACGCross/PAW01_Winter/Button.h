@@ -1,8 +1,8 @@
 #pragma once
-#include "Core.h"
+#include "Snow.h"
 
 namespace ACGCross{
-class Button : public Core::Control
+class Button : public ::Snow::Control
 {
     public:
 
@@ -13,12 +13,12 @@ class Button : public Core::Control
         void SetAlpha(Uint8 alp);
         void SetPos(int x,int y);
 
-        inline Core::Texture* GetNormal(){return &m_normal;}
-        inline Core::Texture* GetMotion(){return &m_motion;}
-        inline Core::Texture* GetDown(){return &m_down;}
+        inline ::Snow::Sprite* GetNormal(){return &m_normal;}
+        inline ::Snow::Sprite* GetMotion(){return &m_motion;}
+        inline ::Snow::Sprite* GetDown(){return &m_down;}
 
         void OnDraw();
-        bool OnEvent (const SDL_Event&,Core::Activity&);
+        bool OnEvent (const SDL_Event&,::Snow::Activity&);
 
         void Show();
         void Hide();
@@ -31,9 +31,9 @@ class Button : public Core::Control
         //2-Motion
         //3-MouseDown
 
-        Core::Texture m_normal;
-        Core::Texture m_motion;
-        Core::Texture m_down;
+        ::Snow::Sprite m_normal;
+        ::Snow::Sprite m_motion;
+        ::Snow::Sprite m_down;
     private:
 
 };

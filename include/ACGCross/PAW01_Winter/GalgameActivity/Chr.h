@@ -3,7 +3,7 @@
 ****https://github.com/amarillys******* */
 
 #pragma once
-#include "core.h"
+#include "Snow.h"
 #include "ACGCross/PAW01_Winter/GameDataMgr.h"
 
 namespace ACGCross{
@@ -11,11 +11,11 @@ namespace Galgame{
 
     class Chr{
     private:
-        Core::Timer m_a_timer,  //the timer to calculate the time of animation
+        ::Snow::Timer m_a_timer,  //the timer to calculate the time of animation
             m_m_timer,
             m_z_timer;
-        Core::Surface m_sur;
-        Core::Texture m_tex;
+        ::Snow::Surface m_sur;
+        ::Snow::Sprite m_tex;
 
         int m_alpha;
         SDL_Rect m_rect;
