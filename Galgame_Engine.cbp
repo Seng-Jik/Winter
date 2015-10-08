@@ -64,6 +64,10 @@
 			<Add library="SDL2" />
 			<Add library="SDL2_image" />
 			<Add library="SDL2_ttf" />
+<<<<<<< HEAD
+=======
+			<Add library="lib/libDAS_Decoder.a" />
+>>>>>>> 5188b12306c9fe5a2924b1292da19ee7703a1942
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>

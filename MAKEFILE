@@ -15,7 +15,11 @@ INC = -I$(SDL2_INCLUDE)\\SDL2 -Iinclude
 CFLAGS = -Wall
 RESINC = 
 LIBDIR = -L$(SDL2_LIB)
+<<<<<<< HEAD
 LIB = -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
+=======
+LIB = -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf lib\\libDAS_Decoder.a
+>>>>>>> 5188b12306c9fe5a2924b1292da19ee7703a1942
 LDFLAGS = 
 
 INC_WINTER_DEBUG = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude -Iinclude\ACGCross\Demo
