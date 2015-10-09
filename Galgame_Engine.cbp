@@ -25,6 +25,7 @@
 					<Add directory="include/ACGCross/GalgameActivity" />
 					<Add directory="include" />
 					<Add directory="include/ACGCross/Demo" />
+					<Add directory="include/ACGCross/PAW01_Winter" />
 				</Compiler>
 				<Linker>
 					<Add library="lib/libSnow_Dbg.a" />
@@ -37,7 +38,6 @@
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-fexpensive-optimizations" />
 					<Add option="-O2" />
 					<Add directory="Core" />
 					<Add directory="src" />
@@ -47,6 +47,7 @@
 					<Add directory="include/ACGCross/GalgameActivity" />
 					<Add directory="include" />
 					<Add directory="include/ACGCross/Demo" />
+					<Add directory="include/ACGCross/PAW01_Winter" />
 				</Compiler>
 				<Linker>
 					<Add library="lib/libSnow.a" />
@@ -64,10 +65,6 @@
 			<Add library="SDL2" />
 			<Add library="SDL2_image" />
 			<Add library="SDL2_ttf" />
-<<<<<<< HEAD
-=======
-			<Add library="lib/libDAS_Decoder.a" />
->>>>>>> 5188b12306c9fe5a2924b1292da19ee7703a1942
 			<Add directory="$(#sdl2.lib)" />
 		</Linker>
 		<ExtraCommands>
@@ -79,7 +76,6 @@
 		<Unit filename="include/ACGCross/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/DASPReader.h" />
 		<Unit filename="include/ACGCross/DAS_Decoder.h" />
-		<Unit filename="include/ACGCross/PAW01_Winter/ACGCross_Logo.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Button.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/CGViewer.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Ending.h" />
@@ -102,6 +98,7 @@
 		<Unit filename="include/ACGCross/PAW01_Winter/GameDataMgr.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/Mask.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/MathFunc.h" />
+		<Unit filename="include/ACGCross/PAW01_Winter/MousePointer.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/NumTexture.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/SaveUI.h" />
 		<Unit filename="include/ACGCross/PAW01_Winter/SettingUI.h" />
@@ -138,6 +135,7 @@
 		<Unit filename="src/ACGCross/PAW01_Winter/GameDataMgr.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/Mask.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/MathFunc.cpp" />
+		<Unit filename="src/ACGCross/PAW01_Winter/MousePointer.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/NumTexture.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/SaveUI.cpp" />
 		<Unit filename="src/ACGCross/PAW01_Winter/SettingUI.cpp" />

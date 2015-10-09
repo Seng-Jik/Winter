@@ -2,6 +2,7 @@
 
 #include "GameDataMgr.h"
 #include "Snow.h"
+#include "MousePointer.h"
 
 namespace ACGCross{
     namespace Galgame{
@@ -20,6 +21,7 @@ namespace ACGCross{
     extern ::Snow::Activity* pCGViewer;
     extern Galgame::TextBox* pTextBox;
     extern Galgame::Clock* pClock;
+    extern MousePointer* pMouse;
 
 
     void AutoSaver(::Snow::THREAD_ID);

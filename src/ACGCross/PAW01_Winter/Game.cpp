@@ -8,6 +8,7 @@
 #include "ACGCross/PAW01_Winter/SettingUI.h"
 #include "ACGCross/PAW01_Winter/CGViewer.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+
 using namespace std;
 using namespace ::Snow;
 using namespace ACGCross;
@@ -24,6 +25,7 @@ ResVal ACGCross::r;
 ::Snow::Activity* ACGCross::pCGViewer;
 ACGCross::Galgame::TextBox* ACGCross::pTextBox;
 ACGCross::Galgame::Clock* ACGCross::pClock;
+ACGCross::MousePointer* ACGCross::pMouse;
 
 void BugReporter(void*           userdata,
                            int             category,
@@ -66,7 +68,10 @@ void ACGCross::InitGame(){
     selBk[2].Load("GalGameSystem/selBk3.png");
     GalSelButton::m_btnbk[2] = IMG_LoadTexture_RW(pRnd,selBk[2],selBk[2].Size());
 
-    //Load Font
+    //Load Mouse
+    pMouse = new MousePointer;
+    pMouse -> Load("GalGameSystem/mouse.png");
+
 
     SDL_LogSetOutputFunction(BugReporter, nullptr);
     pTextBox = new Galgame::TextBox;

@@ -503,6 +503,8 @@ void GalgameActivity::OnDraw()
             pRnd.Clear();
         }
     }
+
+    pMouse -> OnDraw();
 }
 
 void GalgameActivity::OnEvent(const SDL_Event& e)
@@ -511,6 +513,8 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
     if(e.type == SDL_MOUSEBUTTONDOWN) cout<<"MOUSE:"<<e.button.x<<","<<e.button.y<<endl;
     else if(e.type == SDL_KEYDOWN) cout<<"KEY:"<<SDL_GetKeyName(e.key.keysym.sym)<<endl;
     #endif
+
+    pMouse -> OnEvent(e);
 
     if(!m_sels.empty()){
         FOR_EACH(p,m_sels.begin(),m_sels.end())
