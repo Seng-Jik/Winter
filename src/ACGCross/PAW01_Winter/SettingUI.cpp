@@ -176,6 +176,8 @@ void SettingUI::OnDraw()
 
     m_return.OnDraw();
     m_title.OnDraw();
+
+    pMouse -> OnDraw();
 }
 
 void SettingUI::OnNext()
@@ -324,6 +326,7 @@ void SettingUI::OnEvent(Control* c, const Sint32 msg)
 
 void SettingUI::OnEvent(const SDL_Event& e){
 
+    pMouse -> OnEvent(e);
     //if(e.type == SDL_MOUSEBUTTONDOWN) PNT("MOUSE:"<<e.button.x<<","<<e.button.y);
 
     if(e.type == SDL_MOUSEMOTION){

@@ -43,6 +43,7 @@ namespace Snow{
     };
 }
 
+
 template<Uint32 size>
 Snow::Bundle<size>::Bundle()
 {
@@ -138,5 +139,3 @@ void Snow::Bundle<size>::ReadFromFile(std::fstream& in,Uint64 pos)
     in.read((char*)&m_data[0],size);
     in.seekg(p);
 }
-
-

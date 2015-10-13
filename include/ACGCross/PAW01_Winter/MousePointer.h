@@ -12,5 +12,9 @@ class MousePointer
     protected:
     private:
         Snow::Sprite m_mouse;
+        struct MouseEffPoi{
+            int x,y,cnt;
+        };
+        SDL_Texture* m_mpoiTex;
 };
 }

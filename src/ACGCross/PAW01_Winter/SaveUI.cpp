@@ -3,6 +3,7 @@
 #include "ACGCross/PAW01_Winter/Title/Title.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
 #include "ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+
 using namespace ::Snow;
 using namespace ACGCross;
 using namespace ACGCross::Galgame;
@@ -137,6 +138,7 @@ void SaveUI::OnDraw()
         //PNT("DLOADFG:"<<(int)m_dLoad_fg);
         pRnd.Clear();
     }
+    pMouse -> OnDraw();
 }
 
 void SaveUI::OnNext()
@@ -180,6 +182,7 @@ void SaveUI::OnNext()
 }
 
 void SaveUI::OnEvent(const SDL_Event& e){
+    pMouse -> OnEvent(e);
     if(e.type == SDL_MOUSEMOTION)
         MoveDuang(e.motion.x,e.motion.y);
 }
@@ -333,6 +336,7 @@ void SaveUI::Really::OnDraw()
     m_del.OnDraw();
     m_load.OnDraw();
     if(!m_callByTitle) m_save.OnDraw();
+    pMouse->OnDraw();
 }
 
 void SaveUI::Really::OnNext()
@@ -441,6 +445,7 @@ void SaveUI::Really::OnShow()
 
 void SaveUI::Really::OnEvent(const SDL_Event& e)
 {
+    pMouse -> OnEvent(e);
     if(e.type == SDL_MOUSEBUTTONUP && m_state == NOR){
         UnRegAllControl();
         m_state = HI_BTN;

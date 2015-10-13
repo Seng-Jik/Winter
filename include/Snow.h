@@ -1,6 +1,4 @@
-#ifndef _HEAD_SNOW_
-#define _HEAD_SNOW_
-
+#pragma once
 #include "Snow/Activity.h"
 #include "Snow/Bundle.h"
 #include "Snow/Control.h"
@@ -20,4 +18,3 @@
 #include "Snow/CSVReader.h"
 #include "Snow/RenderTarget.h"
 
-#endif // _HEAD_SNOW_

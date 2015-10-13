@@ -2183,7 +2183,7 @@
 	"Snow.h"
 	"../ACGCross/PAW01_Winter/MathFunc.h"
 
-1444366754 j:\winter\winter\include\snow.h
+1444712225 j:\winter\winter\include\snow.h
 	"Snow/Activity.h"
 	"Snow/Bundle.h"
 	"Snow/Control.h"
@@ -2203,13 +2203,13 @@
 	"Snow/CSVReader.h"
 	"Snow/RenderTarget.h"
 
-1444366754 j:\winter\winter\include\snow\activity.h
+1444039221 j:\winter\winter\include\snow\activity.h
 	<forward_list>
 	"SDLbase.h"
 	"Globals.h"
 	"RndPtr.h"
 
-1444366754 j:\winter\winter\include\snow\sdlbase.h
+1444108173 j:\winter\winter\include\snow\sdlbase.h
 	"OS.h"
 	<SDL2/SDL.h>
 	<SDL2/SDL_mixer.h>
@@ -2224,85 +2224,85 @@
 	<SDL_net.h>
 	<SDL_test.h>
 
-1444366754 j:\winter\winter\include\snow\os.h
+1444194977 j:\winter\winter\include\snow\os.h
 	<windows.h>
 
-1444366754 j:\winter\winter\include\snow\globals.h
+1444108060 j:\winter\winter\include\snow\globals.h
 	"SDLbase.h"
 	<vector>
 	<string>
 	"Sound.h"
 
-1444366754 j:\winter\winter\include\snow\sound.h
+1444108173 j:\winter\winter\include\snow\sound.h
 	"SDLbase.h"
 	<map>
 	"ResFile.h"
 
-1444366754 j:\winter\winter\include\snow\resfile.h
+1444108173 j:\winter\winter\include\snow\resfile.h
 	"SDLBase.h"
 	<vector>
 	<string>
 
-1444366754 j:\winter\winter\include\snow\rndptr.h
+1444108173 j:\winter\winter\include\snow\rndptr.h
 	"SDLbase.h"
 	<string>
 
-1444366754 j:\winter\winter\include\snow\bundle.h
+1444364823 j:\winter\winter\include\snow\bundle.h
 	"Globals.h"
 	<fstream>
 	"mem.h"
 
-1444366754 j:\winter\winter\include\snow\control.h
+1444107961 j:\winter\winter\include\snow\control.h
 	"SDLbase.h"
 
-1444366754 j:\winter\winter\include\snow\font.h
+1444108071 j:\winter\winter\include\snow\font.h
 	"SDLbase.h"
 	<string>
 	"ResFile.h"
 
-1444366754 j:\winter\winter\include\snow\misc.h
+1444108079 j:\winter\winter\include\snow\misc.h
 	<fstream>
 	"SDLbase.h"
 	"ResFile.h"
 
-1444366754 j:\winter\winter\include\snow\sprite.h
+1444108173 j:\winter\winter\include\snow\sprite.h
 	"Globals.h"
 	"ResFile.h"
 	"Surface.h"
 
-1444366754 j:\winter\winter\include\snow\surface.h
+1444023380 j:\winter\winter\include\snow\surface.h
 	"ResFile.h"
 
-1444366754 j:\winter\winter\include\snow\thread.h
+1444108173 j:\winter\winter\include\snow\thread.h
 	"SDLbase.h"
 
-1444366754 j:\winter\winter\include\snow\timer.h
+1444455148 j:\winter\winter\include\snow\timer.h
 	"SDLbase.h"
 	"Globals.h"
 
-1444366754 j:\winter\winter\include\snow\resval.h
+1444108173 j:\winter\winter\include\snow\resval.h
 	<map>
 
-1444366754 j:\winter\winter\include\snow\tcpnet.h
+1444108173 j:\winter\winter\include\snow\tcpnet.h
 	"SDLBase.h"
 	<string>
 
-1444366754 j:\winter\winter\include\snow\udpnet.h
+1444108173 j:\winter\winter\include\snow\udpnet.h
 	<string>
 	"SDLbase.h"
 
-1444366754 j:\winter\winter\include\snow\csveditor.h
+1444107969 j:\winter\winter\include\snow\csveditor.h
 	<iostream>
 	<fstream>
 	<string>
 	<map>
 	<vector>
 
-1444366754 j:\winter\winter\include\snow\csvreader.h
+1444107977 j:\winter\winter\include\snow\csvreader.h
 	"ResFile.h"
 	<string>
 
-1444366754 j:\winter\winter\include\snow\rendertarget.h
+1444108089 j:\winter\winter\include\snow\rendertarget.h
 	"Thread.h"
 
 1444366754 j:\winter\winter\include\acgcross\paw01_winter\mathfunc.h
@@ -2318,7 +2318,7 @@
 	<fstream>
 	<set>
 
-1444368559 j:\winter\winter\include\acgcross\paw01_winter\mousepointer.h
+1444712543 j:\winter\winter\include\acgcross\paw01_winter\mousepointer.h
 	"Snow.h"
 
 1444366754 source:j:\winter\winter\src\acgcross\paw01_winter\button.cpp
@@ -2334,7 +2334,7 @@
 1444366754 j:\winter\winter\include\acgcross\paw01_winter\cgviewer.h
 	"Snow.h"
 
-1444366754 j:\winter\winter\include\snow\debug.h
+1444108030 j:\winter\winter\include\snow\debug.h
 	<iostream>
 	<string>
 
@@ -2529,7 +2529,7 @@
 	"ACGCross/PAW01_Winter/NumTexture.h"
 	"Snow/Debug.h"
 
-1444366754 source:j:\winter\winter\src\acgcross\paw01_winter\saveui.cpp
+1444469044 source:j:\winter\winter\src\acgcross\paw01_winter\saveui.cpp
 	"ACGCross/PAW01_Winter/SaveUI.h"
 	"ACGCross/PAW01_Winter/Game.h"
 	"ACGCross/PAW01_Winter/Title/Title.h"
@@ -2560,7 +2560,7 @@
 	"Snow.h"
 	"ACGCross/PAW01_Winter/Button.h"
 
-1444366754 source:j:\winter\winter\src\acgcross\paw01_winter\settingui.cpp
+1444469285 source:j:\winter\winter\src\acgcross\paw01_winter\settingui.cpp
 	"ACGCross/PAW01_Winter/SettingUI.h"
 	"ACGCross/PAW01_Winter/Slider.h"
 	"ACGCross/PAW01_Winter/MathFunc.h"
@@ -2596,7 +2596,7 @@
 1444366754 source:j:\winter\winter\src\acgcross\paw01_winter\title\movingbg.cpp
 	"ACGCross/PAW01_Winter/Title/MovingBG.h"
 
-1444366754 source:j:\winter\winter\src\acgcross\paw01_winter\title\title.cpp
+1444713377 source:j:\winter\winter\src\acgcross\paw01_winter\title\title.cpp
 	"ACGCross/PAW01_Winter/Title/Title.h"
 	"ACGCross/PAW01_Winter/Game.h"
 	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
@@ -2618,8 +2618,9 @@
 	"ACGCross/PAW01_Winter/SaveUI.h"
 	"../Snow/Debug.h"
 
-1444368197 source:j:\winter\winter\src\acgcross\paw01_winter\mousepointer.cpp
+1444712558 source:j:\winter\winter\src\acgcross\paw01_winter\mousepointer.cpp
 	"ACGCross\PAW01_Winter\MousePointer.h"
+	<iostream>
 
 1444368209 source:j:\winter\winter\src\main.cpp
 	"Snow.h"
@@ -2644,4 +2645,8 @@
 	"ACGCross/PAW01_Winter/SettingUI.h"
 	"ACGCross/PAW01_Winter/CGViewer.h"
 	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+
+1444625888 j:\winter\winter\include\snow\mempool.h
+	<stack>
+	<set>
 

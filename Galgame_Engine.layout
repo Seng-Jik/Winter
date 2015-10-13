@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="Winter_Debug" />
+	<ActiveTarget name="Winter_Release" />
+	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21655" topLine="644" />
+		</Cursor>
+	</File>
 	<File name="include\ACGCross\PAW01_Winter\Game.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="610" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\PAW01_Winter\Game.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\PAW01_Winter\GameDataMgr.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2577" topLine="60" />
-		</Cursor>
-	</File>
-	<File name="include\ACGCross\PAW01_Winter\MousePointer.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="298" topLine="0" />
+			<Cursor1 position="1761" topLine="75" />
 		</Cursor>
 	</File>
 	<File name="src\main.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -21,9 +21,39 @@
 			<Cursor1 position="167" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\ACGCross\PAW01_Winter\GalgameActivity\GalgameActivity.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ACGCross\PAW01_Winter\MousePointer.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="16062" topLine="496" />
+			<Cursor1 position="284" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Title\Title.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1769" topLine="66" />
+		</Cursor>
+	</File>
+	<File name="include\ACGCross\PAW01_Winter\MousePointer.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="374" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Game.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2577" topLine="60" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\SettingUI.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5339" topLine="163" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\SaveUI.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9724" topLine="325" />
+		</Cursor>
+	</File>
+	<File name="src\ACGCross\PAW01_Winter\Ending.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1113" topLine="28" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

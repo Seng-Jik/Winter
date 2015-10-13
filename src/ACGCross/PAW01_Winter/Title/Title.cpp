@@ -48,6 +48,7 @@ void Title::OnDraw()
     FOR_EACH(p,m_visableBtn.begin(),m_visableBtn.end())
         (*p) -> OnDraw();
 
+    pMouse -> OnDraw();
     if(m_stat == 3 || m_stat == 4){
         float per = float(m_fpsCounter.GetTimer())/40;
 
@@ -235,6 +236,7 @@ void Title::OnShow()
 
 void Title::OnEvent(const SDL_Event& e)
 {
+    pMouse -> OnEvent(e);
 }
 
 void Title::OnEvent(Control* c, const Sint32 msg)
