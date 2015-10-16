@@ -39,6 +39,7 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
             if(InRect(m_r,e.button.x,e.button.y)){
                 m_stat = 3;
                 ActivityEvent(3);
+                pMouse -> OnEvent(e);
                 return true;
             }
         }
@@ -46,6 +47,7 @@ bool Button::OnEvent(const SDL_Event& e, Activity& a)
             if(InRect(m_r,e.button.x,e.button.y)){
                 m_stat = 2;
                 ActivityEvent(4);
+                pMouse -> OnEvent(e);
                 return true;
             }
         }

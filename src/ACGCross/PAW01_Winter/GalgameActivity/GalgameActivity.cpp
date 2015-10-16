@@ -492,7 +492,7 @@ void GalgameActivity::OnDraw()
 
     m_clock -> OnDraw();
     corner.OnDraw();
-
+    pMouse -> OnDraw();
     if(m_actGlbStat == SHOWING){
         float per = float(m_actGlbTimer.GetTimer()) / 400;
         if(per>=1){
@@ -503,8 +503,6 @@ void GalgameActivity::OnDraw()
             pRnd.Clear();
         }
     }
-
-    pMouse -> OnDraw();
 }
 
 void GalgameActivity::OnEvent(const SDL_Event& e)

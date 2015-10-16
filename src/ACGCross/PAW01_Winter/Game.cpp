@@ -45,19 +45,9 @@ void ACGCross::InitGame(){
 
     //LoadLanguage
     LCID lcid = GetSystemDefaultLCID(); //GetSystemLanguage
-    r.Load("ResVal/LNG_BASE_CHS.TXT");   //China WanSui!!
-    switch(lcid){
-    case  0x1004:
-        r.Load("ResVal/LNG_CHT_MO.txt");break;
-    case 3076:
-        r.Load("ResVal/LNG_CHT_HK.txt");break;
-    case 0x404:
-        r.Load("ResVal/LNG_CHT_TW.txt");break;
-    case 0x409:
-        r.Load("ResVal/LNG_ENG.txt");break;
-    case 0x411 :
-        r.Load("ResVal/LNG_JPN.txt");break;
-    }
+    r.Load("ResVal/LNG_BASE_CHS.TXT");
+    if(lcid == 0x1004 || lcid == 3076 || lcid == 0x404)
+        r.Load("ResVal/LNG_CHT.txt");break;
 
     //Init Class Static Member Value
     static ResFile selBk[3];

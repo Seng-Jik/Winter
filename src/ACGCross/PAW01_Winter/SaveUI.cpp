@@ -52,7 +52,7 @@ void SaveUI::OnShow()
     //DBG
     //auto pSur = SDL_LoadBMP("0.bmp");
     Surface noData;
-    noData.Load("GalGameSystem/saveUI_NODATA.png");
+    noData.Load(r.Str("SAV_NODATA"));
 
     for(int i = 0;i < 4;++i){
         int x = r.Int("SAV_BESTLEFT_X");

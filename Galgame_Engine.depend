@@ -2650,3 +2650,478 @@
 	<stack>
 	<set>
 
+1444366754 source:f:\winter\winter\icon.rc
+
+1444366756 source:f:\winter\winter\src\acgcross\acgcross_logo.cpp
+	"ACGCross/ACGCross_Logo.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1444366754 f:\winter\winter\include\acgcross\acgcross_logo.h
+	"Snow.h"
+	"../ACGCross/PAW01_Winter/MathFunc.h"
+
+1444712226 f:\winter\winter\include\snow.h
+	"Snow/Activity.h"
+	"Snow/Bundle.h"
+	"Snow/Control.h"
+	"Snow/ResFile.h"
+	"Snow/Font.h"
+	"Snow/Globals.h"
+	"Snow/Misc.h"
+	"Snow/Sound.h"
+	"Snow/Sprite.h"
+	"Snow/Thread.h"
+	"Snow/Timer.h"
+	"Snow/ResVal.h"
+	"Snow/RndPtr.h"
+	"Snow/TCPNet.h"
+	"Snow/UDPNet.h"
+	"Snow/CSVEditor.h"
+	"Snow/CSVReader.h"
+	"Snow/RenderTarget.h"
+
+1444039222 f:\winter\winter\include\snow\activity.h
+	<forward_list>
+	"SDLbase.h"
+	"Globals.h"
+	"RndPtr.h"
+
+1444108174 f:\winter\winter\include\snow\sdlbase.h
+	"OS.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_net.h>
+	<SDL2/SDL_test.h>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<SDL_net.h>
+	<SDL_test.h>
+
+1444194978 f:\winter\winter\include\snow\os.h
+	<windows.h>
+
+1444108062 f:\winter\winter\include\snow\globals.h
+	"SDLbase.h"
+	<vector>
+	<string>
+	"Sound.h"
+
+1444108174 f:\winter\winter\include\snow\sound.h
+	"SDLbase.h"
+	<map>
+	"ResFile.h"
+
+1444108174 f:\winter\winter\include\snow\resfile.h
+	"SDLBase.h"
+	<vector>
+	<string>
+
+1444108174 f:\winter\winter\include\snow\rndptr.h
+	"SDLbase.h"
+	<string>
+
+1444364824 f:\winter\winter\include\snow\bundle.h
+	"Globals.h"
+	<fstream>
+	"mem.h"
+
+1444107962 f:\winter\winter\include\snow\control.h
+	"SDLbase.h"
+
+1444108072 f:\winter\winter\include\snow\font.h
+	"SDLbase.h"
+	<string>
+	"ResFile.h"
+
+1444108080 f:\winter\winter\include\snow\misc.h
+	<fstream>
+	"SDLbase.h"
+	"ResFile.h"
+
+1444108174 f:\winter\winter\include\snow\sprite.h
+	"Globals.h"
+	"ResFile.h"
+	"Surface.h"
+
+1444023380 f:\winter\winter\include\snow\surface.h
+	"ResFile.h"
+
+1444108174 f:\winter\winter\include\snow\thread.h
+	"SDLbase.h"
+
+1444455150 f:\winter\winter\include\snow\timer.h
+	"SDLbase.h"
+	"Globals.h"
+
+1444108174 f:\winter\winter\include\snow\resval.h
+	<map>
+
+1444108174 f:\winter\winter\include\snow\tcpnet.h
+	"SDLBase.h"
+	<string>
+
+1444108174 f:\winter\winter\include\snow\udpnet.h
+	<string>
+	"SDLbase.h"
+
+1444107970 f:\winter\winter\include\snow\csveditor.h
+	<iostream>
+	<fstream>
+	<string>
+	<map>
+	<vector>
+
+1444107978 f:\winter\winter\include\snow\csvreader.h
+	"ResFile.h"
+	<string>
+
+1444108090 f:\winter\winter\include\snow\rendertarget.h
+	"Thread.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\mathfunc.h
+	"Snow.h"
+
+1444368304 f:\winter\winter\include\acgcross\paw01_winter\game.h
+	"GameDataMgr.h"
+	"Snow.h"
+	"MousePointer.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\gamedatamgr.h
+	"Snow.h"
+	<fstream>
+	<set>
+
+1009841660 f:\winter\winter\include\acgcross\paw01_winter\mousepointer.h
+	"Snow.h"
+	<list>
+
+1009845582 source:f:\winter\winter\src\acgcross\paw01_winter\button.cpp
+	"ACGCross/PAW01_Winter/Button.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\button.h
+	"Snow.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\cgviewer.cpp
+	"ACGCross/PAW01_Winter/CGViewer.h"
+	"Snow/Debug.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\cgviewer.h
+	"Snow.h"
+
+1444108032 f:\winter\winter\include\snow\debug.h
+	<iostream>
+	<string>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\ending.cpp
+	"ACGCross/PAW01_Winter/Ending.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\ending.h
+	"Snow.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\fadelable.cpp
+	"ACGCross/PAW01_Winter/FadeLable.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\fadelable.h
+	"Snow.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\bg.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Bg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\bg.h
+	"SMEProcUnit.h"
+	"../ACGCross/PAW01_Winter/str2wstr.h"
+	"Snow.h"
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\smeprocunit.h
+	"Snow.h"
+	"SMLanguage/SMI.h"
+
+1444366756 f:\winter\winter\include\smlanguage\smi.h
+	<iostream>
+	<fstream>
+	<string>
+	<unordered_map>
+	<unordered_set>
+	<vector>
+	<stack>
+	<algorithm>
+	<sstream>
+	<memory.h>
+	"../Snow/Bundle.h"
+	"../Snow/ResFile.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\str2wstr.h
+	<string>
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\galgameactivity.h
+	"Snow.h"
+	"Clock.h"
+	"TextBox.h"
+	"NameCard.h"
+	"Corner.h"
+	"SnowEff.h"
+	"Bg.h"
+	"../../../SMLanguage/SMI.h"
+	"TextWindow.h"
+	"MaskCmdTarget.h"
+	"../Button.h"
+	"ChrMgr.h"
+	"SMEProcUnit.h"
+	<map>
+	<stack>
+	<list>
+	"GalSelButton.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\clock.h
+	"../NumTexture.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\numtexture.h
+	"../Snow/Sprite.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\textbox.h
+	"SMEProcUnit.h"
+	"ACGCross/PAW01_Winter/game.h"
+	<string>
+	<vector>
+	<list>
+	"Snow.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\namecard.h
+	"ACGCross/PAW01_Winter/FadeLable.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"SMLanguage/SMI.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\corner.h
+	"Snow.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\snoweff.h
+	"Snow.h"
+	"Snow/SDLbase.h"
+	"SMEProcUnit.h"
+	"SMLanguage/SMI.h"
+	<list>
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\textwindow.h
+	"Snow.h"
+	<list>
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\maskcmdtarget.h
+	"ACGCross/PAW01_Winter/Mask.h"
+	"bg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/SMEProcUnit.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\mask.h
+	<string>
+	"Snow.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\chrmgr.h
+	"SMEProcUnit.h"
+	"Chr.h"
+	"../ACGCross/PAW01_Winter/str2wstr.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\chr.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\galselbutton.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/Game.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\chr.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Chr.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\chrmgr.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/ChrMgr.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"../Snow/Debug.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\clock.cpp
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/Clock.h"
+	<ctime>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\corner.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/Corner.h"
+
+1009846174 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	"../Snow/Debug.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\saveui.h
+	"Snow.h"
+	"Button.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galselbutton.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\gamemenu.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
+	"Snow.h"
+	"ACGCross/PAW01_Winter/NumTexture.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\galgameactivity\gamemenu.h
+	"ACGCross/PAW01_Winter/GalgameActivity/GameMenu.h"
+	"Snow.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\maskcmdtarget.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/MaskCmdTarget.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\namecard.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/NameCard.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\snow.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/SnowEff.h"
+	"stdlib.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\textbox.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\galgameactivity\textwindow.cpp
+	"ACGCross/PAW01_Winter/GalgameActivity/TextWindow.h"
+	"ACGCross/PAW01_Winter/game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1009846574 source:f:\winter\winter\src\acgcross\paw01_winter\game.cpp
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/Clock.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/Ending.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	"ACGCross/PAW01_Winter/SettingUI.h"
+	"ACGCross/PAW01_Winter/CGViewer.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\title\title.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/Title/MovingBg.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/SnowEff.h"
+	"ACGCross/PAW01_Winter/Title/GameLogo.h"
+	"ACGCross/PAW01_Winter/Title/TitleButton.h"
+	<vector>
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\title\movingbg.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\title\gamelogo.h
+	"ACGCross/PAW01_Winter/GalgameActivity/Corner.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\title\titlebutton.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/Button.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\settingui.h
+	"Snow.h"
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/Button.h"
+
+1444366756 f:\winter\winter\include\acgcross\paw01_winter\slider.h
+	"Snow.h"
+	<string>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\gamedatamgr.cpp
+	"ACGCross/PAW01_Winter/GameDataMgr.h"
+	<string>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\mask.cpp
+	"ACGCross/PAW01_Winter/Mask.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\mathfunc.cpp
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	<math.h>
+	<mem.h>
+	<string.h>
+
+1009844334 source:f:\winter\winter\src\acgcross\paw01_winter\mousepointer.cpp
+	"ACGCross\PAW01_Winter\MousePointer.h"
+	"MathFunc.h"
+	"Snow/Debug.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\numtexture.cpp
+	"ACGCross/PAW01_Winter/NumTexture.h"
+	"Snow/Debug.h"
+
+1009846834 source:f:\winter\winter\src\acgcross\paw01_winter\settingui.cpp
+	"ACGCross/PAW01_Winter/SettingUI.h"
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"Snow.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	<cstdlib>
+	<string>
+	<sstream>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\slider.cpp
+	"ACGCross/PAW01_Winter/Slider.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\str2wstr.cpp
+	"ACGCross/PAW01_Winter/str2wstr.h"
+	<mem.h>
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\title\gamelogo.cpp
+	"ACGCross/PAW01_Winter/Title/GameLogo.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\title\movingbg.cpp
+	"ACGCross/PAW01_Winter/Title/MovingBG.h"
+
+1444366756 source:f:\winter\winter\src\acgcross\paw01_winter\title\titlebutton.cpp
+	"ACGCross/PAW01_Winter/Title/TitleButton.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+
+1444368210 source:f:\winter\winter\src\main.cpp
+	"Snow.h"
+	<cstdlib>
+	<ctime>
+	"ACGCross/DASPReader.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/ACGCross_Logo.h"
+
+1444366754 f:\winter\winter\include\acgcross\daspreader.h
+	"Snow.h"
+	<map>
+
+1444366756 source:f:\winter\winter\src\smlanguage\smi.cpp
+	"../../include/SMLanguage/SMI.h"
+
+1009846970 source:f:\winter\winter\src\acgcross\paw01_winter\saveui.cpp
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+
+1444713378 source:f:\winter\winter\src\acgcross\paw01_winter\title\title.cpp
+	"ACGCross/PAW01_Winter/Title/Title.h"
+	"ACGCross/PAW01_Winter/Game.h"
+	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
+	"ACGCross/PAW01_Winter/SaveUI.h"
+	<cstdlib>
+	<fstream>
+

@@ -1,5 +1,5 @@
 #冬 基本语言文件
-#中华人民共和国 大陆 简体中文
+#简体中文
 
 STR AFX_FONT = "GalGameSystem/FangZhengHei.TTF"
 
@@ -50,7 +50,15 @@ STR CFG_CVSTR = "语音音量"
 STR CFG_SESTR = "音效音量"
 STR CFG_WARN = "这些设置将会在重新启动游戏后应用。"
 
+STR CFG_RET1 = "GalGameSystem/config_ret1.png"
+STR CFG_RET2 = "GalGameSystem/config_ret2.png"
+STR CFG_RET3 = "GalGameSystem/config_ret3.png"
+STR CFG_TLE1 = "GalGameSystem/config_tle1.png"
+STR CFG_TLE2 = "GalGameSystem/config_tle2.png"
+STR CFG_TLE3 = "GalGameSystem/config_tle3.png"
+
 #存档页面
 STR SAV_BUTTON_SAVE = "GalGameSystem/saveUI_save.png"
 STR SAV_BUTTON_LOAD = "GalGameSystem/saveUI_load.png"
 STR SAV_BUTTON_DEL = "GalGameSystem/saveUI_del.png"
+STR SAV_NODATA = "GalGameSystem/saveUI_NODATA.png"

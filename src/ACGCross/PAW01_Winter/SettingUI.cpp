@@ -94,12 +94,12 @@ SettingUI::SettingUI()
     }
     updateGrpState();
 
-    m_return.SetNormalPic("GalGameSystem/config_ret1.png");
-    m_title.SetNormalPic("GalGameSystem/config_tle1.png");
-    m_return.SetMotionPic("GalGameSystem/config_ret2.png");
-    m_title.SetMotionPic("GalGameSystem/config_tle2.png");
-    m_return.SetDownPic("GalGameSystem/config_ret3.png");
-    m_title.SetDownPic("GalGameSystem/config_tle3.png");
+    m_return.SetNormalPic(r.Str("CFG_RET1"));
+    m_title.SetNormalPic(r.Str("CFG_TLE1"));
+    m_return.SetMotionPic(r.Str("CFG_RET2"));
+    m_title.SetMotionPic(r.Str("CFG_TLE2"));
+    m_return.SetDownPic(r.Str("CFG_RET3"));
+    m_title.SetDownPic(r.Str("CFG_TLE3"));
 
     m_return.SetPos(655,458+r.Int("CFG_YOFFSET"));
     m_title.SetPos(940,458+r.Int("CFG_YOFFSET"));

@@ -1,3 +1,0 @@
-#中国 台湾 繁体中文
-
-STR SMI_STORYFILE = "GalRes/winter_cht.smo"

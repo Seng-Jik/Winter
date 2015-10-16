@@ -1,5 +1,6 @@
 #pragma once
 #include "Snow.h"
+#include <list>
 namespace ACGCross{
 class MousePointer
 {
@@ -13,8 +14,10 @@ class MousePointer
     private:
         Snow::Sprite m_mouse;
         struct MouseEffPoi{
-            int x,y,cnt;
+            int x,y;
+            int cnt;
         };
+        std::list<MouseEffPoi> m_pois;
         SDL_Texture* m_mpoiTex;
 };
 }
