@@ -140,7 +140,7 @@ void SettingUI::OnShow()
     m_grpWarn_t.SetRenderTextColor(0xfa,0xd8,0xd1,255);
     m_grpWarn_t.Load(m_font,StringToWString(ACGCross::r.Str("CFG_WARN")));
     m_grpWarn_t.SetZoom(0.7);
-    m_grpWarn_t.SetPos(638,528+ACGCross::r.Int("CFG_YOFFSET"));
+    m_grpWarn_t.SetPos(52,478+ACGCross::r.Int("CFG_YOFFSET"));
 
     m_stat = SHOWING;
     m_timer.Reset();

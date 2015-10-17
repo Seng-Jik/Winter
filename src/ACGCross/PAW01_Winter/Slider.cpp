@@ -1,10 +1,12 @@
 #include "ACGCross/PAW01_Winter/Slider.h"
 #include "ACGCross/PAW01_Winter/MathFunc.h"
+#include "ACGCross/PAW01_Winter/Game.h"
 using namespace ACGCross;
 using namespace ::Snow;
 
 bool Slider::OnEvent(const SDL_Event& e, Activity& a)
 {
+    pMouse -> OnEvent(e);
     SDL_Rect rHk = {m_r.x+m_hkxpos_xd,m_r.y,m_hkw,m_hkh};
     if(e.type == SDL_MOUSEMOTION){
         if(m_mouse == DOW){

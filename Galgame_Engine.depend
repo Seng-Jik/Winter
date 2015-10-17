@@ -2561,7 +2561,7 @@
 	"Snow.h"
 	"ACGCross/PAW01_Winter/Button.h"
 
-1009846834 source:j:\winter\winter\src\acgcross\paw01_winter\settingui.cpp
+1445089148 source:j:\winter\winter\src\acgcross\paw01_winter\settingui.cpp
 	"ACGCross/PAW01_Winter/SettingUI.h"
 	"ACGCross/PAW01_Winter/Slider.h"
 	"ACGCross/PAW01_Winter/MathFunc.h"
@@ -2582,9 +2582,10 @@
 	"Snow.h"
 	<string>
 
-1444366756 source:j:\winter\winter\src\acgcross\paw01_winter\slider.cpp
+1445090378 source:j:\winter\winter\src\acgcross\paw01_winter\slider.cpp
 	"ACGCross/PAW01_Winter/Slider.h"
 	"ACGCross/PAW01_Winter/MathFunc.h"
+	"ACGCross/PAW01_Winter/Game.h"
 
 1444366756 source:j:\winter\winter\src\acgcross\paw01_winter\str2wstr.cpp
 	"ACGCross/PAW01_Winter/str2wstr.h"
