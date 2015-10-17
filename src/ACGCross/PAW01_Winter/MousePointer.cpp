@@ -19,47 +19,58 @@ void MousePointer::Load(const std::string& _)
     Surface sur;
     sur.Load("GalGameSystem/mouse_out.png");
     m_mpoiTex = SDL_CreateTextureFromSurface(pRnd,sur);
+
+    FOR_EACH(i,0,8)
+	    m_pois[i].live=false;
+
 }
 
 #include "MathFunc.h"
 #include "Snow/Debug.h"
 void MousePointer::OnDraw()
 {
-    try{
-    REDRAW:
-    FOR_EACH(p,m_pois.begin(),m_pois.end()){
-        if(p->cnt>0){
-            float per = ACGCross::ArcFunc(float(p->cnt)/20);
-            if(per == -1){
-                m_pois.erase(p);
-                goto REDRAW;
-            }
-            else{
-                SDL_Rect r;
-                r.x = p ->x - int(32 * per);
-                r.y = p ->y - int(32 * per);
-                r.w = int(64*per);r.h=int(64*per);
-                SDL_SetTextureAlphaMod(m_mpoiTex,255*(1-per));
-                SDL_RenderCopy(pRnd,m_mpoiTex,nullptr,&r);
-            }
-        }
-        ++p->cnt;
-    }
-    }catch(...){
-        std::cout<<"Fuck::"<<m_pois.size()<<std::endl;
-        system("pause");
-    }
+ 	FOR_EACH(i,0,8){
+		if(m_pois[i].live){
+			if(m_pois[i].cnt>30){
+				m_pois[i].live=false;
+			}else{
+				float per=ArcFunc(float(m_pois[i].cnt)/30);
+				SDL_Rect r={
+					m_pois[i].x-int(per*16),
+					m_pois[i].y-int(per*16),
+					int(32*per),int(32*per)
+				};
+				SDL_SetTextureAlphaMod(m_mpoiTex,255*(1-per));
+				SDL_RenderCopy(pRnd,m_mpoiTex,nullptr,&r);
+				++m_pois[i].cnt;
+			}
+		}
+	}
+
     if(SDL_GetMouseFocus()) m_mouse.OnDraw();
 }
+
+void MousePointer::NewPoi(int x,int y){
+	FOR_EACH(i,0,8){
+		if(!m_pois[i].live){
+			m_pois[i].x=x;
+			m_pois[i].y=y;
+			m_pois[i].cnt=0;
+			m_pois[i].live=true;
+			break;
+		}
+	}
+}
+
 
 void MousePointer::OnEvent(const SDL_Event& e)
 {
     if(e.type == SDL_MOUSEMOTION) m_mouse.SetPos(e.motion.x,e.motion.y);
     else if(e.type == SDL_MOUSEBUTTONDOWN){
-        m_pois.push_back({e.button.x,e.button.y,0});
+        NewPoi(e.button.x,e.button.y);
     }else if(e.type == SDL_MOUSEBUTTONUP && e.button.button == 1){
         //m_pois.push_back({e.button.x,e.button.y,0});
-        m_pois.push_back({e.button.x,e.button.y,0});
+        NewPoi(e.button.x,e.button.y);
         //m_pois.push_back({e.button.x,e.button.y,-20});
     }
 }

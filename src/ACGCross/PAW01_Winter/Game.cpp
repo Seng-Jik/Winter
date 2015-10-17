@@ -47,7 +47,7 @@ void ACGCross::InitGame(){
     LCID lcid = GetSystemDefaultLCID(); //GetSystemLanguage
     r.Load("ResVal/LNG_BASE_CHS.TXT");
     if(lcid == 0x1004 || lcid == 3076 || lcid == 0x404)
-        r.Load("ResVal/LNG_CHT.txt");break;
+        r.Load("ResVal/LNG_CHT.txt");
 
     //Init Class Static Member Value
     static ResFile selBk[3];

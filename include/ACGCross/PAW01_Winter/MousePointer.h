@@ -9,6 +9,7 @@ class MousePointer
         void Load(const std::string&);
         void OnDraw();
         void OnEvent(const SDL_Event& e);
+        void NewPoi(int x,int y);
         ~MousePointer();
     protected:
     private:
@@ -16,8 +17,9 @@ class MousePointer
         struct MouseEffPoi{
             int x,y;
             int cnt;
+            bool live;
         };
-        std::list<MouseEffPoi> m_pois;
+        MouseEffPoi m_pois [8];
         SDL_Texture* m_mpoiTex;
 };
 }
