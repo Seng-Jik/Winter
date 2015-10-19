@@ -99,7 +99,7 @@ void GalSelButton::SetY(int y)
     m_dst.y = y;
     int w,h;
     m_str.GetSize(w,h);
-    m_str.SetPos(pRnd.GetW()/2-w/2,y+3);
+    m_str.SetPos(pRnd.GetW()/2-w/2,y+10);
 }
 
 bool GalSelButton::Killed()

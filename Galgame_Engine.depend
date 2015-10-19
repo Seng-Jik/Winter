@@ -2530,7 +2530,7 @@
 	"ACGCross/PAW01_Winter/NumTexture.h"
 	"Snow/Debug.h"
 
-1009846970 source:j:\winter\winter\src\acgcross\paw01_winter\saveui.cpp
+1445090607 source:j:\winter\winter\src\acgcross\paw01_winter\saveui.cpp
 	"ACGCross/PAW01_Winter/SaveUI.h"
 	"ACGCross/PAW01_Winter/Game.h"
 	"ACGCross/PAW01_Winter/Title/Title.h"
@@ -2613,7 +2613,7 @@
 1444366756 source:j:\winter\winter\src\smlanguage\smi.cpp
 	"../../include/SMLanguage/SMI.h"
 
-1009846174 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
+1445232097 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
 	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
 	"ACGCross/PAW01_Winter/str2wstr.h"
 	"ACGCross/PAW01_Winter/Game.h"
