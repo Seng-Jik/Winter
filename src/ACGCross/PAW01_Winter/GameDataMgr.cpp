@@ -18,7 +18,7 @@ GameDataMgr::GameDataMgr()
 
     //游戏数据长度效验
     in.seekg(0,ios::end);
-    if(in.tellg() < 8+8+32+65536*16){
+    if(in.tellg() < 8+8+32+65536*16+8192){
         ERROR_MSGBOX("GameData.dat is invaild.");
     }
 
@@ -53,6 +53,17 @@ GameDataMgr::GameDataMgr()
     //存档
     for(int i = 0;i < 16;++i)
         m_save[i].ReadFromFile(in,16+32+i*65536);
+        
+    //Kidoku
+    Uint8 kidokuBuf[8192];
+    in.read((char*)kidokuBuf,8192);
+    for(int i = 0;i < 8192;++i){
+        Uint8 fliter = 0x80;
+        for(int j = 0;j < 8;++j){
+            kidoku[i*8+j] = kidokuBuf[i] & fliter;
+            fliter>>=1;
+        }
+    }
 
     in.close();
 
@@ -144,6 +155,15 @@ void GameDataMgr::UpdateData()
                 m_save[t].WriteToFile(out,16+32+t*65536);
             }
         }
+        //Kidoku Update
+        Uint8 kidokuBuf[8192] = {0};
+        for(int i = 0;i < 8192;++i){
+            for(int j = 0;j < 8;++j){
+                kidokuBuf[i]<<=1;
+                kidokuBuf[i]+=kidoku[i*8+j];
+            }
+        }
+        out.write((char*)&kidokuBuf[0],8192);
         out.close();
     }
     m_updateTask.clear();
@@ -196,4 +216,3 @@ void GameDataMgr::SetDataExist(int num,bool tf)
     m_updateTask.insert(-2);
     Unlock();
 }
-
