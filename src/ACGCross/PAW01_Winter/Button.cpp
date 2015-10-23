@@ -1,4 +1,5 @@
 #include "ACGCross/PAW01_Winter/Button.h"
+#include "ACGCross/PAW01_Winter/Game.h"
 
 using namespace std;
 using namespace ::Snow;
@@ -23,6 +24,7 @@ Button::Button()
 
 bool Button::OnEvent(const SDL_Event& e, Activity& a)
 {
+    if(!m_enable) return false;
     if(m_stat > 0){
         if(e.type == SDL_MOUSEMOTION){
             if(InRect(m_r,e.motion.x,e.motion.y)){

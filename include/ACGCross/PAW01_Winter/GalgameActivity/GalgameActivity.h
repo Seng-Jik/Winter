@@ -85,6 +85,8 @@ private:
     SMI::Interpreter m_SMEProc_smi;
     SMI::SMEvent m_SMEProc_sme;
 
+    Uint32 m_SayEndLine = 0;
+
     std::map<std::wstring,SMEProcUnit*> m_SMEProc_map;
 
     SMEProcUnit* m_SMEProc_Say;
@@ -131,6 +133,8 @@ private:
     ::Snow::Timer m_autoUpdateDataTimer;
 
     void LowerSaveGame();
+    void UpdateSkipButton();
+    bool m_skipButtonEnabled = true;
 
 public:
     ::Snow::Font m_name_font;

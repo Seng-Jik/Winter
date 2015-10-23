@@ -9,6 +9,7 @@ using namespace ACGCross;
 int main(int argc,char** argv)
 {
     Init();
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY,"1");
 
     /*DASPReader dasp;
     ifstream inDic("dic.dasdic",ios::binary);

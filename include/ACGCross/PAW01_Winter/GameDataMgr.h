@@ -2,11 +2,13 @@
 #include "Snow.h"
 #include <fstream>
 #include <set>
+#include <bitset>
 namespace ACGCross{
 
 class GameDataMgr   //Thread Safe
 {
     public:
+        std::bitset<65536> kidoku;
         typedef ::Snow::Bundle<65536> SAVE;
         GameDataMgr();
 

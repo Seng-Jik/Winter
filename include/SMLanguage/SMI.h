@@ -93,6 +93,7 @@ namespace SMI
 	public:
 		Interpreter();
 		~Interpreter();
+		inline size_t GetLineNumber(){return now_line;}
 
 		bool LoadStory(const std::string& filename, bool is_encoding);
 		bool PullEvent(SMEvent& out_event);

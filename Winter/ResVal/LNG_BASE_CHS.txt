@@ -38,7 +38,7 @@ INT GAL_WORDSIZE = 36
 
 #ED
 #Warning:ED_STAFF's Height MUST smaller than 4000px!
-STR ED_STAFF = "GalGameSystem/Staff.png"
+STR ED_STAFF = "GalRes/Staff.png"
 INT ED_STAFF_STOP = 3489
 INT ED_TIME = 6000
 STR ED_BGM = "GalRes/bgm/k.ogg"

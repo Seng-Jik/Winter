@@ -17,6 +17,7 @@ class Button : public ::Snow::Control
         inline ::Snow::Sprite* GetMotion(){return &m_motion;}
         inline ::Snow::Sprite* GetDown(){return &m_down;}
 
+        inline void SetEnable(bool b){m_enable = b;m_stat = 1;};
         void OnDraw();
         bool OnEvent (const SDL_Event&,::Snow::Activity&);
 
@@ -25,6 +26,7 @@ class Button : public ::Snow::Control
         bool GetHidden(){return m_stat == 0;}
     protected:
         int m_stat;
+        bool m_enable = true;
         SDL_Rect m_r;
         //0-Hidden
         //1-Normal

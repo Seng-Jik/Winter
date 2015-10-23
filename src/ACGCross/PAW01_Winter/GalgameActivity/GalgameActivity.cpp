@@ -53,6 +53,7 @@ void GalgameActivity::SMEClick()
         SMEText_lb();
     }
     else if(m_SMEProc_stat == WAITCLICK){
+        gameData.kidoku[m_SayEndLine] = 1;
         m_SMEProc_stat = PROCESSING;
         if(!gameData.GetCSaveExist()){
             gameData.SetDataExist(0,true);
@@ -72,6 +73,10 @@ void GalgameActivity::SMENext()
 {
     SMEUpdateStat();
     if(m_SMEProc_skipping){
+        if(gameData.kidoku[m_SayEndLine] == 0){
+            m_SMEProc_skipping = false;
+            return;
+        }
         m_text -> StopSpeak();
         m_SMEProc_skipFPSClicks ++;
         if(m_SMEProc_skipFPSClicks >=5){
@@ -203,8 +208,13 @@ void GalgameActivity::SMEProc(bool fast)
             break;
         case SAYEND:
             PNT("SMEProcessor:PROC sayend");
+            m_SayEndLine = m_SMEProc_smi.GetLineNumber();
+            UpdateSkipButton();
             m_SMEProc_stat = WAITCLICK;SMEText_lb();
             m_SMEProc_autoTimer.Reset();
+            char s[10];
+            itoa(m_SayEndLine,s,10);
+            PNT(string("LINE:")+s);
             break;
         case NAME:
             PNT("SMEProcessor:PROC name");
@@ -402,6 +412,24 @@ void GalgameActivity::OnInit()
     PNT("GALGAMEACTIVITY:ONINIT END");
 }
 
+void GalgameActivity::UpdateSkipButton()
+{
+    if(gameData.kidoku[m_SayEndLine] != m_skipButtonEnabled){
+        if(gameData.kidoku[m_SayEndLine]){
+            m_textWindow_skip.SetNormalPic("GalGameSystem/window_normal_skip1.png");
+            //m_textWindow_skip.SetMotionPic("GalGameSystem/window_normal_skip2.png");
+            //m_textWindow_skip.SetDownPic("GalGameSystem/window_normal_skip3.png");
+            m_textWindow_skip.SetEnable(true);
+        }else{
+            m_textWindow_skip.SetNormalPic("GalGameSystem/window_normal_skipd.png");
+            m_textWindow_skip.SetEnable(false);
+        }
+    }
+
+    m_skipButtonEnabled = gameData.kidoku[m_SayEndLine];
+}
+
+
 void GalgameActivity::OnHide()
 {
     PNT("GALGAMEACTIVITY:ONHIDE");
@@ -524,7 +552,7 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
         m_SMEProc_autoing = false;
         m_SMEProc_skipping = false;
         m_text -> SetEffectSpeed(r.Int("GAL_TEXTBOX_EFFECTSPEED"));
-        if(e.button.button == SDL_BUTTON_LEFT) SMEClick();
+        if(e.button.button == SDL_BUTTON_LEFT) {SMEClick();}
         else if(e.button.button == SDL_BUTTON_RIGHT) HideWindow();
     }else if(e.type == SDL_KEYDOWN){
         std::string KeyName(SDL_GetKeyName(e.key.keysym.sym));
@@ -542,7 +570,7 @@ void GalgameActivity::OnEvent(const SDL_Event& e)
             cout<<"UP"<<endl;
         }else if(KeyName == "Space"){
             if(m_astat == WINDOWHIDDEN) ShowWindow();
-            else if(m_astat == RUNNING && m_SMEProc_jg.GetTimer() >= 10){
+            else if(m_astat == RUNNING && m_SMEProc_jg.GetTimer() >= 20){
                 m_SMEProc_autoing = false;
                 m_SMEProc_skipping = false;
                 m_text -> SetEffectSpeed(r.Int("GAL_TEXTBOX_EFFECTSPEED"));
