@@ -2317,19 +2317,21 @@
 	"Snow.h"
 	"MousePointer.h"
 
-1444366756 j:\winter\winter\include\acgcross\paw01_winter\gamedatamgr.h
+1446181185 j:\winter\winter\include\acgcross\paw01_winter\gamedatamgr.h
 	"Snow.h"
 	<fstream>
 	<set>
+	<bitset>
 
 1445059039 j:\winter\winter\include\acgcross\paw01_winter\mousepointer.h
 	"Snow.h"
 	<list>
 
-1009845582 source:j:\winter\winter\src\acgcross\paw01_winter\button.cpp
+1446181185 source:j:\winter\winter\src\acgcross\paw01_winter\button.cpp
 	"ACGCross/PAW01_Winter/Button.h"
+	"ACGCross/PAW01_Winter/Game.h"
 
-1444366756 j:\winter\winter\include\acgcross\paw01_winter\button.h
+1446181185 j:\winter\winter\include\acgcross\paw01_winter\button.h
 	"Snow.h"
 
 1444366756 source:j:\winter\winter\src\acgcross\paw01_winter\cgviewer.cpp
@@ -2371,7 +2373,7 @@
 	"Snow.h"
 	"SMLanguage/SMI.h"
 
-1444366756 j:\winter\winter\include\smlanguage\smi.h
+1446181185 j:\winter\winter\include\smlanguage\smi.h
 	<iostream>
 	<fstream>
 	<string>
@@ -2388,7 +2390,7 @@
 1444366756 j:\winter\winter\include\acgcross\paw01_winter\str2wstr.h
 	<string>
 
-1444366756 j:\winter\winter\include\acgcross\paw01_winter\galgameactivity\galgameactivity.h
+1446181185 j:\winter\winter\include\acgcross\paw01_winter\galgameactivity\galgameactivity.h
 	"Snow.h"
 	"Clock.h"
 	"TextBox.h"
@@ -2482,7 +2484,7 @@
 1444366756 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\corner.cpp
 	"ACGCross/PAW01_Winter/GalgameActivity/Corner.h"
 
-1444366756 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galselbutton.cpp
+1445232153 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galselbutton.cpp
 	"ACGCross/PAW01_Winter/GalgameActivity/GalSelButton.h"
 	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
 	"ACGCross/PAW01_Winter/MathFunc.h"
@@ -2617,7 +2619,7 @@
 1444366756 source:j:\winter\winter\src\smlanguage\smi.cpp
 	"../../include/SMLanguage/SMI.h"
 
-1445232097 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
+1446181185 source:j:\winter\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
 	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
 	"ACGCross/PAW01_Winter/str2wstr.h"
 	"ACGCross/PAW01_Winter/Game.h"

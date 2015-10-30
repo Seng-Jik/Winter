@@ -53,17 +53,6 @@ GameDataMgr::GameDataMgr()
     //存档
     for(int i = 0;i < 16;++i)
         m_save[i].ReadFromFile(in,16+32+i*65536);
-        
-    //Kidoku
-    Uint8 kidokuBuf[8192];
-    in.read((char*)kidokuBuf,8192);
-    for(int i = 0;i < 8192;++i){
-        Uint8 fliter = 0x80;
-        for(int j = 0;j < 8;++j){
-            kidoku[i*8+j] = kidokuBuf[i] & fliter;
-            fliter>>=1;
-        }
-    }
 
     //Kidoku
     in.seekg(1048624);
@@ -168,10 +157,7 @@ void GameDataMgr::UpdateData()
             }
         }
         //Kidoku Update
-<<<<<<< HEAD
         out.seekp(1048624);
-=======
->>>>>>> 792ab1e2e41c3fa8e79975e240c76ea08523367e
         Uint8 kidokuBuf[8192] = {0};
         for(int i = 0;i < 8192;++i){
             for(int j = 0;j < 8;++j){
@@ -231,8 +217,6 @@ void GameDataMgr::SetDataExist(int num,bool tf)
     m_dataExist[num] = tf;
     m_updateTask.insert(-2);
     Unlock();
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 792ab1e2e41c3fa8e79975e240c76ea08523367e
+
