@@ -36,9 +36,9 @@ void MousePointer::OnDraw()
 			}else{
 				float per=ArcFunc(float(m_pois[i].cnt)/30);
 				SDL_Rect r={
-					m_pois[i].x-int(per*16),
-					m_pois[i].y-int(per*16),
-					int(32*per),int(32*per)
+					m_pois[i].x-int(per*32),
+					m_pois[i].y-int(per*32),
+					int(64*per),int(64*per)
 				};
 				SDL_SetTextureAlphaMod(m_mpoiTex,255*(1-per));
 				SDL_RenderCopy(pRnd,m_mpoiTex,nullptr,&r);
