@@ -30,7 +30,7 @@ DEP_WINTER_DEBUG =
 OUT_WINTER_DEBUG = bin\\Debug\\Galgame_Engine.exe
 
 INC_WINTER_RELEASE = $(INC) -ICore -Isrc -Iinclude\ACGCross\Title -Iinclude\ACGCross -Iinclude\Core -Iinclude\ACGCross\GalgameActivity -Iinclude -Iinclude\ACGCross\Demo -Iinclude\ACGCross\PAW01_Winter
-CFLAGS_WINTER_RELEASE = $(CFLAGS) -O2
+CFLAGS_WINTER_RELEASE = $(CFLAGS) -O
 RESINC_WINTER_RELEASE = $(RESINC)
 RCFLAGS_WINTER_RELEASE = $(RCFLAGS)
 LIBDIR_WINTER_RELEASE = $(LIBDIR)

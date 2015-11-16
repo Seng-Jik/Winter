@@ -120,7 +120,7 @@
 	<stdlib.h>
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_config.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 
 1436254864 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_platform.h
@@ -389,12 +389,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1376156544 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_ttf.h
+1376156543 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1376156504 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_net.h
+1376156503 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_net.h
 	<stdint.h>
 	"SDL.h"
 	"SDL_endian.h"
@@ -418,49 +418,49 @@
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_common.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_common.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_font.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_font.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_random.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_random.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_fuzzer.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_fuzzer.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_crc32.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_crc32.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_md5.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_md5.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_log.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_log.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_assert.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_assert.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_harness.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_harness.h
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_images.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_images.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1436254866 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_compare.h
+1436254865 f:\codeblocks\sdk\sdl2-2.0.3\i686-w64-mingw32\include\sdl2\sdl_test_compare.h
 	"SDL.h"
 	"SDL_test_images.h"
 	"begin_code.h"
@@ -2049,14 +2049,14 @@
 	"ACGCross/PAW01_Winter/GalgameActivity/TextBox.h"
 	"ACGCross/PAW01_Winter/MathFunc.h"
 
-1445561428 source:f:\winter\src\acgcross\paw01_winter\gamedatamgr.cpp
+1447129514 source:f:\winter\src\acgcross\paw01_winter\gamedatamgr.cpp
 	"ACGCross/PAW01_Winter/GameDataMgr.h"
 	<string>
 
 1445558874 source:f:\winter\src\acgcross\paw01_winter\mask.cpp
 	"ACGCross/PAW01_Winter/Mask.h"
 
-1445563838 source:f:\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
+1445564548 source:f:\winter\src\acgcross\paw01_winter\galgameactivity\galgameactivity.cpp
 	"ACGCross/PAW01_Winter/GalgameActivity/GalgameActivity.h"
 	"ACGCross/PAW01_Winter/str2wstr.h"
 	"ACGCross/PAW01_Winter/Game.h"
@@ -3549,7 +3549,7 @@
 	"Snow.h"
 	<list>
 
-1445558874 source:f:\winter\src\acgcross\paw01_winter\mousepointer.cpp
+1447129514 source:f:\winter\src\acgcross\paw01_winter\mousepointer.cpp
 	"ACGCross\PAW01_Winter\MousePointer.h"
 	"MathFunc.h"
 	"Snow/Debug.h"

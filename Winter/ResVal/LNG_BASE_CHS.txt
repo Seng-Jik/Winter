@@ -28,7 +28,7 @@ STR TITLE_BUTTON_EXIT_M = "Title/tbExt.png"
 STR TITLE_BUTTON_EXIT_D = "Title/tbExt.png"
 
 #”Œœ∑÷˜¬ﬂº≠≈‰÷√
-STR SMI_STORYFILE = "GalRes/smi_test.smo"
+STR SMI_STORYFILE = "GalRes/winter_cht.smo"
 
 INT GAL_TEXTBOX_EFFECTSPEED = 100
 
