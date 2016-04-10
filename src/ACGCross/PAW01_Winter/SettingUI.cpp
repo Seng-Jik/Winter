@@ -144,7 +144,7 @@ void SettingUI::OnShow()
 
     m_stat = SHOWING;
     m_timer.Reset();
-    delete pixels;
+    delete [] pixels;
 }
 
 void SettingUI::OnHide(){
